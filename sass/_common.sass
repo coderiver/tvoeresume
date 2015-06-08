@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts 
+// ## fonts
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)
 // =book
-// 	font-family: "book", Arial, sans-serif 
+// 	font-family: "book", Arial, sans-serif
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -47,120 +47,109 @@
 // p
 // 	+jpg(bla)
 
+//fonts
++font(roboto-regular, roboto-regular)
++font(roboto-bold, roboto-bold)
++font(robotoslab-bold, robotoslab-bold)
++font(robotoslab-light, robotoslab-light)
++font(opensans, opensans)
++font(opensans-bold-italic, opensans-bold-italic)
++font(nautilus, nautilus)
+
+=rob
+	font-family: "roboto-regular", Arial, sans-serif
+=rob-b
+	font-family: "roboto-bold", Arial, sans-serif
+=slab-b
+	font-family: "robotoslab-bold", Arial, sans-serif
+=slab-l
+	font-family: "robotoslab-light", Arial, sans-serif
+=op
+	font-family: "opensans", Arial, sans-serif
+=op-b
+	font-family: "opensans-bold-italic", Arial, sans-serif
+=nautilus
+	font-family: "nautilus", Arial, sans-serif
+
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-family: Arial, sans-serif
+	font-size: 12px
 	line-height: 1.4
 
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.out
+	min-width: 970px
+
+.l-center
+	width: 970px
+	margin: 0 auto
+
+// common blocks
+a
+	text-decoration: none
+
+.onleft
+	float: left
+.onright
+	float: right
+
+.index-list
+	margin: 50px
+	a
+		font-size: 18px
+		color: #5DC1E8
+		&:hover
+			text-decoration: underline
+
+
+//radiobox
+.radiobox
+	display: block
+	cursor: pointer
+	input
+		position: absolute
+		width: 27px
+		height: 27px
+		opacity: 0
+		&:checked
+			+ span
+				&:after
+					+opacity(1)
+	&__text
+		display: inline-block
+		position: relative
+		padding-left: 40px
+		+nosel
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 27px
+			height: 27px
+			border-radius: 50%
+			background: #FFF
+		&:after
+			content: "\e804"
+			position: absolute
+			font-size: 24px
+			top: -2px
+			left: 2px
+			color: #90C53B
+			font-family: 'fontello'
+			+opacity(0)
+
+//form
+.form
+	.form__input
+		position: relative
+		display: block
+		margin-bottom: 10px
+	.input
+		width: 100%
+		padding: 7px 15px
+		background-color: #FAFAFA
+		font-size: 13px
+		+rob
+		+border-radius(3px)
+		+placeholder-color(#9FB2B8)

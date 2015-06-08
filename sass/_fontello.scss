@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?42325875');
+  src: url('fonts/fontello.eot?42325875#iefix') format('embedded-opentype'),
+	   url('fonts/fontello.woff?42325875') format('woff'),
+	   url('fonts/fontello.ttf?42325875') format('truetype'),
+	   url('fonts/fontello.svg?42325875#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vk:before { content: '\e800'; }
+.icon-help:before { content: '\e801'; }
+.icon-settings:before { content: '\e802'; }
+.icon-exit:before { content: '\e803'; }
+.icon-checked:before { content: '\e804'; }
+.icon-arrow:before { content: '\e805'; }
+.icon-ok:before { content: '\e806'; }
+.icon-mail:before { content: '\e807'; }
+.icon-pass:before { content: '\e808'; }

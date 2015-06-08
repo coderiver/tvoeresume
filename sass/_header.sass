@@ -1,0 +1,143 @@
+// header
+.header
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -8px
+		height: 8px
+		background: url(../img/header-bg.png) bottom repeat-x
+		z-index: 2
+	&__wrap
+		position: relative
+	&__in
+		padding: 15px
+		background: #fff
+		+box
+		+clr
+	&__sign
+		position: relative
+		color: #2F5A71
+		font-size: 0
+		+rob
+		span
+			display: inline-block
+			font-size: 14px
+			vertical-align: middle
+	&__social
+		display: inline-block
+		width: 46px
+		height: 46px
+		margin: 0 13px 0 20px
+		font-size: 15px
+		background: #337a9e
+		color: #fff
+		border-radius: 50%
+		+vertical
+		i
+			display: inline-block
+			vertical-align: middle
+			&:before
+				font-size: 15px
+	&__or
+		display: inline-block
+		margin-top: 5px
+		font-size: 14px
+		color: #2F5A71
+		vertical-align: middle
+		+rob
+		a
+			position: relative
+			display: inline-block
+			margin-left: 12px
+			padding-bottom: 5px
+			text-transform: uppercase
+			font-size: 14px
+			color: #4FD0D7
+			line-height: 1
+			vertical-align: baseline
+			+rob-b
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				border-bottom: 1px dashed #4FD0D7
+			&:hover
+				&:after
+					width: 0
+	.form
+		position: absolute
+		right: 0
+		padding: 25px 15px 0
+		background-color: #334c55
+		font-size: 14px
+		z-index: 1
+		+opacity(0)
+		+rob
+		+box
+		+transition(opacity 0.3s ease)
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: -40px
+			+s(angle-2)
+		&.is-visible
+			+opacity(1)
+		i
+			position: absolute
+			top: 50%
+			left: 5px
+			color: #9FB2B8
+			&.icon-mail
+				margin-top: -7px
+				font-size: 14px
+			&.icon-pass
+				margin-top: -9px
+				font-size: 18px
+		.form__link
+			display: block
+			text-align: center
+			text-decoration: underline
+			font-size: 11px
+			color: #52B3D2
+			&:hover
+				text-decoration: none
+		.form__btn
+			display: block
+			margin: 10px auto
+			padding: 11px 13px
+			text-transform: uppercase
+			font-size: 12px
+			background-color: #4FD0D7
+			color: #FFF
+			+box
+			+border-radius(15px)
+			+box-shadow(0 1px 0 rgba(85, 141, 158, 0.74))
+			+slab-b
+			+transition(all 0.1s ease-in)
+			&:hover
+				background-color: #2A969C
+		.form__input
+			max-width: 162px
+		.input
+			padding-left: 32px
+			padding-right: 10px
+
+.logo
+	text-transform: uppercase
+	font-size: 36px
+	color: #2F5A71
+	line-height: 1
+	+slab-l
+	span
+		display: inline-block
+		margin-left: 12px
+		padding: 5px 6px 5px 8px
+		background: #ED6247
+		color: #FFF
+		+slab-b

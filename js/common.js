@@ -15,5 +15,9 @@ head.ready(function() {
 	//     scrollFixedElements()
 	// });
 
-	console.log($('body').html());
+	$('.js-sign').click(function(e){
+		e.preventDefault;
+		$(this).closest('.header__wrap').find('.js-form').toggleClass('is-visible');
+	});
+
 });

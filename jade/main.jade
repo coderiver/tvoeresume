@@ -1,0 +1,25 @@
+extend _skeleton
+
+block title
+	title Главная
+
+block content
+	.message
+		.message__in
+			p <span>875</span> человек уже нашли с нами работу
+		i.helicopter-ico
+	.main
+		h1.main__ttl На<span>ч</span>ни прямо сейчас!
+		.character
+			.character__bl.onleft
+				label.radiobox
+					input(type="radio" name="character" value="boy")
+					span.radiobox__text Я парень
+						.icon-arrow
+					span.character__img.is-boy
+			.character__bl.onright
+				label.radiobox
+					input(type="radio" name="character" value="girl")
+					span.radiobox__text Я девушка
+						.icon-arrow
+					span.character__img.is-girl
