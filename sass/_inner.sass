@@ -1,0 +1,123 @@
+//inner pages
+.content
+	&.is-inner
+		padding-top: 50px
+		background: url(../img/bg-1.png) center center no-repeat
+
+.paper
+	position: relative
+	min-height: 640px
+	background: #fff
+
+.slide-title
+	position: absolute
+	width: 620px
+	top: -16px
+	left: 50%
+	margin-left: -310px
+	padding: 3px 0
+	text-align: center
+	background: #fff
+	color: #2f5a71
+	font-size: 33px
+	line-height: 1
+	+nautilus
+	span
+		position: relative
+		display: block
+		padding: 15px 0 10px
+		background: #fff
+		border-top: 1px dashed #CDCDCD
+		border-bottom: 1px dashed #CDCDCD
+		z-index: 1
+
+.slide-nav-prev,
+.slide-nav-next
+	position: absolute
+	top: 50%
+	height: 42px
+	margin-top: -21px
+	background: #71C6E1
+	color: #fff
+	text-transform: uppercase
+	&:before
+		content: ""
+		position: absolute
+		width: 7px
+		height: 56px
+		top: -7px
+		background: #6BB1C7
+		z-index: 0
+		border-radius: 20px
+	span
+		position: relative
+		display: inline-block
+		border: 4px solid #2f5a71
+		line-height: 34px
+		z-index: 1
+		+slab-r
+		+box
+
+.slide-nav-prev
+	right: 99%
+	&:before
+		right: -3px
+	span
+		padding: 0 10px 0 20px
+
+.slide-nav-next
+	left: 99%
+	&:before
+		left: -3px
+	span
+		padding: 0 20px 0 10px
+
+.slide-nav-indication
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 8px 0
+	background: #4C5E6B
+	text-align: center
+	font-size: 0
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 1000px
+		background: #4C5E6B
+	&:before
+		left: 100%
+	&:after
+		right: 100%
+	li
+		display: inline-block
+		&.is-active
+			span
+				border-color: #4FD0D7
+				&:before
+					display: block
+	span
+		position: relative
+		display: block
+		margin: 0 5px
+		width: 15px
+		height: 15px
+		border: 1px solid #828F98
+		border-radius: 50%
+		+box
+		&:before
+			display: none
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -4.5px 0 0 -4.5px
+			width: 9px
+			height: 9px
+			background: #4FD0D7
+			border-radius: 100%
+

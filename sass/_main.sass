@@ -25,6 +25,7 @@
 	&.right-grey
 		&:after
 			background-color: #a1aeb3
+
 .main
 	&__ttl
 		padding-top: 55px
@@ -145,12 +146,12 @@
 			width: 234px
 			&:before
 				width: 234px
-				background-image: url(../img/boy.png)
+				background-image: url(../img/svg/boy-bg.svg)
 		&.is-girl
 			width: 221px
 			&:before
 				width: 221px
-				background-image: url(../img/girl.png)
+				background-image: url(../img/svg/girl-bg.svg)
 		&.is-teacher
 			width: 180px
 			height: 214px
@@ -213,3 +214,69 @@
 		font-size: 60px
 		color: #FFF
 		+opacity(0.3)
+
+
+//loading
+.loading
+	position: relative
+	display: block
+	width: 389px
+	height: 389px
+	margin: 132px auto 0
+	background: url(../img/loading.png) no-repeat
+	overflow: hidden
+	border-radius: 50%
+	&__helicopter
+		position: absolute
+		top: 50%
+		left: -251px
+		margin-top: -44.5px
+		width: 251px
+		height: 89px
+		background: url(../img/loader-helicopter.png) no-repeat
+		animation-name: pulse
+		animation-duration: 4s
+		animation-timing-function: ease-in
+		animation-delay: 0
+		animation-iteration-count: infinite
+		animation-play-state: running
+		animation-fill-mode: backwards
+	&__clouds
+		position: absolute
+		top: 35px
+		left: 10px
+		right: 0
+		height: 103px
+		background: url(../img/clouds.png) center center no-repeat
+		animation-name: move
+		animation-duration: 10s
+		animation-timing-function: ease
+		animation-delay: 0
+		animation-iteration-count: infinite
+		animation-play-state: running
+
+@keyframes pulse
+	0
+		+transform(translate(0 , 0))
+	20%
+		+transform(translate(300px, 0))
+	32%
+		+transform(translate(300px, 20px))
+	44%
+		+transform(translate(300px, 0))
+	56%
+		+transform(translate(300px, -20px))
+	68%
+		+transform(translate(300px, 0))
+	80%
+		+transform(translate(300px, 20px))
+	100%
+		+transform(translate(1000px, 0))
+
+@keyframes move
+	0%
+		+transform(translate(0 , 0))
+	50%
+		+transform(translate(10px , 0))
+	100%
+		+transform(translate(0, 0))

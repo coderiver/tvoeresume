@@ -9,7 +9,7 @@ html
 		block title
 			title template
 	body
-		.out
+		.out.is-loading
 			//BEGIN HEADER
 			header.header
 				.l-center
@@ -17,22 +17,6 @@ html
 						.header__in
 							a(href="#").logo.onleft
 								| Твое<span>Резюме</span>
-							.header__sign.onright
-								span Войти с помощью
-								a(href="#").header__social
-									i.icon-vk
-								p.header__or
-									| или <a href="#" class="js-sign">по паролю</a>
-						.form.js-form
-							form
-								label.form__input
-									i.icon-mail
-									input(type="email" placeholder="Электронная почта").input
-								label.form__input
-									i.icon-pass
-									input(type="password" placeholder="Пароль").input
-								a(href="#").form__link напомнить пароль
-								button(type="submit").form__btn Вход
 			//END HEADER
 			//BEGIN CONTENT
 			.container

@@ -34,7 +34,7 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts
+// ## fontsP
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
 // +font(book, cytiapro-black-webfont)
 // =book
@@ -50,6 +50,7 @@
 //fonts
 +font(roboto-regular, roboto-regular)
 +font(roboto-bold, roboto-bold)
++font(robotoslab-regular, robotoslab-regular)
 +font(robotoslab-bold, robotoslab-bold)
 +font(robotoslab-light, robotoslab-light)
 +font(opensans, opensans)
@@ -64,6 +65,8 @@
 	font-family: "robotoslab-bold", Arial, sans-serif
 =slab-l
 	font-family: "robotoslab-light", Arial, sans-serif
+=slab-r
+	font-family: "robotoslab-regular", serif
 =op
 	font-family: "opensans", Arial, sans-serif
 =op-b
@@ -71,6 +74,8 @@
 =nautilus
 	font-family: "nautilus", Arial, sans-serif
 
+html, body
+	height: 100%
 
 body
 	font-family: Arial, sans-serif
@@ -78,7 +83,23 @@ body
 	line-height: 1.4
 
 .out
+	position: relative
 	min-width: 970px
+	&.is-loading
+		height: 100%
+		min-height: 750px
+		overflow: hidden
+		background-color: #a0aeb3
+		.footer
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+
+
+.container
+	min-height: 500px
+	overflow: hidden
 
 .l-center
 	width: 970px
