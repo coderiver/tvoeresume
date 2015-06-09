@@ -2,7 +2,6 @@
 .content
 	&.is-main
 		position: relative
-		min-height: 844px
 		&:before,
 		&:after
 			content: ""
@@ -11,14 +10,21 @@
 			top: 0
 			bottom: 0
 			z-index: -1
+			+transition(background-color 0.2s ease-out)
 		&:before
 			left: 0
-			background: url(../img/left-side.png) right 40px no-repeat
+			background: url(../img/left-side.png) right bottom no-repeat
 			background-color: #5BB7D4
 		&:after
 			right: 0
-			background: url(../img/right-side.png) 0 -20px no-repeat
+			background: url(../img/right-side.png) left bottom no-repeat
 			background-color: #da5940
+	&.left-grey
+		&:before
+			background-color: #a1aeb3
+	&.right-grey
+		&:after
+			background-color: #a1aeb3
 .main
 	&__ttl
 		padding-top: 55px
@@ -38,6 +44,18 @@
 	position: absolute
 	top: 133px
 	right: 47px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: -11px
+		z-index: 0
+	&:before
+		top: 0
+		+arr(11, 24, #6a8b99, tr)
+	&:after
+		bottom: 4.5px
+		+arr(11, 24, #6a8b99, br)
 	p
 		padding: 9px 13px 5px 22px
 		border-top: 1px dashed #C5C5C5
@@ -55,12 +73,18 @@
 		padding: 5px 0
 		background: #fff
 		border-right: 5px solid #5495AA
-		&:before
+		&:before,
+		&:after
 			content: ""
 			position: absolute
+			left: -10px
+			z-index: 1
+		&:before
 			top: 0
-			left: -9px
-			+s(angle)
+			+arr(10, 24, #fff, tr)
+		&:after
+			bottom: 0
+			+arr(10, 24, #fff, br)
 	.helicopter-ico
 		display: inline-block
 		vertical-align: middle
@@ -69,7 +93,9 @@
 
 //character
 .character
+	position: relative
 	margin-top: 75px
+	padding-bottom: 55px
 	+clr
 	&__bl
 		position: relative
@@ -80,10 +106,24 @@
 			.character__img
 				&:before
 					height: 100%
-		&:last-child
+				&.is-teacher
+					&:before
+						+transform(translateY(0))
+		&.onright
 			.icon-arrow
 				left: inherit
 				right: -50px
+				+transform(scale(-1, 1))
+		&.is-absolute
+			position: absolute
+			width: auto
+			top: 50%
+			left: 50%
+			margin: -125px 0 0 -88px
+			z-index: 2
+			.icon-arrow
+				left: inherit
+				right: -35px
 				+transform(scale(-1, 1))
 	&__img
 		position: relative
@@ -111,6 +151,54 @@
 			&:before
 				width: 221px
 				background-image: url(../img/girl.png)
+		&.is-teacher
+			width: 180px
+			height: 214px
+			overflow: hidden
+			border-radius: 50%
+			&:before
+				width: 124px
+				height: 214px
+				left: 50%
+				margin-left: -62px
+				background-image: url(../img/teacher.png)
+				+transform(translateY(30px))
+			&:after
+				content: ""
+				position: absolute
+				left: 50%
+				bottom: 0
+				width: 162px
+				height: 162px
+				margin-left: -81px
+				background-color: #757E82
+				border-radius: 50%
+				z-index: -1
+			&.is-small
+				&:before
+					height: 214px
+					+transform(translateY(95px))
+		&.is-small
+			&:before
+				height: 475px
+	&__choose
+		position: absolute
+		top: 45px
+		left: 0
+		text-align: center
+		z-index: 2
+		+nautilus
+		+svg(cloud-bg, 184, 83)
+		&.is-another
+			top: 97px
+			left: inherit
+			right: 15px
+			+svg(cloud-bg2, 135, 83)
+		span
+			display: inline-block
+			margin-top: 22px
+			font-size: 20px
+			color: #2F5A71
 	.radiobox
 		position: relative
 		font-size: 24px

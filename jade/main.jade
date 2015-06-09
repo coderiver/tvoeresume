@@ -11,15 +11,25 @@ block content
 	.main
 		h1.main__ttl На<span>ч</span>ни прямо сейчас!
 		.character
-			.character__bl.onleft
+			.character__bl.onleft.js-hover
 				label.radiobox
 					input(type="radio" name="character" value="boy")
 					span.radiobox__text Я парень
 						.icon-arrow
 					span.character__img.is-boy
-			.character__bl.onright
+			.character__bl.is-absolute.js-hover
+				label.radiobox
+					input(type="radio" name="character" value="teacher")
+					span.radiobox__text Я учитель
+						.icon-arrow
+					span.character__img.is-teacher
+			.character__bl.onright.js-hover
 				label.radiobox
 					input(type="radio" name="character" value="girl")
 					span.radiobox__text Я девушка
 						.icon-arrow
 					span.character__img.is-girl
+			.character__choose
+				span Выбери персонажа
+			.character__choose.is-another
+				span Выбери меня
