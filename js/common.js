@@ -7,8 +7,8 @@ head.ready(function() {
 	});
 
 	$('.js-sign').click(function(e){
-		e.stopPropagation();
 		$(this).closest('.header__wrap').find('.js-form').toggleClass('is-visible');
+		return false;
 	});
 
 	$(".js-form").click(function (e) {
@@ -42,6 +42,14 @@ head.ready(function() {
 			container.removeClass('left-grey');
 			container.removeClass('right-grey');
 		}
+	});
+
+	// //datepicker
+	$(function(){
+		$.datepicker.setDefaults(
+			$.extend($.datepicker.regional["ru"])
+		);
+		$(".datepicker").datepicker();
 	});
 
 });

@@ -49,6 +49,9 @@
 
 //fonts
 +font(roboto-regular, roboto-regular)
++font(roboto-light, roboto-light)
++font(roboto-light-italic, roboto-light-italic)
++font(roboto-medium, roboto-medium)
 +font(roboto-bold, roboto-bold)
 +font(robotoslab-regular, robotoslab-regular)
 +font(robotoslab-bold, robotoslab-bold)
@@ -59,6 +62,12 @@
 
 =rob
 	font-family: "roboto-regular", Arial, sans-serif
+=rob-l
+	font-family: "roboto-light", Arial, sans-serif
+=rob-li
+	font-family: "roboto-light-italic", Arial, sans-serif
+=rob-m
+	font-family: "roboto-medium", Arial, sans-serif
 =rob-b
 	font-family: "roboto-bold", Arial, sans-serif
 =slab-b
@@ -95,19 +104,61 @@ body
 			bottom: 0
 			left: 0
 			right: 0
+	&.is-inner
+		min-width: 1200px
 
-
+//layout
 .container
 	min-height: 500px
 	overflow: hidden
+
+.l-wide
+	width: 1000px
+	margin: 0 auto
 
 .l-center
 	width: 970px
 	margin: 0 auto
 
 // common blocks
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+	line-height: 1
+
 a
-	text-decoration: none
+	text-decoration: underline
+	color: #71C6E1
+	&:hover
+		text-decoration: none
+	&:visited
+		color: #9D35CE
+
+.h1
+	text-align: center
+	font-size: 33px
+	color: #2f5a71
+	+nautilus
+
+.h2
+	margin-bottom: 15px
+	text-align: center
+	text-transform: uppercase
+	font-size: 15px
+	color: #5DC1E8
+	+slab-b
+
+.h3
+	margin-bottom: 15px
+	text-align: center
+	font-size: 24px
+	color: #5DC1E8
+	+nautilus
+
+.h4
+	margin-bottom: 20px
+	font-size: 14px
+	color: #2F5A71
+	+slab-b
 
 .onleft
 	float: left
@@ -174,3 +225,71 @@ a
 		+rob
 		+border-radius(3px)
 		+placeholder-color(#9FB2B8)
+
+
+//buttons
+.btn
+	padding: 19px 23px 18px
+	background: #5DC1E8
+	font-size: 14px
+	text-transform: uppercase
+	line-height: 1
+	color: #FFF
+	border-radius: 50px
+	box-shadow: 0px 3px 0px 0px #4FA3C4
+	+rob-b
+	+transition(background 0.2s ease)
+	&:hover
+		background: #4FA3C4
+	&:active
+		position: relative
+		top: 1px
+	&.is-olive
+		background: #80A446
+		box-shadow: 0px 3px 0px 0px #6c8642
+		&:hover
+			background: #6c8642
+	&.is-green
+		background: #00AA9F
+		box-shadow: 0px 3px 0px 0px #00857c
+		&:hover
+			background: #00857C
+
+
+//datepicker
+.ui-datepicker
+	width: 280px !important
+	padding: 0 !important
+	background: #FFF
+	font-size: 14px
+	box-shadow: 1px 1px 10px 0px rgba(35,104,126, 0.25)
+	+rob-m
+	td
+		border: 1px solid #d0d4d9 !important
+	.ui-datepicker-header
+		padding: 6px 0 !important
+		background: #34B1E2
+		color: #fff
+	.ui-datepicker-month
+		text-transform: uppercase
+		font-size: 16px
+		+rob-b
+	.ui-datepicker-year
+		display: none
+	.ui-state-default
+		padding: 10px 0
+		text-align: center
+		color: #4D5155
+	.ui-datepicker-calendar
+		thead
+			display: none
+	.ui-datepicker-week-end a
+		color: #cccfd3
+	.ui-datepicker-today
+		color: #34B1E2
+		background: #EEF1F5
+	.ui-datepicker-calendar
+		margin: 0 !important
+
+.datepicker
+	+unselectable

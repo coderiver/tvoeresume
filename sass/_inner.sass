@@ -1,13 +1,230 @@
-//inner pages
+//template for inner
+.out
+	&.is-inner-girl
+		.slide-nav-prev,
+		.slide-nav-next
+			background: #ed6247
+			&:hover
+				background: #2F5A71
+		.btn
+			background: #ED6247
+			box-shadow: 0px 3px 0px 0px #bd4f39
+			&:hover
+				background: #bd4f39
+		.slide__message
+			+svg(cloud-bg4, 290, 95)
+		.slide-nav-next
+			&:hover
+				.slide-nav-in
+					&:before
+						+arr(15, 21, #2f5a71, tl)
+					&:after
+						+arr(22, 15, #2f5a71, bl)
+			.slide-nav-in
+				&:before
+					+arr(15, 21, #ed6247, tl)
+				&:after
+					+arr(22, 15, #ed6247, bl)
+		.slide-nav-prev
+			&:hover
+				.slide-nav-in
+					&:before
+						+arr(15, 21, #2f5a71, tr)
+					&:after
+						+arr(15, 21, #2f5a71, br)
+			.slide-nav-in
+				&:before
+					+arr(15, 21, #ed6247, tr)
+				&:after
+					+arr(15, 21, #ed6247, br)
+
+
 .content
 	&.is-inner
 		padding-top: 50px
-		background: url(../img/bg-1.png) center center no-repeat
+		background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center 122% no-repeat
+		background-color: #5BB7D4
+		&.bg-bottom
+			background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center bottom no-repeat
+			background-color: #5BB7D4
 
 .paper
 	position: relative
-	min-height: 640px
 	background: #fff
+	border-radius: 5px 0 0 0
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		background: #5BB7D4
+		z-index: 1
+		+arr(30, 33, #d2edf1, bl)
+	.rect-ico
+		position: absolute
+		top: -7px
+		right: 55px
+		width: 200px
+		height: 50px
+		border-radius: 5px
+		background: #D2EDF1
+		+transform(rotate(-2deg))
+	.rect-ico-2
+		position: absolute
+		top: 30px
+		left: -8px
+		width: 50px
+		height: 400px
+		border-radius: 5px
+		background: #D2EDF1
+		+transform(rotate(-2.5deg))
+
+.slide
+	position: relative
+	min-height: 640px
+	padding-bottom: 31px
+	background: #fff
+	+box
+	&__in
+		padding-top: 53px
+		color: #2F5A71
+		font-size: 14px
+		+clr
+		+rob-l
+		section
+			margin-bottom: 40px
+			padding: 0 15px
+			+clr
+			div
+				&:not(:only-of-type)
+					float: left
+					width: 50%
+		article
+			div
+				margin-bottom: 40px
+				+clr
+				img
+					float: left
+					margin: 5px 30px 0 0
+				p
+					overflow: hidden
+		p
+			line-height: 1.6
+		ul, ol
+			padding-left: 20px
+			color: #5DC1E8
+			li
+				margin-bottom: 10px
+				span
+					color: #2F5A71
+		ol
+			list-style-type: decimal
+		ul
+			list-style-type: disc
+		blockquote
+			margin-bottom: 50px
+			padding: 50px 0
+			background: #E9FAFF
+			box-shadow: 15px 0px 0px 0px #E9FAFF, -15px 0px 0px 0px #E9FAFF
+			p
+				position: relative
+				max-width: 785px
+				padding-left: 72px
+				margin: 0 auto
+				+box
+				&:before
+					content: "“"
+					position: absolute
+					top: -8px
+					left: 0
+					font-size: 108px
+					color: #5BB7D4
+					font-family: Arial
+					font-weight: bold
+					line-height: 1
+		figure
+			margin-bottom: 55px
+			figcaption
+				position: relative
+				padding: 58px 15px 0
+				font-size: 0
+				background: url(../img/svg/dots-bg.svg) 0 7px repeat-x
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: -15px
+					right: -15px
+					border-top: 1px dashed #ccc
+			button
+				display: inline-block
+				margin-right: 75px
+				&:last-child
+					margin-right: 0
+			div
+				display: inline-block
+				.h4
+					display: inline-block
+					margin: 0 10px 0 0
+				label
+					margin-right: 10px
+			label
+				display: inline-block
+				input
+					width: 100%
+					padding: 11px 14px 12px
+					background: #FAFAFA
+					border: 1px solid #dce6e6
+					border-radius: 5px
+					color: #2F5A71
+					+rob-b
+					+box
+					+placeholder
+						color: #9FB2B8
+						+rob-li
+	&__subttl
+		margin: 20px 0 35px
+		text-align: center
+		.icon-lamp
+			display: inline-block
+			margin-right: 2px
+			font-size: 26px
+			color: #5DC1E8
+		.h2
+			display: inline-block
+			margin-bottom: 0
+			vertical-align: bottom
+	&__teacher
+		position: relative
+		margin: 47px 0 0 165px
+		z-index: 1
+		vertical-align: middle
+		+svg(teacher-bg, 175, 450)
+	&__txt
+		&.start
+			display: inline-block
+			margin-top: 25px
+			vertical-align: middle
+			.btn
+				display: block
+				margin: 0 auto
+				font-size: 30px
+	&-bg
+		position: absolute
+		left: 50%
+		bottom: 25px
+		margin-left: -469px
+		+svg(start-bg, 938, 170)
+	&__message
+		margin-bottom: 50px
+		text-align: center
+		+svg(cloud-bg3, 290, 95)
+		p
+			max-width: 180px
+			margin: 20px 0 0 70px
+			font-size: 20px
+			color: #FFF
+			+nautilus
 
 .slide-title
 	position: absolute
@@ -16,31 +233,55 @@
 	left: 50%
 	margin-left: -310px
 	padding: 3px 0
-	text-align: center
 	background: #fff
-	color: #2f5a71
-	font-size: 33px
-	line-height: 1
-	+nautilus
-	span
+	.h1
 		position: relative
-		display: block
-		padding: 15px 0 10px
+		padding: 14px 0
 		background: #fff
 		border-top: 1px dashed #CDCDCD
 		border-bottom: 1px dashed #CDCDCD
 		z-index: 1
+	.clip-ico
+		position: absolute
+		top: -10px
+		left: 15px
+		z-index: 2
+		+svg(clip-bg, 20, 56)
 
+
+// prev/next
 .slide-nav-prev,
 .slide-nav-next
 	position: absolute
-	top: 50%
 	height: 42px
-	margin-top: -21px
+	top: 0
+	margin-top: 280px
 	background: #71C6E1
 	color: #fff
 	text-transform: uppercase
+	white-space: nowrap
+	+transition(background 0.2s ease)
+	+box
 	&:before
+		content: ""
+		position: absolute
+		top: 0
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+	&:hover
+		background: #2F5A71
+	&:visited
+		color: #fff
+	span
+		display: inline-block
+		font-size: 14px
+		line-height: 34px
+		vertical-align: middle
+		+slab-r
+		+box
+	.line-ico
 		content: ""
 		position: absolute
 		width: 7px
@@ -49,29 +290,97 @@
 		background: #6BB1C7
 		z-index: 0
 		border-radius: 20px
-	span
-		position: relative
+	.triangle-ico
+		position: absolute
+		top: 50%
+		margin-top: -5px
+
+.slide-nav-in
+	position: relative
+	border-top: 4px solid #2f5a71
+	border-bottom: 4px solid #2f5a71
+	z-index: 1
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		+transition(border-color 0.2s ease)
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		+transition(border-color 0.2s ease)
+	.icon-angle-left,
+	.icon-angle-right
 		display: inline-block
-		border: 4px solid #2f5a71
-		line-height: 34px
-		z-index: 1
-		+slab-r
-		+box
+		font-size: 20px
+		color: #FFF
+		vertical-align: middle
 
 .slide-nav-prev
 	right: 99%
 	&:before
+		left: -16px
+		+arr(16, 22, #2f5a71, tr)
+	&:after
+		left: -16px
+		+arr(16, 22, #2f5a71, br)
+	&:hover
+		.slide-nav-in
+			&:before
+				+arr(15, 21, #2f5a71, tr)
+			&:after
+				+arr(15, 21, #2f5a71, br)
+	.icon-angle-left
+		margin-left: 3px
+	.line-ico
 		right: -3px
+	.slide-nav-in
+		border-right: 4px solid #2f5a71
+		&:before
+			left: -9px
+			+arr(15, 21, #71c6e1, tr)
+		&:after
+			left: -9px
+			+arr(15, 21, #71c6e1, br)
+	.triangle-ico
+		+arr(3, 10, #2f5a71, r)
 	span
-		padding: 0 10px 0 20px
+		padding: 0 10px 0 3px
 
 .slide-nav-next
 	left: 99%
 	&:before
+		right: -16px
+		+arr(16, 22, #2f5a71, tl)
+	&:after
+		right: -16px
+		+arr(22, 16, #2f5a71, bl)
+	&:hover
+		.slide-nav-in
+			&:before
+				+arr(15, 21, #2f5a71, tl)
+			&:after
+				+arr(22, 15, #2f5a71, bl)
+	.icon-angle-right
+		margin-right: 3px
+	.line-ico
 		left: -3px
+	.slide-nav-in
+		border-left: 4px solid #2f5a71
+		&:before
+			right: -9px
+			+arr(15, 21, #71c6e1, tl)
+		&:after
+			right: -9px
+			+arr(22, 15, #71c6e1, bl)
+	.triangle-ico
+		right: 0
+		+arr(3, 10, #2f5a71, l)
 	span
-		padding: 0 20px 0 10px
+		padding: 0 3px 0 10px
 
+// navigation
 .slide-nav-indication
 	position: absolute
 	left: 0
@@ -120,4 +429,5 @@
 			height: 9px
 			background: #4FD0D7
 			border-radius: 100%
+
 
