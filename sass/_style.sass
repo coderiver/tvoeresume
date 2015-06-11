@@ -1,0 +1,178 @@
+//typography
+.slide__in
+	section
+		margin-bottom: 40px
+		padding: 0 15px
+		&.no-margin
+			margin-bottom: 0
+		+clr
+		> div
+			&:not(:only-of-type)
+				float: left
+				width: 50%
+	article
+		div
+			margin-bottom: 40px
+			+clr
+			img
+				float: left
+				margin: 5px 30px 0 0
+			p
+				overflow: hidden
+	p
+		line-height: 1.6
+	ul, ol
+		padding-left: 20px
+		color: #5DC1E8
+		li
+			margin-bottom: 10px
+			span
+				color: #2F5A71
+	ol
+		list-style-type: decimal
+	ul
+		list-style-type: disc
+	blockquote
+		margin-bottom: 50px
+		padding: 50px 0
+		background: #E9FAFF
+		box-shadow: 15px 0px 0px 0px #E9FAFF, -15px 0px 0px 0px #E9FAFF
+		p
+			position: relative
+			max-width: 785px
+			padding-left: 72px
+			margin: 0 auto
+			+box
+			&:before
+				content: "“"
+				position: absolute
+				top: -8px
+				left: 0
+				font-size: 108px
+				color: #5BB7D4
+				font-family: Arial
+				font-weight: bold
+				line-height: 1
+	figure
+		margin-bottom: 55px
+		padding: 0 15px
+		figcaption
+			position: relative
+			padding-top: 58px
+			font-size: 0
+			background: url(../img/svg/dots-bg.svg) 0 7px repeat-x
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: -15px
+				right: -15px
+				border-top: 1px dashed #ccc
+			.btn
+				display: inline-block
+				margin-right: 75px
+		.btn
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+			&.is-padding
+				.checkbox
+					span
+						padding: 0
+		.form
+			.h3
+				margin: 0
+				line-height: 1.4
+			.h4
+				margin: 13px 0 0
+				text-transform: uppercase
+				&.is-another
+					color: #5DC1E8
+	.form
+		&.is-margin
+			margin: 20px 0 40px
+		.h4
+			display: inline-block
+			margin: 0 10px 0 0
+			font-size: 15px
+			&.no-margin
+				margin: 0
+				line-height: 1.4
+		.calendar
+			display: inline-block
+		.radiobox
+			display: block
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		.checkbox
+			margin-bottom: 0
+	.form__section
+		+clr
+		&.is-margin
+			margin: 15px 0 35px
+	.form__link
+		position: relative
+		float: right
+		+rob-b
+		&:before
+			content: "+"
+			display: inline-block
+			margin-right: 10px
+			text-align: center
+			width: 17px
+			height: 17px
+			font-size: 17px
+			border: 2px solid #5DC1E8
+			line-height: 1
+			font-family: 'fontello'
+		&:visited
+			color: #5dc1e8
+	.form__input, .select-wrap
+		max-width: 540px
+		padding-left: 240px
+	.form__cut
+		padding-left: 240px
+		span
+			margin-right: 17px
+		p
+			margin-bottom: 12px
+			font-size: 12px
+			text-decoration: underline
+			color: #5DC1E8
+			+rob
+	.input
+		padding: 10px 13px
+		border: 1px solid #DCE6E6
+	.special
+		padding-left: 240px
+	.radiobox, .checkbox
+		span
+			padding-left: 30px
+			&:before
+				width: 20px
+				height: 20px
+				border: 1px solid #E0E9E9
+				background: #fafafa
+			&:after
+				font-size: 18px
+	.icon-clip
+		font-size: 14px
+		margin-right: 8px
+	.icon-close
+		margin-left: 5px
+		font-size: 8px
+		color: #ED6247
+		text-decoration: none
+		&:visited
+			color: #ED6247
+	.icon-edit
+		margin-left: 10px
+		font-size: 17px
+		text-decoration: none
+		color: #5DC1E8
+	.icon-uni, .icon-feather
+		float: left
+		margin-right: 10px
+		font-size: 28px
+		color: #5DC1E8

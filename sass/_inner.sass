@@ -37,8 +37,15 @@
 					+arr(15, 21, #ed6247, tr)
 				&:after
 					+arr(15, 21, #ed6247, br)
-		.h1, .h2, .h3, .icon-lamp
+		.h1, .h2, .h3,
+		.icon-lamp, .icon-calendar
 			color: #ED6247
+		.slide__in
+			ul, ol
+				color: #ED6247
+			blockquote p
+				&:before
+					color: #ED6247
 
 .content
 	&.is-inner
@@ -92,109 +99,6 @@
 		font-size: 14px
 		+clr
 		+rob-l
-		section
-			margin-bottom: 40px
-			padding: 0 15px
-			+clr
-			> div
-				&:not(:only-of-type)
-					float: left
-					width: 50%
-			form
-				> div
-					display: inline-block
-					vertical-align: baseline
-					&:first-child
-						vertical-align: middle
-						div
-							&:first-child
-								margin-right: 10px
-					div
-						display: inline-block
-						margin-right: 30px
-						vertical-align: top
-						.h4
-							display: inline-block
-							margin: 0 10px 0 0
-						label
-							display: inline-block
-						.radiobox
-							display: block
-							margin-bottom: 15px
-						.checkbox
-							margin-bottom: 0
-		article
-			div
-				margin-bottom: 40px
-				+clr
-				img
-					float: left
-					margin: 5px 30px 0 0
-				p
-					overflow: hidden
-		p
-			line-height: 1.6
-		ul, ol
-			padding-left: 20px
-			color: #5DC1E8
-			li
-				margin-bottom: 10px
-				span
-					color: #2F5A71
-		ol
-			list-style-type: decimal
-		ul
-			list-style-type: disc
-		blockquote
-			margin-bottom: 50px
-			padding: 50px 0
-			background: #E9FAFF
-			box-shadow: 15px 0px 0px 0px #E9FAFF, -15px 0px 0px 0px #E9FAFF
-			p
-				position: relative
-				max-width: 785px
-				padding-left: 72px
-				margin: 0 auto
-				+box
-				&:before
-					content: "“"
-					position: absolute
-					top: -8px
-					left: 0
-					font-size: 108px
-					color: #5BB7D4
-					font-family: Arial
-					font-weight: bold
-					line-height: 1
-		figure
-			margin-bottom: 55px
-			figcaption
-				position: relative
-				padding: 58px 15px 0
-				font-size: 0
-				background: url(../img/svg/dots-bg.svg) 0 7px repeat-x
-				&:before
-					content: ""
-					position: absolute
-					top: 0
-					left: -15px
-					right: -15px
-					border-top: 1px dashed #ccc
-			button
-				display: inline-block
-				margin-right: 75px
-				&:last-child
-					margin-right: 0
-		.radiobox, .checkbox
-			span
-				padding-left: 30px
-				&:before
-					width: 20px
-					height: 20px
-					border: 1px solid #E0E9E9
-					background: #fafafa
-				&:after
-					font-size: 18px
 	&__subttl
 		margin: 20px 0 35px
 		text-align: center
@@ -246,7 +150,6 @@
 	left: 50%
 	margin-left: -310px
 	padding: 3px 0
-	background: #fff
 	.h1
 		position: relative
 		padding: 14px 0

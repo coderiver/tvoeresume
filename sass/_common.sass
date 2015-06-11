@@ -1,38 +1,38 @@
 // # SHORT HOWTO
 // ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
+// .whatever
+//+sized-sprite($icons, coderiver) //or
 // 			+s(codedby) //gets default value for spritemap as $icons
 // ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
+// +include keyframes(rotate)
+//from
+// +rotate(0)
+//to
+// +rotate(360)
 // ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
+// body:hover
+// 	+animation(rotate 200s linear infinite)
 // ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
+// transition: all 1.2s ceaser($ease-in)
 // ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
+// +background-image(linear-gradient(#232323, #5c5c5c))
+// +g(#232323, #5c5c5c)
+//	 horizontal
+// +gh(#232323, #5c5c5c)
 // ## making bw-images
-//     img
+// img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
+// +min-screen(320)
 //			display: none
 // +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
+// @for $i from 1 through 3
+// .item-#{$i}
+//			width: 2em * $i
+// @each $s in a,b,c
+// 		#{$s}
 //				display: none
 // ## fontsP
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
@@ -51,6 +51,7 @@
 +font(roboto-regular, roboto-regular)
 +font(roboto-light, roboto-light)
 +font(roboto-light-italic, roboto-light-italic)
++font(roboto-condensed-light, roboto-condensed-light)
 +font(roboto-medium, roboto-medium)
 +font(roboto-bold, roboto-bold)
 +font(robotoslab-regular, robotoslab-regular)
@@ -66,6 +67,8 @@
 	font-family: "roboto-light", Arial, sans-serif
 =rob-li
 	font-family: "roboto-light-italic", Arial, sans-serif
+=rob-cl
+	font-family: "roboto-condensed-light", Arial, sans-serif
 =rob-m
 	font-family: "roboto-medium", Arial, sans-serif
 =rob-b
@@ -217,9 +220,17 @@ a
 		&:before
 			border-radius: 5px
 
+.special
+	display: block
+	input
+		width: 100%
+		padding: 10px
+		border-bottom: 1px solid #5DC1E8
+
 //buttons
 .btn
-	padding: 19px 23px 18px
+	position: relative
+	padding: 15px 23px
 	background: #5DC1E8
 	font-size: 14px
 	text-transform: uppercase
@@ -232,7 +243,6 @@ a
 	&:hover
 		background: #4FA3C4
 	&:active
-		position: relative
 		top: 1px
 	&.is-olive
 		background: #80A446
@@ -244,21 +254,140 @@ a
 		box-shadow: 0px 3px 0px 0px #00857c
 		&:hover
 			background: #00857C
+	&.is-padding
+		display: inline-block
+		padding-left: 53px
+		cursor: pointer
+	.cross-ico
+		position: absolute
+		top: 0
+		left: 1px
+		width: 42px
+		height: 44px
+		border-radius: 50%
+		background: #66D4FF
+		&:before
+			content: ""
+			position: absolute
+			width: 2px
+			top: 9px
+			right: 9px
+			left: 50%
+			bottom: 9px
+			margin-left: -1px
+			background: #FFF
+		&:after
+			content: ""
+			position: absolute
+			height: 2px
+			top: 50%
+			right: 9px
+			left: 9px
+			bottom: 9px
+			margin-top: -1px
+			background: #FFF
+	.checkbox
+		position: absolute
+		top: 0
+		left: 1px
+		width: 42px
+		height: 44px
+		border-radius: 50%
+		background: #66D4FF
+		span
+			position: absolute
+			top: 50%
+			left: 50%
+			padding: 0
+			&:before
+				width: 20px
+				height: 20px
+				top: 50%
+				left: 50%
+				border-radius: 20px
+				margin: -10px 0 0 -10px
+				+box
+			&:after
+				top: 50%
+				left: 50%
+				margin: -10px 0 0 -9px
 
 //form
 .form
-	.form__input
+	&__group
+		display: inline-block
+		vertical-align: baseline
+		&:last-child
+			.form__bl
+				margin-right: 10px
+	&__bl
+		display: inline-block
+		margin-right: 30px
+		vertical-align: top
+	&__section
+		display: block
+		margin-bottom: 10px
+	&__input
 		position: relative
 		display: block
 		margin-bottom: 10px
+		+clr
+		&.is-error
+			.input
+				border-color: #ff7d64
+			&:after
+				content: "\e80a"
+				position: absolute
+				top: 50%
+				right: -20px
+				margin-top: -9.5px
+				font-family: "fontello"
+				color: #ff7d64
+			.error-message
+				content: "Поле заполнено неверно. Повторите попытку."
+				position: absolute
+				top: 50%
+				left: 100%
+				width: 145px
+				padding: 10px
+				margin: -39px 0 0 29px
+				font-size: 13px
+				color: #666
+				background: #F6E0E0
+				border-radius: 20px
+				border: 1px solid #ff7d64
+				+nosel
+				+box
+				+rob-l
+				&:before
+					content: ""
+					position: absolute
+					top: 20px
+					left: -14px
+					+arr(13, 12, #ff7d64, br)
+				&:after
+					content: ""
+					position: absolute
+					top: 19px
+					left: -11px
+					+arr(13, 12, #F6E0E0, br)
+	&__note
+		display: block
+		float: right
+		margin-top: 5px
+		font-size: 12px
+		color: #BEC9CC
+		+rob-cl
 	.input
 		width: 100%
 		padding: 7px 15px
 		background-color: #FAFAFA
 		font-size: 13px
+		border-radius: 3px
 		+rob
-		+border-radius(3px)
-		+placeholder-color(#9FB2B8)
+		+placeholder
+			color: #9FB2B8
+			+rob-li
 
 .calendar
 	position: relative
@@ -269,6 +398,60 @@ a
 		right: 12px
 		font-size: 16px
 		color: #34B1E2
+
+//select
+.select-wrap
+	position: relative
+	.select
+		position: relative
+		padding: 10px 15px
+		font-size: 13px
+		color: #2F5A71
+		background-color: #FAFAFA
+		border-radius: 3px
+		border: 1px solid #dce6e6
+		cursor: pointer
+		+rob-b
+		+nosel
+	.icon-angle-down
+		position: absolute
+		line-height: 1
+		top: 50%
+		right: 10px
+		margin-top: -12px
+		font-size: 24px
+		color: #34b1e2
+	.select__list
+		position: absolute
+		top: 100%
+		left: -1px
+		right: -1px
+		max-height: 115px
+		overflow-y: auto
+		background: #fff
+		border: 1px solid #dce6e6
+		list-style-type: none
+		z-index: 2
+		+box
+		li
+			margin-bottom: 0
+			&:first-child
+				padding-top: 20px
+			&:last-child
+				padding-bottom: 20px
+				a
+					margin-bottom: 0
+		a
+			display: block
+			padding-left: 20px
+			margin-bottom: 10px
+			text-decoration: none
+			color: #2F5A71
+			+rob-l
+			&:visited
+				color: #2f5a71
+			&:hover
+				+rob-b
 
 //datepicker
 .ui-datepicker.ui-widget

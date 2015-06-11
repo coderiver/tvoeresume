@@ -33,39 +33,104 @@
                     <div class="slide__subttl"><i class="icon-lamp"></i>
                       <h2 class="h2">Последнее место обучения (Н2):</h2>
                     </div>
-                    <section>
-                      <form>
-                        <div>
-                          <div>
-                            <h4 class="h4">С:</h4>
-                            <label class="calendar">
-                              <input type="text" value="25.05.2012" readonly="readonly" class="datepicker"/><i class="icon-calendar"></i>
-                            </label>
+                    <section class="no-margin">
+                      <div class="form">
+                        <form>
+                          <div class="form__group">
+                            <div class="form__bl">
+                              <h4 class="h4">С:</h4>
+                              <label class="calendar">
+                                <input type="text" value="25.05.2012" readonly="readonly" class="datepicker"/><i class="icon-calendar"></i>
+                              </label>
+                            </div>
+                            <div class="form__bl">
+                              <h4 class="h4">По (Н4):</h4>
+                              <label class="calendar">
+                                <input type="text" placeholder="Выберите дату" readonly="readonly" class="datepicker"/><i class="icon-calendar"></i>
+                              </label>
+                            </div>
                           </div>
-                          <div>
-                            <h4 class="h4">По (Н4):</h4>
-                            <label class="calendar">
-                              <input type="text" placeholder="Выберите дату" readonly="readonly" class="datepicker"/><i class="icon-calendar"></i>
-                            </label>
+                          <div class="form__group">
+                            <div class="form__bl">
+                              <label class="checkbox">
+                                <input type="checkbox" checked="checked"/><span>по настоящее время</span>
+                              </label>
+                            </div>
+                            <div class="form__bl">
+                              <label class="radiobox">
+                                <input type="radio" name="time" value="1" checked="checked"/><span>по настоящее время</span>
+                              </label>
+                              <label class="radiobox">
+                                <input type="radio" name="time" value="2"/><span>по ненастоящее время</span>
+                              </label>
+                            </div>
                           </div>
-                        </div>
-                        <div>
-                          <div>
-                            <label class="checkbox">
-                              <input type="checkbox" checked="checked"/><span>по настоящее время</span>
-                            </label>
-                          </div>
-                          <div>
-                            <label class="radiobox">
-                              <input type="radio" name="time" value="1" checked="checked"/><span>по настоящее время</span>
-                            </label>
-                            <label class="radiobox">
-                              <input type="radio" name="time" value="2"/><span>по ненастоящее время</span>
-                            </label>
-                          </div>
-                        </div>
-                      </form>
+                        </form>
+                      </div>
                     </section>
+                    <figure>
+                      <div class="form is-margin">
+                        <form>
+                          <div class="form__section"><i class="icon-uni"></i>
+                            <h4 class="h4 onleft is-another">Учебное заведение:</h4>
+                            <div class="select-wrap">
+                              <div class="select"><span>Напр. МГУ</span><i class="icon-angle-down"></i>
+                                <ul class="select__list js-scroll">
+                                  <li><a href="#">Красный</a></li>
+                                  <li><a href="#">Синий</a></li>
+                                  <li><a href="#">Зелёный</a></li>
+                                  <li><a href="#">Красный</a></li>
+                                  <li><a href="#">Синий</a></li>
+                                  <li><a href="#">Зелёный</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form__section"><i class="icon-feather"></i>
+                            <h4 class="h4 onleft is-another">Название курса:</h4>
+                            <label class="form__input is-error js-error">
+                              <input type="text" placeholder="Напр. Архитектура" class="input"/>
+                              <div class="error-message">Поле заполнено неверно. Повторите попытку</div>
+                            </label>
+                          </div>
+                          <div class="form__section is-margin">
+                            <h3 class="h3 onleft">Личные данные(Н3)</h3>
+                            <label class="special">
+                              <input type="text"/>
+                            </label>
+                          </div>
+                          <div class="form__section">
+                            <h4 class="h4 onleft">Учебное заведение:</h4>
+                            <label class="form__input">
+                              <input type="text" placeholder="Напр. Архитектура" class="input"/>
+                            </label>
+                          </div>
+                          <div class="form__section">
+                            <h4 class="h4 onleft">Название курса:</h4>
+                            <label class="form__input">
+                              <input type="text" value="МГУ ПРГР мкий" class="input"/><span class="form__note">*необязательное поле</span>
+                            </label>
+                          </div>
+                          <div class="form__section">
+                            <h4 class="h4 onleft no-margin">Название курса:</h4>
+                            <div class="form__cut">
+                              <p><i class="icon-clip"></i>Мои достижения.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a></p>
+                              <p><i class="icon-clip"></i>Мои достижения длинное название.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a></p>
+                            </div>
+                          </div>
+                          <div class="form__section">
+                            <h4 class="h4 onleft no-margin">Рекомендации:</h4>
+                            <div class="form__cut"><span>Иван Пётр Николаевич<a href="#"><i class="icon-edit"></i></a></span><span>8-495-123-45-67<a href="#"><i class="icon-edit"></i></a></span><a href="#" class="form__link">Добавить место работы</a></div>
+                          </div>
+                        </form>
+                      </div>
+                      <button type="button" class="btn is-padding"><i class="cross-ico"></i>Добавить курсы повышения квалификации</button>
+                      <div class="btn is-padding">
+                        <label class="checkbox">
+                          <input type="checkbox" checked="checked"/><span></span>
+                        </label>Нет опыта работы
+                      </div>
+                    </figure>
                     <section>
                       <h2 class="h2">Последнее место обучения (Н2):</h2>
                       <p>

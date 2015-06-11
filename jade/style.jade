@@ -18,31 +18,90 @@ block content
 							.slide__subttl
 								i.icon-lamp
 								h2.h2 Последнее место обучения (Н2):
-							section
-								form
-									div
-										div
-											h4.h4 С:
-											label.calendar
-												input(type="text" value="25.05.2012" readonly).datepicker
-												i.icon-calendar
-										div
-											h4.h4 По (Н4):
-											label.calendar
-												input(type="text" placeholder="Выберите дату" readonly).datepicker
-												i.icon-calendar
-									div
-										div
-											label.checkbox
-												input(type="checkbox" checked)
-												span по настоящее время
-										div
-											label.radiobox
-												input(type="radio" name="time" value="1" checked)
-												span по настоящее время
-											label.radiobox
-												input(type="radio" name="time" value="2")
-												span по ненастоящее время
+							section.no-margin
+								.form
+									form
+										.form__group
+											.form__bl
+												h4.h4 С:
+												label.calendar
+													input(type="text" value="25.05.2012" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												h4.h4 По (Н4):
+												label.calendar
+													input(type="text" placeholder="Выберите дату" readonly).datepicker
+													i.icon-calendar
+										.form__group
+											.form__bl
+												label.checkbox
+													input(type="checkbox" checked)
+													span по настоящее время
+											.form__bl
+												label.radiobox
+													input(type="radio" name="time" value="1" checked)
+													span по настоящее время
+												label.radiobox
+													input(type="radio" name="time" value="2")
+													span по ненастоящее время
+							figure
+								.form.is-margin
+									form
+										.form__section
+											i.icon-uni
+											h4.h4.onleft.is-another Учебное заведение:
+											.select-wrap
+												.select
+													span Напр. МГУ
+													i.icon-angle-down
+													ul.select__list.js-scroll
+														li: a(href="#") Красный
+														li: a(href="#") Синий
+														li: a(href="#") Зелёный
+														li: a(href="#") Красный
+														li: a(href="#") Синий
+														li: a(href="#") Зелёный
+										.form__section
+											i.icon-feather
+											h4.h4.onleft.is-another Название курса:
+											label.form__input.is-error.js-error
+												input(type="text" placeholder="Напр. Архитектура").input
+												.error-message Поле заполнено неверно. Повторите попытку
+										.form__section.is-margin
+											h3.h3.onleft Личные данные(Н3)
+											label.special
+												input(type="text")
+										.form__section
+											h4.h4.onleft Учебное заведение:
+											label.form__input
+												input(type="text" placeholder="Напр. Архитектура").input
+										.form__section
+											h4.h4.onleft Название курса:
+											label.form__input
+												input(type="text" value="МГУ ПРГР мкий").input
+												span.form__note *необязательное поле
+										.form__section
+											h4.h4.onleft.no-margin Название курса:
+											.form__cut
+												p
+													| <i class="icon-clip"></i>Мои достижения.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a>
+												p
+													| <i class="icon-clip"></i>Мои достижения длинное название.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a>
+										.form__section
+											h4.h4.onleft.no-margin Рекомендации:
+											.form__cut
+												span
+													| Иван Пётр Николаевич<a href="#"><i class="icon-edit"></i></a>
+												span
+													| 8-495-123-45-67<a href="#"><i class="icon-edit"></i></a>
+												a(href="#").form__link Добавить место работы
+								button(type="button").btn.is-padding
+									| <i class="cross-ico"></i>Добавить курсы повышения квалификации
+								.btn.is-padding
+									label.checkbox
+										input(type="checkbox" checked)
+										span
+									| Нет опыта работы
 							section
 								h2.h2 Последнее место обучения (Н2):
 								p.

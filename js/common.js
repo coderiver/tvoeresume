@@ -57,4 +57,7 @@ head.ready(function() {
 		});
 	});
 
+	//jscrollpane
+	$('.js-scroll').jScrollPane();
+
 });
