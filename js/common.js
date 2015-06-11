@@ -49,7 +49,12 @@ head.ready(function() {
 		$.datepicker.setDefaults(
 			$.extend($.datepicker.regional["ru"])
 		);
-		$(".datepicker").datepicker();
+		$(".datepicker").datepicker({
+			beforeShow: function(input, inst) {
+			    var widget = $(inst).datepicker('widget');
+			    widget.css('margin-left', $(input).outerWidth() - widget.outerWidth());
+			}
+		});
 	});
 
 });

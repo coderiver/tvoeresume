@@ -37,7 +37,8 @@
 					+arr(15, 21, #ed6247, tr)
 				&:after
 					+arr(15, 21, #ed6247, br)
-
+		.h1, .h2, .h3, .icon-lamp
+			color: #ED6247
 
 .content
 	&.is-inner
@@ -95,10 +96,33 @@
 			margin-bottom: 40px
 			padding: 0 15px
 			+clr
-			div
+			> div
 				&:not(:only-of-type)
 					float: left
 					width: 50%
+			form
+				> div
+					display: inline-block
+					vertical-align: baseline
+					&:first-child
+						vertical-align: middle
+						div
+							&:first-child
+								margin-right: 10px
+					div
+						display: inline-block
+						margin-right: 30px
+						vertical-align: top
+						.h4
+							display: inline-block
+							margin: 0 10px 0 0
+						label
+							display: inline-block
+						.radiobox
+							display: block
+							margin-bottom: 15px
+						.checkbox
+							margin-bottom: 0
 		article
 			div
 				margin-bottom: 40px
@@ -161,27 +185,16 @@
 				margin-right: 75px
 				&:last-child
 					margin-right: 0
-			div
-				display: inline-block
-				.h4
-					display: inline-block
-					margin: 0 10px 0 0
-				label
-					margin-right: 10px
-			label
-				display: inline-block
-				input
-					width: 100%
-					padding: 11px 14px 12px
-					background: #FAFAFA
-					border: 1px solid #dce6e6
-					border-radius: 5px
-					color: #2F5A71
-					+rob-b
-					+box
-					+placeholder
-						color: #9FB2B8
-						+rob-li
+		.radiobox, .checkbox
+			span
+				padding-left: 30px
+				&:before
+					width: 20px
+					height: 20px
+					border: 1px solid #E0E9E9
+					background: #fafafa
+				&:after
+					font-size: 18px
 	&__subttl
 		margin: 20px 0 35px
 		text-align: center

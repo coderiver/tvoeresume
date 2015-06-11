@@ -174,7 +174,7 @@ a
 			text-decoration: underline
 
 
-//radiobox
+//radiobox and checkbox
 .radiobox
 	display: block
 	cursor: pointer
@@ -187,7 +187,7 @@ a
 			+ span
 				&:after
 					+opacity(1)
-	&__text
+	span
 		display: inline-block
 		position: relative
 		padding-left: 40px
@@ -211,21 +211,11 @@ a
 			font-family: 'fontello'
 			+opacity(0)
 
-//form
-.form
-	.form__input
-		position: relative
-		display: block
-		margin-bottom: 10px
-	.input
-		width: 100%
-		padding: 7px 15px
-		background-color: #FAFAFA
-		font-size: 13px
-		+rob
-		+border-radius(3px)
-		+placeholder-color(#9FB2B8)
-
+.checkbox
+	@extend .radiobox
+	span
+		&:before
+			border-radius: 5px
 
 //buttons
 .btn
@@ -255,19 +245,43 @@ a
 		&:hover
 			background: #00857C
 
+//form
+.form
+	.form__input
+		position: relative
+		display: block
+		margin-bottom: 10px
+	.input
+		width: 100%
+		padding: 7px 15px
+		background-color: #FAFAFA
+		font-size: 13px
+		+rob
+		+border-radius(3px)
+		+placeholder-color(#9FB2B8)
+
+.calendar
+	position: relative
+	.icon-calendar
+		position: absolute
+		top: 50%
+		margin-top: -8px
+		right: 12px
+		font-size: 16px
+		color: #34B1E2
 
 //datepicker
-.ui-datepicker
-	width: 280px !important
-	padding: 0 !important
+.ui-datepicker.ui-widget
+	width: 280px
+	padding: 0
 	background: #FFF
 	font-size: 14px
 	box-shadow: 1px 1px 10px 0px rgba(35,104,126, 0.25)
 	+rob-m
 	td
-		border: 1px solid #d0d4d9 !important
+		border: 1px solid #d0d4d9
 	.ui-datepicker-header
-		padding: 6px 0 !important
+		padding: 6px 0
 		background: #34B1E2
 		color: #fff
 	.ui-datepicker-month
@@ -288,8 +302,50 @@ a
 	.ui-datepicker-today
 		color: #34B1E2
 		background: #EEF1F5
+	.ui-state-highlight
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: -0.1em
+			left: -0.1em
+			right: -0.1em
+			bottom: -0.1em
+			border: 1px solid #5bb7d4
 	.ui-datepicker-calendar
-		margin: 0 !important
+		margin: 0
+	.ui-datepicker-next,
+	.ui-datepicker-prev
+		top: 8px
+		color: #FFF
+		text-decoration: none
+		cursor: pointer
+		&:before
+			font-size: 20px
+			font-family: 'fontello'
+			line-height: 1
+		&:hover
+			right: 2px
+			color: #2F5A71
+	.ui-datepicker-next
+		&:before
+			content: "\e80c"
+			margin-left: 10px
+	.ui-datepicker-prev
+		&:before
+			content: "\e80b"
+			margin-left: 10px
 
 .datepicker
+	width: 100%
+	padding: 11px 14px 12px
+	background: #FAFAFA
+	border: 1px solid #dce6e6
+	border-radius: 5px
+	color: #2F5A71
+	+rob-b
+	+box
+	+placeholder
+		color: #9FB2B8
+		+rob-li
 	+unselectable

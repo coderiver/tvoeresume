@@ -69,17 +69,14 @@ a:visited { color: #9d35ce; }
 .index-list a { font-size: 18px; color: #5dc1e8; }
 .index-list a:hover { text-decoration: underline; }
 
-.radiobox { display: block; cursor: pointer; }
-.radiobox input { position: absolute; width: 27px; height: 27px; opacity: 0; }
-.radiobox input:checked + span:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
-.radiobox__text { display: inline-block; position: relative; padding-left: 40px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.radiobox__text:before { content: ""; position: absolute; top: 0; left: 0; width: 27px; height: 27px; border-radius: 50%; background: white; }
-.radiobox__text:after { content: "\e804"; position: absolute; font-size: 24px; top: -2px; left: 2px; color: #90c53b; font-family: "fontello"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
+.radiobox, .checkbox { display: block; cursor: pointer; }
+.radiobox input, .checkbox input { position: absolute; width: 27px; height: 27px; opacity: 0; }
+.radiobox input:checked + span:after, .checkbox input:checked + span:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.radiobox span, .checkbox span { display: inline-block; position: relative; padding-left: 40px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.radiobox span:before, .checkbox span:before { content: ""; position: absolute; top: 0; left: 0; width: 27px; height: 27px; border-radius: 50%; background: white; }
+.radiobox span:after, .checkbox span:after { content: "\e804"; position: absolute; font-size: 24px; top: -2px; left: 2px; color: #90c53b; font-family: "fontello"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 
-.form .form__input { position: relative; display: block; margin-bottom: 10px; }
-.form .input { width: 100%; padding: 7px 15px; background-color: #fafafa; font-size: 13px; font-family: "roboto-regular", Arial, sans-serif; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
-.form .input:-moz-placeholder, .form .input::-moz-placeholder { color: #9fb2b8; opacity: 1; }
-.form .input::-webkit-input-placeholder { color: #9fb2b8; }
+.checkbox span:before { border-radius: 5px; }
 
 .btn { padding: 19px 23px 18px; background: #5dc1e8; font-size: 14px; text-transform: uppercase; line-height: 1; color: white; border-radius: 50px; box-shadow: 0px 3px 0px 0px #4fa3c4; font-family: "roboto-bold", Arial, sans-serif; -moz-transition: background 0.2s ease; -o-transition: background 0.2s ease; -webkit-transition: background 0.2s ease; transition: background 0.2s ease; }
 .btn:hover { background: #4fa3c4; }
@@ -89,18 +86,38 @@ a:visited { color: #9d35ce; }
 .btn.is-green { background: #00aa9f; box-shadow: 0px 3px 0px 0px #00857c; }
 .btn.is-green:hover { background: #00857c; }
 
-.ui-datepicker { width: 280px !important; padding: 0 !important; background: white; font-size: 14px; box-shadow: 1px 1px 10px 0px rgba(35, 104, 126, 0.25); font-family: "roboto-medium", Arial, sans-serif; }
-.ui-datepicker td { border: 1px solid #d0d4d9 !important; }
-.ui-datepicker .ui-datepicker-header { padding: 6px 0 !important; background: #34b1e2; color: white; }
-.ui-datepicker .ui-datepicker-month { text-transform: uppercase; font-size: 16px; font-family: "roboto-bold", Arial, sans-serif; }
-.ui-datepicker .ui-datepicker-year { display: none; }
-.ui-datepicker .ui-state-default { padding: 10px 0; text-align: center; color: #4d5155; }
-.ui-datepicker .ui-datepicker-calendar thead { display: none; }
-.ui-datepicker .ui-datepicker-week-end a { color: #cccfd3; }
-.ui-datepicker .ui-datepicker-today { color: #34b1e2; background: #eef1f5; }
-.ui-datepicker .ui-datepicker-calendar { margin: 0 !important; }
+.form .form__input { position: relative; display: block; margin-bottom: 10px; }
+.form .input { width: 100%; padding: 7px 15px; background-color: #fafafa; font-size: 13px; font-family: "roboto-regular", Arial, sans-serif; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.form .input:-moz-placeholder, .form .input::-moz-placeholder { color: #9fb2b8; opacity: 1; }
+.form .input::-webkit-input-placeholder { color: #9fb2b8; }
 
-.datepicker { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.calendar { position: relative; }
+.calendar .icon-calendar { position: absolute; top: 50%; margin-top: -8px; right: 12px; font-size: 16px; color: #34b1e2; }
+
+.ui-datepicker.ui-widget { width: 280px; padding: 0; background: white; font-size: 14px; box-shadow: 1px 1px 10px 0px rgba(35, 104, 126, 0.25); font-family: "roboto-medium", Arial, sans-serif; }
+.ui-datepicker.ui-widget td { border: 1px solid #d0d4d9; }
+.ui-datepicker.ui-widget .ui-datepicker-header { padding: 6px 0; background: #34b1e2; color: white; }
+.ui-datepicker.ui-widget .ui-datepicker-month { text-transform: uppercase; font-size: 16px; font-family: "roboto-bold", Arial, sans-serif; }
+.ui-datepicker.ui-widget .ui-datepicker-year { display: none; }
+.ui-datepicker.ui-widget .ui-state-default { padding: 10px 0; text-align: center; color: #4d5155; }
+.ui-datepicker.ui-widget .ui-datepicker-calendar thead { display: none; }
+.ui-datepicker.ui-widget .ui-datepicker-week-end a { color: #cccfd3; }
+.ui-datepicker.ui-widget .ui-datepicker-today { color: #34b1e2; background: #eef1f5; }
+.ui-datepicker.ui-widget .ui-state-highlight { position: relative; }
+.ui-datepicker.ui-widget .ui-state-highlight:before { content: ""; position: absolute; top: -0.1em; left: -0.1em; right: -0.1em; bottom: -0.1em; border: 1px solid #5bb7d4; }
+.ui-datepicker.ui-widget .ui-datepicker-calendar { margin: 0; }
+.ui-datepicker.ui-widget .ui-datepicker-next, .ui-datepicker.ui-widget .ui-datepicker-prev { top: 8px; color: white; text-decoration: none; cursor: pointer; }
+.ui-datepicker.ui-widget .ui-datepicker-next:before, .ui-datepicker.ui-widget .ui-datepicker-prev:before { font-size: 20px; font-family: "fontello"; line-height: 1; }
+.ui-datepicker.ui-widget .ui-datepicker-next:hover, .ui-datepicker.ui-widget .ui-datepicker-prev:hover { right: 2px; color: #2f5a71; }
+.ui-datepicker.ui-widget .ui-datepicker-next:before { content: "\e80c"; margin-left: 10px; }
+.ui-datepicker.ui-widget .ui-datepicker-prev:before { content: "\e80b"; margin-left: 10px; }
+
+.datepicker { width: 100%; padding: 11px 14px 12px; background: #fafafa; border: 1px solid #dce6e6; border-radius: 5px; color: #2f5a71; font-family: "roboto-bold", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.datepicker:-ms-input-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
+.datepicker:-moz-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
+.datepicker::-moz-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
+.datepicker::-webkit-input-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
+.datepicker::placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
 
 .header { position: relative; background: white; }
 .header:after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; background: url(../img/header-bg.png) bottom repeat-x; z-index: 2; }
@@ -179,8 +196,8 @@ a:visited { color: #9d35ce; }
 .character__choose { position: absolute; top: 45px; left: 0; text-align: center; z-index: 2; font-family: "nautilus", Arial, sans-serif; background: url("../img/svg/cloud-bg.svg") no-repeat 0 0; -moz-background-size: 184px 83px; -o-background-size: 184px 83px; -webkit-background-size: 184px 83px; background-size: 184px 83px; width: 184px; height: 83px; display: inline-block; }
 .character__choose.is-another { top: 97px; left: inherit; right: 15px; background: url("../img/svg/cloud-bg2.svg") no-repeat 0 0; -moz-background-size: 135px 83px; -o-background-size: 135px 83px; -webkit-background-size: 135px 83px; background-size: 135px 83px; width: 135px; height: 83px; display: inline-block; }
 .character__choose span { display: inline-block; margin-top: 22px; font-size: 20px; color: #2f5a71; }
-.character .radiobox { position: relative; font-size: 24px; }
-.character .radiobox .radiobox__text { color: white; line-height: 27px; font-family: "opensans-bold-italic", Arial, sans-serif; }
+.character .radiobox, .character .checkbox { position: relative; font-size: 24px; }
+.character .radiobox .radiobox__text, .character .checkbox .radiobox__text { color: white; line-height: 27px; font-family: "opensans-bold-italic", Arial, sans-serif; }
 .character .icon-arrow { position: absolute; top: 18px; left: -60px; font-size: 60px; color: white; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
 
 .loading { position: relative; display: block; width: 389px; height: 389px; margin: 132px auto 0; background: url(../img/loading.png) no-repeat; overflow: hidden; border-radius: 50%; }
@@ -211,6 +228,7 @@ a:visited { color: #9d35ce; }
 .out.is-inner-girl .slide-nav-prev:hover .slide-nav-in:after { width: 0px; height: 0px; border-style: solid; border-width: 0 0 21px 15px; border-color: transparent transparent #2f5a71 transparent; }
 .out.is-inner-girl .slide-nav-prev .slide-nav-in:before { width: 0px; height: 0px; border-style: solid; border-width: 0 15px 21px 0; border-color: transparent #ed6247 transparent transparent; }
 .out.is-inner-girl .slide-nav-prev .slide-nav-in:after { width: 0px; height: 0px; border-style: solid; border-width: 0 0 21px 15px; border-color: transparent transparent #ed6247 transparent; }
+.out.is-inner-girl .h1, .out.is-inner-girl .h2, .out.is-inner-girl .h3, .out.is-inner-girl .icon-lamp { color: #ed6247; }
 
 .content.is-inner { padding-top: 50px; background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center 122% no-repeat; background-color: #5bb7d4; }
 .content.is-inner.bg-bottom { background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center bottom no-repeat; background-color: #5bb7d4; }
@@ -225,7 +243,15 @@ a:visited { color: #9d35ce; }
 .slide__in:after { content: " "; display: table; clear: both; }
 .slide__in section { margin-bottom: 40px; padding: 0 15px; *zoom: 1; }
 .slide__in section:after { content: " "; display: table; clear: both; }
-.slide__in section div:not(:only-of-type) { float: left; width: 50%; }
+.slide__in section > div:not(:only-of-type) { float: left; width: 50%; }
+.slide__in section form > div { display: inline-block; vertical-align: baseline; }
+.slide__in section form > div:first-child { vertical-align: middle; }
+.slide__in section form > div:first-child div:first-child { margin-right: 10px; }
+.slide__in section form > div div { display: inline-block; margin-right: 30px; vertical-align: top; }
+.slide__in section form > div div .h4 { display: inline-block; margin: 0 10px 0 0; }
+.slide__in section form > div div label { display: inline-block; }
+.slide__in section form > div div .radiobox, .slide__in section form > div div .checkbox { display: block; margin-bottom: 15px; }
+.slide__in section form > div div .checkbox { margin-bottom: 0; }
 .slide__in article div { margin-bottom: 40px; *zoom: 1; }
 .slide__in article div:after { content: " "; display: table; clear: both; }
 .slide__in article div img { float: left; margin: 5px 30px 0 0; }
@@ -244,16 +270,9 @@ a:visited { color: #9d35ce; }
 .slide__in figure figcaption:before { content: ""; position: absolute; top: 0; left: -15px; right: -15px; border-top: 1px dashed #cccccc; }
 .slide__in figure button { display: inline-block; margin-right: 75px; }
 .slide__in figure button:last-child { margin-right: 0; }
-.slide__in figure div { display: inline-block; }
-.slide__in figure div .h4 { display: inline-block; margin: 0 10px 0 0; }
-.slide__in figure div label { margin-right: 10px; }
-.slide__in figure label { display: inline-block; }
-.slide__in figure label input { width: 100%; padding: 11px 14px 12px; background: #fafafa; border: 1px solid #dce6e6; border-radius: 5px; color: #2f5a71; font-family: "roboto-bold", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.slide__in figure label input:-ms-input-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
-.slide__in figure label input:-moz-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
-.slide__in figure label input::-moz-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
-.slide__in figure label input::-webkit-input-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
-.slide__in figure label input::placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
+.slide__in .radiobox span, .slide__in .checkbox span, .slide__in .checkbox span { padding-left: 30px; }
+.slide__in .radiobox span:before, .slide__in .checkbox span:before, .slide__in .checkbox span:before { width: 20px; height: 20px; border: 1px solid #e0e9e9; background: #fafafa; }
+.slide__in .radiobox span:after, .slide__in .checkbox span:after, .slide__in .checkbox span:after { font-size: 18px; }
 .slide__subttl { margin: 20px 0 35px; text-align: center; }
 .slide__subttl .icon-lamp { display: inline-block; margin-right: 2px; font-size: 26px; color: #5dc1e8; }
 .slide__subttl .h2 { display: inline-block; margin-bottom: 0; vertical-align: bottom; }

@@ -18,15 +18,31 @@ block content
 							.slide__subttl
 								i.icon-lamp
 								h2.h2 Последнее место обучения (Н2):
-							figure
-								div
-									h4.h4 С:
-									label
-										input(type="text" value="25.05.2012" readonly).datepicker
-								div
-									h4.h4 По (Н4):
-									label
-										input(type="text" placeholder="Выберите дату" readonly).datepicker
+							section
+								form
+									div
+										div
+											h4.h4 С:
+											label.calendar
+												input(type="text" value="25.05.2012" readonly).datepicker
+												i.icon-calendar
+										div
+											h4.h4 По (Н4):
+											label.calendar
+												input(type="text" placeholder="Выберите дату" readonly).datepicker
+												i.icon-calendar
+									div
+										div
+											label.checkbox
+												input(type="checkbox" checked)
+												span по настоящее время
+										div
+											label.radiobox
+												input(type="radio" name="time" value="1" checked)
+												span по настоящее время
+											label.radiobox
+												input(type="radio" name="time" value="2")
+												span по ненастоящее время
 							section
 								h2.h2 Последнее место обучения (Н2):
 								p.
