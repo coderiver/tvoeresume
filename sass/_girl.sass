@@ -1,0 +1,102 @@
+//change color for girl template
+body
+	&.is-inner-girl
+		.btn
+			background: #ED6247
+			box-shadow: 0px 3px 0px 0px #bd4f39
+			&:hover
+				background: #bd4f39
+			&.is-olive
+				background: #80A446
+				box-shadow: 0px 3px 0px 0px #6c8642
+				&:hover
+					background: #6c8642
+			&.is-green
+				background: #00AA9F
+				box-shadow: 0px 3px 0px 0px #00857c
+				&:hover
+					background: #00857C
+			.cross-ico, .checkbox
+				background: #ff7c62
+		.header
+			.header__settings
+				i
+					color: #EE6B51
+		.item__bl
+			background: #ffeee3
+			border: 1px solid #ed6247
+			&.no-bg
+				background: #fff
+				border-color: #DCE6E6
+				&:hover
+					background: #fff
+					border-color: #ED6247
+			&:hover
+				background: #ED6247
+		.item__ico
+			color: #ED6247
+		.jspDrag
+			background: #ED6247
+		.ui-datepicker.ui-widget
+			.ui-datepicker-header
+				background: #ed6247
+			.ui-state-highlight:before
+				border-color: #ed6247
+		.slide__message
+			+svg(cloud-bg4, 290, 95)
+		.slide-nav-prev,
+		.slide-nav-next
+			background: #ed6247
+			&:hover
+				background: #2F5A71
+		.slide-nav-next
+			&:hover
+				.slide-nav-in
+					&:before
+						+arr(15, 21, #2f5a71, tl)
+					&:after
+						+arr(22, 15, #2f5a71, bl)
+			.slide-nav-in
+				&:before
+					+arr(15, 21, #ed6247, tl)
+				&:after
+					+arr(22, 15, #ed6247, bl)
+		.slide-nav-prev
+			&:hover
+				.slide-nav-in
+					&:before
+						+arr(15, 21, #2f5a71, tr)
+					&:after
+						+arr(15, 21, #2f5a71, br)
+			.slide-nav-in
+				&:before
+					+arr(15, 21, #ed6247, tr)
+				&:after
+					+arr(15, 21, #ed6247, br)
+		.slide-title
+			&:before
+				+svg(title-left-bg-girl, 16, 70)
+			&:after
+				+svg(title-right-bg-girl, 16, 70)
+		.h1, .h2, .h3,
+		.icon-lamp, .icon-calendar, .icon-angle-down,
+		.icon-uni, .icon-feather, .icon-clip, .icon-edit,
+		.icon-clock
+			color: #ED6247
+		.slide__in
+			ul, ol,
+			figure .form h4.is-another,
+			.form__link,
+			.form__cut p
+				color: #ED6247
+			.form__link
+				&:before
+					border-color: #ED6247
+			blockquote
+				background: #FFEFEF
+				box-shadow: 15px 0px 0px 0px #FFEFEF, -15px 0px 0px 0px #FFEFEF
+				p
+					&:before
+						color: #ED6247
+			.h4.is-another
+				color: #ED6247
