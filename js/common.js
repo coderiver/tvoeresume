@@ -1,6 +1,6 @@
 head.ready(function() {
 
-	//popup sign
+	//close on body click
 	$(document).on("click", function(){
 		$(".js-form").removeClass('is-visible');
 		$('.select__list').removeClass('is-visible');

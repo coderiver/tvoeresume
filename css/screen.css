@@ -178,6 +178,9 @@ a:visited { color: #9d35ce; }
 .header__or a { position: relative; display: inline-block; margin-left: 12px; padding-bottom: 5px; text-decoration: none; text-transform: uppercase; font-size: 14px; color: #4fd0d7; line-height: 1; vertical-align: baseline; font-family: "roboto-bold", Arial, sans-serif; }
 .header__or a:after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; border-bottom: 1px dashed #4fd0d7; }
 .header__or a:hover:after { width: 0; }
+.header__settings { float: right; font-size: 0; }
+.header__settings a { display: inline-block; color: #2f5a71; font-size: 12px; text-decoration: underline; font-family: "opensans-bold-italic", Arial, sans-serif; }
+.header__settings a:hover { text-decoration: none; }
 .header .form { position: absolute; right: 0; padding: 25px 15px 0; background-color: #334c55; font-size: 14px; z-index: 2; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: "roboto-regular", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; -webkit-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
 .header .form:after { content: ""; position: absolute; left: 0; bottom: -40px; background: url('../img/icons-s91aa59b0ff.png') 0 0 no-repeat; width: 192px; height: 40px; }
 .header .form.is-visible { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
