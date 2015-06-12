@@ -61,7 +61,8 @@ a:visited { color: #9d35ce; }
 
 .h3 { margin-bottom: 15px; text-align: center; font-size: 24px; color: #5dc1e8; font-family: "nautilus", Arial, sans-serif; }
 
-.h4 { margin-bottom: 20px; font-size: 14px; color: #2f5a71; font-family: "robotoslab-bold", Arial, sans-serif; }
+.h4 { text-align: center; margin-bottom: 20px; font-size: 14px; color: #2f5a71; font-family: "robotoslab-bold", Arial, sans-serif; }
+.h4 span { display: inline-block; vertical-align: middle; }
 
 .onleft { float: left; }
 
@@ -140,21 +141,23 @@ a:visited { color: #9d35ce; }
 
 .ui-datepicker.ui-widget { width: 280px; padding: 0; background: white; font-size: 14px; box-shadow: 1px 1px 10px 0px rgba(35, 104, 126, 0.25); z-index: 3 !important; font-family: "roboto-medium", Arial, sans-serif; }
 .ui-datepicker.ui-widget td { border: 1px solid #d0d4d9; }
-.ui-datepicker.ui-widget .ui-datepicker-header { padding: 6px 0; background: #34b1e2; color: white; }
+.ui-datepicker.ui-widget .ui-datepicker-header { text-align: center; padding: 6px 0; background: #34b1e2; color: white; }
 .ui-datepicker.ui-widget .ui-datepicker-month { text-transform: uppercase; font-size: 16px; font-family: "roboto-bold", Arial, sans-serif; }
 .ui-datepicker.ui-widget .ui-datepicker-year { display: none; }
-.ui-datepicker.ui-widget .ui-state-default { padding: 10px 0; text-align: center; color: #4d5155; }
+.ui-datepicker.ui-widget .ui-state-default { display: block; padding: 10px 0; text-decoration: none; text-align: center; color: #4d5155; }
 .ui-datepicker.ui-widget .ui-datepicker-calendar thead { display: none; }
 .ui-datepicker.ui-widget .ui-datepicker-week-end a { color: #cccfd3; }
 .ui-datepicker.ui-widget .ui-datepicker-today { color: #34b1e2; background: #eef1f5; }
 .ui-datepicker.ui-widget .ui-state-highlight { position: relative; }
 .ui-datepicker.ui-widget .ui-state-highlight:before { content: ""; position: absolute; top: -0.1em; left: -0.1em; right: -0.1em; bottom: -0.1em; border: 1px solid #5bb7d4; }
 .ui-datepicker.ui-widget .ui-datepicker-calendar { margin: 0; }
-.ui-datepicker.ui-widget .ui-datepicker-next, .ui-datepicker.ui-widget .ui-datepicker-prev { top: 8px; color: white; text-decoration: none; cursor: pointer; }
+.ui-datepicker.ui-widget .ui-datepicker-next, .ui-datepicker.ui-widget .ui-datepicker-prev { position: absolute; top: 8px; color: white; text-decoration: none; font-size: 0; cursor: pointer; }
 .ui-datepicker.ui-widget .ui-datepicker-next:before, .ui-datepicker.ui-widget .ui-datepicker-prev:before { font-size: 20px; font-family: "fontello"; line-height: 1; }
-.ui-datepicker.ui-widget .ui-datepicker-next:hover, .ui-datepicker.ui-widget .ui-datepicker-prev:hover { right: 2px; color: #2f5a71; }
-.ui-datepicker.ui-widget .ui-datepicker-next:before { content: "\e80c"; margin-left: 10px; }
-.ui-datepicker.ui-widget .ui-datepicker-prev:before { content: "\e80b"; margin-left: 10px; }
+.ui-datepicker.ui-widget .ui-datepicker-next:hover, .ui-datepicker.ui-widget .ui-datepicker-prev:hover { color: #2f5a71; }
+.ui-datepicker.ui-widget .ui-datepicker-next { right: 10px; }
+.ui-datepicker.ui-widget .ui-datepicker-next:before { content: "\e80c"; }
+.ui-datepicker.ui-widget .ui-datepicker-prev { left: 10px; }
+.ui-datepicker.ui-widget .ui-datepicker-prev:before { content: "\e80b"; }
 
 .datepicker { width: 100%; padding: 11px 14px 12px; background: #fafafa; border: 1px solid #dce6e6; border-radius: 5px; color: #2f5a71; font-family: "roboto-bold", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .datepicker:-ms-input-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
@@ -272,7 +275,10 @@ body.is-inner-girl .btn.is-green { background: #00aa9f; box-shadow: 0px 3px 0px 
 body.is-inner-girl .btn.is-green:hover { background: #00857c; }
 body.is-inner-girl .btn .cross-ico, body.is-inner-girl .btn .checkbox { background: #ff7c62; }
 body.is-inner-girl .header .header__settings i { color: #ee6b51; }
-body.is-inner-girl .regime h4 { color: #ed6247; }
+body.is-inner-girl .study__bl { background: #ffeee3; border: 1px solid #ed6247; }
+body.is-inner-girl .study__bl.no-bg { background: white; border-color: #dce6e6; }
+body.is-inner-girl .study__bl.no-bg:hover { background: white; border-color: #ed6247; }
+body.is-inner-girl .study__bl:hover { background: #ed6247; }
 body.is-inner-girl .jspDrag { background: #ed6247; }
 body.is-inner-girl .ui-datepicker.ui-widget .ui-datepicker-header { background: #ed6247; }
 body.is-inner-girl .ui-datepicker.ui-widget .ui-state-highlight:before { border-color: #ed6247; }
@@ -294,6 +300,7 @@ body.is-inner-girl .slide__in ul, body.is-inner-girl .slide__in ol, body.is-inne
 body.is-inner-girl .slide__in .form__link:before { border-color: #ed6247; }
 body.is-inner-girl .slide__in blockquote { background: #ffefef; box-shadow: 15px 0px 0px 0px #ffefef, -15px 0px 0px 0px #ffefef; }
 body.is-inner-girl .slide__in blockquote p:before { color: #ed6247; }
+body.is-inner-girl .slide__in .h4.is-another { color: #ed6247; }
 
 .content.is-inner { padding-top: 50px; background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center bottom no-repeat; background-color: #5bb7d4; }
 
@@ -302,13 +309,15 @@ body.is-inner-girl .slide__in blockquote p:before { color: #ed6247; }
 .paper .rect-ico { position: absolute; top: -7px; right: 55px; width: 200px; height: 50px; border-radius: 5px; background: #d2edf1; -moz-transform: rotate(-2deg); -ms-transform: rotate(-2deg); -webkit-transform: rotate(-2deg); transform: rotate(-2deg); }
 .paper .rect-ico-2 { position: absolute; top: 30px; left: -8px; width: 50px; height: 400px; border-radius: 5px; background: #d2edf1; -moz-transform: rotate(-2.5deg); -ms-transform: rotate(-2.5deg); -webkit-transform: rotate(-2.5deg); transform: rotate(-2.5deg); }
 
-.slide { position: relative; min-height: 640px; padding-bottom: 31px; background: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.slide { position: relative; min-height: 640px; padding-bottom: 31px; background-color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.slide.study-bg { background: white url(../img/svg/study-bg.svg) center bottom no-repeat; }
+.slide.start-bg { background: white url(../img/svg/start-bg.svg) center bottom no-repeat; }
 .slide__in { padding-top: 53px; color: #2f5a71; font-size: 14px; *zoom: 1; font-family: "roboto-light", Arial, sans-serif; }
 .slide__in:after { content: " "; display: table; clear: both; }
 .slide__subttl { margin: 20px 0 35px; text-align: center; }
 .slide__subttl .icon-lamp { display: inline-block; margin-right: 2px; font-size: 26px; color: #5dc1e8; }
 .slide__subttl .h2 { display: inline-block; margin-bottom: 0; vertical-align: bottom; }
-.slide__teacher { position: relative; margin: 47px 0 0 165px; z-index: 1; vertical-align: middle; background: url("../img/svg/teacher-bg.svg") no-repeat 0 0; -moz-background-size: 175px 450px; -o-background-size: 175px 450px; -webkit-background-size: 175px 450px; background-size: 175px 450px; width: 175px; height: 450px; display: inline-block; }
+.slide__teacher { position: relative; margin: 58px 0 0 149px; z-index: 1; vertical-align: middle; background: url("../img/svg/teacher-bg.svg") no-repeat 0 0; -moz-background-size: 175px 450px; -o-background-size: 175px 450px; -webkit-background-size: 175px 450px; background-size: 175px 450px; width: 175px; height: 450px; display: inline-block; }
 .slide__txt.start { display: inline-block; margin-top: 25px; vertical-align: middle; }
 .slide__txt.start .btn { display: block; margin: 0 auto; font-size: 30px; }
 .slide-bg { position: absolute; left: 50%; bottom: 25px; margin-left: -469px; background: url("../img/svg/start-bg.svg") no-repeat 0 0; -moz-background-size: 938px 170px; -o-background-size: 938px 170px; -webkit-background-size: 938px 170px; background-size: 938px 170px; width: 938px; height: 170px; display: inline-block; }
@@ -318,8 +327,7 @@ body.is-inner-girl .slide__in blockquote p:before { color: #ed6247; }
 .slide-title { position: absolute; width: 580px; top: -16px; left: 50%; margin-left: -310px; padding: 3px 0; background: white; }
 .slide-title:before { content: ""; position: absolute; top: 0; left: -7px; z-index: 2; background: url("../img/svg/title-left-bg.svg") no-repeat 0 0; -moz-background-size: 16px 70px; -o-background-size: 16px 70px; -webkit-background-size: 16px 70px; background-size: 16px 70px; width: 16px; height: 70px; display: inline-block; }
 .slide-title:after { content: ""; position: absolute; top: 0; right: -7px; background: url("../img/svg/title-right-bg.svg") no-repeat 0 0; -moz-background-size: 16px 70px; -o-background-size: 16px 70px; -webkit-background-size: 16px 70px; background-size: 16px 70px; width: 16px; height: 70px; display: inline-block; }
-.slide-title .h1 { position: relative; background: white; border-top: 1px dashed #cdcdcd; border-bottom: 1px dashed #cdcdcd; }
-.slide-title .h1 span { position: relative; display: block; padding: 14px 0; }
+.slide-title .h1 { position: relative; background: white; padding: 14px 0; border-top: 1px dashed #cdcdcd; border-bottom: 1px dashed #cdcdcd; }
 .slide-title .clip-ico { position: absolute; top: -10px; left: 15px; z-index: 2; background: url("../img/svg/clip-bg.svg") no-repeat 0 0; -moz-background-size: 20px 56px; -o-background-size: 20px 56px; -webkit-background-size: 20px 56px; background-size: 20px 56px; width: 20px; height: 56px; display: inline-block; }
 
 .slide-nav-prev, .slide-nav-next { position: absolute; height: 42px; top: 0; margin-top: 280px; background: #71c6e1; color: white; text-transform: uppercase; white-space: nowrap; -moz-transition: background 0.2s ease; -o-transition: background 0.2s ease; -webkit-transition: background 0.2s ease; transition: background 0.2s ease; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -381,9 +389,28 @@ body.is-inner-girl .slide__in blockquote p:before { color: #ed6247; }
 .regime__clock p.regime__p { position: relative; display: inline-block; max-height: 84px; padding: 0 20px; font-size: 16px; color: #2f5a71; vertical-align: middle; line-height: 1.35; overflow: hidden; z-index: 1; font-family: "roboto-bold", Arial, sans-serif; }
 .regime__clock > div { position: absolute; top: -16px; left: -16px; z-index: 0; }
 .regime__bar { position: absolute; border-radius: 50%; background: #5dc1e8; top: -22px; left: -22px; right: -22px; bottom: -22px; }
-.regime .h4 { text-transform: uppercase; text-align: center; font-size: 15px; color: #5dc1e8; }
-.regime .h4 span { display: inline-block; vertical-align: middle; }
+.regime .h4 { font-size: 15px; }
 .regime .icon-clock { display: inline-block; font-size: 23px; margin-right: 5px; vertical-align: middle; }
+
+.study { padding-top: 50px; text-align: center; }
+.study.another-pad { padding-top: 40px; }
+.study__wrap { font-size: 0; max-width: 490px; margin: 30px auto 0; }
+.study__bl { display: inline-block; width: 132px; height: 80px; margin: 0 15px 30px; background-color: #e3f8ff; border-radius: 3px; vertical-align: top; border: 1px solid #8dc8df; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; font-size: 0; -moz-transition: background 0.2s ease, border-color 0.2s ease; -o-transition: background 0.2s ease, border-color 0.2s ease; -webkit-transition: background 0.2s ease, border-color 0.2s ease; transition: background 0.2s ease, border-color 0.2s ease; }
+.study__bl:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.study__bl.no-bg { background: none; border-color: #dce6e6; }
+.study__bl.no-bg:hover { background: none; border-color: #5dc1e8; }
+.study__bl.no-bg:hover span { color: #2f5a71; }
+.study__bl:hover { background: #5dc1e8; }
+.study__bl:hover span { color: white; }
+.study__bl span { display: inline-block; font-size: 14px; vertical-align: middle; color: #2f5a71; line-height: 1; font-family: "roboto-bold", Arial, sans-serif; -moz-transition: color 0.2s ease; -o-transition: color 0.2s ease; -webkit-transition: color 0.2s ease; transition: color 0.2s ease; }
+.study__bl img { display: inline-block; max-width: 100%; max-height: 100%; vertical-align: middle; }
+.study__select { max-width: 456px; margin: 0 auto; *zoom: 1; }
+.study__select:after { content: " "; display: table; clear: both; }
+.study__select .h4 { margin-top: 10px; }
+.study__select div.select-wrap { padding-left: 160px; text-align: left; }
+.study .icon-year { display: inline-block; margin-right: 10px; font-size: 24px; vertical-align: middle; }
+.study i.icon-uni { float: none; }
+.study .icon-globe { display: inline-block; margin-right: 5px; font-size: 24px; vertical-align: middle; }
 
 .slide__in section { margin-bottom: 40px; padding: 0 15px; *zoom: 1; }
 .slide__in section.no-margin { margin-bottom: 0; }
@@ -410,8 +437,9 @@ body.is-inner-girl .slide__in blockquote p:before { color: #ed6247; }
 .slide__in figure .btn:last-child { margin-right: 0; }
 .slide__in figure .btn.is-padding .checkbox span { padding: 0; }
 .slide__in figure .form .h3 { position: relative; margin: 0; line-height: 1.4; z-index: 1; }
-.slide__in figure .form .h4 { margin: 13px 0 0; text-transform: uppercase; }
-.slide__in figure .form .h4.is-another { color: #5dc1e8; }
+.slide__in figure .form .h4 { margin: 13px 0 0; }
+.slide__in .h4 { text-transform: uppercase; }
+.slide__in .h4.is-another { color: #5dc1e8; }
 .slide__in .form.is-margin { margin: 20px 0 40px; }
 .slide__in .form .h4 { position: relative; display: inline-block; margin: 0 10px 0 0; font-size: 15px; z-index: 1; }
 .slide__in .form .h4.no-margin { margin: 0; line-height: 1.4; }
@@ -502,6 +530,12 @@ body.is-inner-girl .slide__in blockquote p:before { color: #ed6247; }
 .icon-angle-down:before { content: '\e814'; }
 
 .icon-clock:before { content: '\e815'; }
+
+.icon-language:before { content: '\e817'; }
+
+.icon-globe:before { content: '\e818'; }
+
+.icon-year:before { content: '\e819'; }
 
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
 .jspContainer { overflow: hidden; position: relative; }

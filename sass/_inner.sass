@@ -22,9 +22,17 @@ body
 			.header__settings
 				i
 					color: #EE6B51
-		.regime
-			h4
-				color: #ED6247
+		.study__bl
+			background: #ffeee3
+			border: 1px solid #ed6247
+			&.no-bg
+				background: #fff
+				border-color: #DCE6E6
+				&:hover
+					background: #fff
+					border-color: #ED6247
+			&:hover
+				background: #ED6247
 		.jspDrag
 			background: #ED6247
 		.ui-datepicker.ui-widget
@@ -88,6 +96,8 @@ body
 				p
 					&:before
 						color: #ED6247
+			.h4.is-another
+				color: #ED6247
 
 
 .content
@@ -131,8 +141,12 @@ body
 	position: relative
 	min-height: 640px
 	padding-bottom: 31px
-	background: #fff
+	background-color: #fff
 	+box
+	&.study-bg
+		background: #fff url(../img/svg/study-bg.svg) center bottom no-repeat
+	&.start-bg
+		background: #fff url(../img/svg/start-bg.svg) center bottom no-repeat
 	&__in
 		padding-top: 53px
 		color: #2F5A71
@@ -153,7 +167,7 @@ body
 			vertical-align: bottom
 	&__teacher
 		position: relative
-		margin: 47px 0 0 165px
+		margin: 58px 0 0 149px
 		z-index: 1
 		vertical-align: middle
 		+svg(teacher-bg, 175, 450)
@@ -207,12 +221,9 @@ body
 	.h1
 		position: relative
 		background: #fff
+		padding: 14px 0
 		border-top: 1px dashed #CDCDCD
 		border-bottom: 1px dashed #CDCDCD
-		span
-			position: relative
-			display: block
-			padding: 14px 0
 	.clip-ico
 		position: absolute
 		top: -10px
@@ -459,15 +470,78 @@ body
 		right: -22px
 		bottom: -22px
 	.h4
-		text-transform: uppercase
-		text-align: center
 		font-size: 15px
-		color: #5DC1E8
-		span
-			display: inline-block
-			vertical-align: middle
 	.icon-clock
 		display: inline-block
 		font-size: 23px
 		margin-right: 5px
+		vertical-align: middle
+
+//year
+.study
+	padding-top: 50px
+	text-align: center
+	&.another-pad
+		padding-top: 40px
+	&__wrap
+		font-size: 0
+		max-width: 490px
+		margin: 30px auto 0
+	&__bl
+		display: inline-block
+		width: 132px
+		height: 80px
+		margin: 0 15px 30px
+		background-color: #E3F8FF
+		border-radius: 3px
+		vertical-align: top
+		border: 1px solid #8dc8df
+		+box
+		+vertical
+		+transition(background 0.2s ease, border-color 0.2s ease)
+		&.no-bg
+			background: none
+			border-color: #DCE6E6
+			&:hover
+				background: none
+				border-color: #5dc1e8
+				span
+					color: #2F5A71
+		&:hover
+			background: #5dc1e8
+			span
+				color: #fff
+		span
+			display: inline-block
+			font-size: 14px
+			vertical-align: middle
+			color: #2F5A71
+			line-height: 1
+			+rob-b
+			+transition(color 0.2s ease)
+		img
+			display: inline-block
+			max-width: 100%
+			max-height: 100%
+			vertical-align: middle
+	&__select
+		max-width: 456px
+		margin: 0 auto
+		+clr
+		.h4
+			margin-top: 10px
+		div.select-wrap
+			padding-left: 160px
+			text-align: left
+	.icon-year
+		display: inline-block
+		margin-right: 10px
+		font-size: 24px
+		vertical-align: middle
+	i.icon-uni
+		float: none
+	.icon-globe
+		display: inline-block
+		margin-right: 5px
+		font-size: 24px
 		vertical-align: middle

@@ -1,7 +1,7 @@
 extend _skeleton-is-inner
 
 block title
-	title Создание резюме
+	title Расскажи о своей учебе
 
 block header
 	header.header
@@ -17,16 +17,28 @@ block content
 			.paper
 				i.rect-ico
 				i.rect-ico-2
-				.slide.start-bg
+				.slide.study-bg
 					.l-center
 						.slide-title
 							i.clip-ico
-							h1.h1 Выбери режим работы
+							h1.h1 Расскажи о своей учебе
 						.slide__in
-							.slide__teacher
-							.slide__txt.start
-								.slide__message: p А теперь приступим к созданию резюме!
-								button(type="button").btn Старт
+							.study
+								h4.h4.is-another
+									| <i class="icon-year"></i><span>Год поступления</span>
+								.study__wrap
+									a(href="#").study__bl
+										span 2009
+									a(href="#").study__bl
+										span 2010
+									a(href="#").study__bl
+										span 2011
+									a(href="#").study__bl
+										span 2012
+									a(href="#").study__bl.is-active
+										span 2013
+									a(href="#").study__bl
+										span 2014
 						a(href="#").slide-nav-prev
 							.slide-nav-in
 								i.triangle-ico

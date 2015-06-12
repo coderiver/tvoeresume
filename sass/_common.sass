@@ -161,10 +161,14 @@ a
 	+nautilus
 
 .h4
+	text-align: center
 	margin-bottom: 20px
 	font-size: 14px
 	color: #2F5A71
 	+slab-b
+	span
+		display: inline-block
+		vertical-align: middle
 
 .onleft
 	float: left
@@ -482,6 +486,7 @@ a
 	td
 		border: 1px solid #d0d4d9
 	.ui-datepicker-header
+		text-align: center
 		padding: 6px 0
 		background: #34B1E2
 		color: #fff
@@ -492,7 +497,9 @@ a
 	.ui-datepicker-year
 		display: none
 	.ui-state-default
+		display: block
 		padding: 10px 0
+		text-decoration: none
 		text-align: center
 		color: #4D5155
 	.ui-datepicker-calendar
@@ -517,25 +524,26 @@ a
 		margin: 0
 	.ui-datepicker-next,
 	.ui-datepicker-prev
+		position: absolute
 		top: 8px
 		color: #FFF
 		text-decoration: none
+		font-size: 0
 		cursor: pointer
 		&:before
 			font-size: 20px
 			font-family: 'fontello'
 			line-height: 1
 		&:hover
-			right: 2px
 			color: #2F5A71
 	.ui-datepicker-next
+		right: 10px
 		&:before
 			content: "\e80c"
-			margin-left: 10px
 	.ui-datepicker-prev
+		left: 10px
 		&:before
 			content: "\e80b"
-			margin-left: 10px
 
 .datepicker
 	width: 100%
