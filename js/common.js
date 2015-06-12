@@ -3,7 +3,7 @@ head.ready(function() {
 	//popup sign
 	$(document).on("click", function(){
 		$(".js-form").removeClass('is-visible');
-
+		$('.select__list').removeClass('is-visible');
 	});
 
 	$('.js-sign').click(function(e){
@@ -57,7 +57,21 @@ head.ready(function() {
 		});
 	});
 
-	//jscrollpane
+	//scroll
 	$('.js-scroll').jScrollPane();
 
+	//select dropdown
+	$('.select').click(function(){
+		$(this).find('.select__list').toggleClass('is-visible');
+		return false;
+	});
+
+	$('.select a').click(function(e){
+		e.preventDefault();
+
+		var value = $(this).parent('li').data('attr'),
+			place = $(this).closest('.select').find('.select__span');
+
+		place.text(value);
+	});
 });

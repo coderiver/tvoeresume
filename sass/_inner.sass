@@ -1,18 +1,37 @@
 //template for inner
-.out
+body
 	&.is-inner-girl
-		.slide-nav-prev,
-		.slide-nav-next
-			background: #ed6247
-			&:hover
-				background: #2F5A71
 		.btn
 			background: #ED6247
 			box-shadow: 0px 3px 0px 0px #bd4f39
 			&:hover
 				background: #bd4f39
+			&.is-olive
+				background: #80A446
+				box-shadow: 0px 3px 0px 0px #6c8642
+				&:hover
+					background: #6c8642
+			&.is-green
+				background: #00AA9F
+				box-shadow: 0px 3px 0px 0px #00857c
+				&:hover
+					background: #00857C
+			.cross-ico, .checkbox
+				background: #ff7c62
+		.jspDrag
+			background: #ED6247
+		.ui-datepicker.ui-widget
+			.ui-datepicker-header
+				background: #ed6247
+			.ui-state-highlight:before
+				border-color: #ed6247
 		.slide__message
 			+svg(cloud-bg4, 290, 95)
+		.slide-nav-prev,
+		.slide-nav-next
+			background: #ed6247
+			&:hover
+				background: #2F5A71
 		.slide-nav-next
 			&:hover
 				.slide-nav-in
@@ -38,14 +57,25 @@
 				&:after
 					+arr(15, 21, #ed6247, br)
 		.h1, .h2, .h3,
-		.icon-lamp, .icon-calendar
+		.icon-lamp, .icon-calendar, .icon-angle-down,
+		.icon-uni, .icon-feather, .icon-clip, .icon-edit
 			color: #ED6247
 		.slide__in
-			ul, ol
+			ul, ol,
+			figure .form h4.is-another,
+			.form__link,
+			.form__cut p
 				color: #ED6247
-			blockquote p
+			.form__link
 				&:before
-					color: #ED6247
+					border-color: #ED6247
+			blockquote
+				background: #FFEFEF
+				box-shadow: 15px 0px 0px 0px #FFEFEF, -15px 0px 0px 0px #FFEFEF
+				p
+					&:before
+						color: #ED6247
+
 
 .content
 	&.is-inner
@@ -346,4 +376,59 @@
 			background: #4FD0D7
 			border-radius: 100%
 
-
+//regime
+.regime
+	padding-top: 35px
+	&__bg
+		position: absolute
+		width: 147px
+		height: 184px
+		z-index: 1
+		left: 50%
+		bottom: 30px
+		margin-left: -73.5px
+		background-repeat: no-repeat
+		background-image: url(../img/svg/clock-bg.svg)
+		+cover
+	&__wrap
+		margin-top: 42px
+		text-align: center
+		font-size: 0
+	&__bl
+		display: inline-block
+		vertical-align: middle
+	&__clock
+		position: relative
+		display: block
+		width: 138px
+		height: 138px
+		margin: 55px 50px 0
+		background-image: url(../img/svg/dial-bg.svg)
+		-webkit-background-size: contain
+		-o-background-size: contain
+		background-size: contain
+		background-repeat: no-repeat
+		+vertical
+		span
+			display: inline-block
+			max-height: 84px
+			padding: 0 20px
+			font-size: 16px
+			color: #2f5a71
+			vertical-align: middle
+			line-height: 1.35
+			overflow: hidden
+			+rob-b
+	&__bar
+		position: absolute
+		border-radius: 50%
+		background: #5DC1E8
+		top: -22px
+		left: -22px
+		right: -22px
+		bottom: -22px
+	.h4
+		text-transform: uppercase
+		text-align: center
+		font-size: 15px
+		color: #5DC1E8

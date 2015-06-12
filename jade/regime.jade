@@ -1,0 +1,88 @@
+extend _skeleton-is-inner
+
+block title
+	title Выбери режим работы
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Выбери режим работы
+						.slide__in
+							.regime
+								h4.h4 График работы
+								.regime__wrap
+									.regime__bl
+										label.radiobox
+											input(type="radio" name="time" value="full" checked)
+											span
+										.regime__clock
+											span Полный день
+									.regime__bl
+										label.radiobox
+											input(type="radio" name="time" value="remote")
+											span
+										.regime__clock
+											span Удаленная работа
+									.regime__bl
+										label.radiobox
+											input(type="radio" name="time" value="shiftable")
+											span
+										.regime__clock
+											span Сменный график
+									.regime__bl
+										label.radiobox
+											input(type="radio" name="time" value="elastic")
+											span
+										.regime__clock
+											span Гибкий график
+								.regime__bg
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+						ul.slide-nav-indication
+							li.is-active
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
+							li
+								span
