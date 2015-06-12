@@ -18,6 +18,13 @@ body
 					background: #00857C
 			.cross-ico, .checkbox
 				background: #ff7c62
+		.header
+			.header__settings
+				i
+					color: #EE6B51
+		.regime
+			h4
+				color: #ED6247
 		.jspDrag
 			background: #ED6247
 		.ui-datepicker.ui-widget
@@ -56,9 +63,15 @@ body
 					+arr(15, 21, #ed6247, tr)
 				&:after
 					+arr(15, 21, #ed6247, br)
+		.slide-title
+			&:before
+				+svg(title-left-bg-girl, 16, 70)
+			&:after
+				+svg(title-right-bg-girl, 16, 70)
 		.h1, .h2, .h3,
 		.icon-lamp, .icon-calendar, .icon-angle-down,
-		.icon-uni, .icon-feather, .icon-clip, .icon-edit
+		.icon-uni, .icon-feather, .icon-clip, .icon-edit,
+		.icon-clock
 			color: #ED6247
 		.slide__in
 			ul, ol,
@@ -80,11 +93,8 @@ body
 .content
 	&.is-inner
 		padding-top: 50px
-		background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center 122% no-repeat
+		background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center bottom no-repeat
 		background-color: #5BB7D4
-		&.bg-bottom
-			background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center bottom no-repeat
-			background-color: #5BB7D4
 
 .paper
 	position: relative
@@ -175,18 +185,34 @@ body
 
 .slide-title
 	position: absolute
-	width: 620px
+	width: 580px
 	top: -16px
 	left: 50%
 	margin-left: -310px
 	padding: 3px 0
+	background: #fff
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: -7px
+		z-index: 2
+		+svg(title-left-bg, 16, 70)
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: -7px
+		+svg(title-right-bg, 16, 70)
 	.h1
 		position: relative
-		padding: 14px 0
 		background: #fff
 		border-top: 1px dashed #CDCDCD
 		border-bottom: 1px dashed #CDCDCD
-		z-index: 1
+		span
+			position: relative
+			display: block
+			padding: 14px 0
 	.clip-ico
 		position: absolute
 		top: -10px
@@ -387,9 +413,7 @@ body
 		left: 50%
 		bottom: 30px
 		margin-left: -73.5px
-		background-repeat: no-repeat
-		background-image: url(../img/svg/clock-bg.svg)
-		+cover
+		background: url(../img/svg/clock-bg.svg) center bottom no-repeat
 	&__wrap
 		margin-top: 42px
 		text-align: center
@@ -409,7 +433,8 @@ body
 		background-size: contain
 		background-repeat: no-repeat
 		+vertical
-		span
+		p.regime__p
+			position: relative
 			display: inline-block
 			max-height: 84px
 			padding: 0 20px
@@ -418,7 +443,13 @@ body
 			vertical-align: middle
 			line-height: 1.35
 			overflow: hidden
+			z-index: 1
 			+rob-b
+		> div
+			position: absolute
+			top: -16px
+			left: -16px
+			z-index: 0
 	&__bar
 		position: absolute
 		border-radius: 50%
@@ -432,3 +463,11 @@ body
 		text-align: center
 		font-size: 15px
 		color: #5DC1E8
+		span
+			display: inline-block
+			vertical-align: middle
+	.icon-clock
+		display: inline-block
+		font-size: 23px
+		margin-right: 5px
+		vertical-align: middle

@@ -51,8 +51,8 @@ head.ready(function() {
 		);
 		$(".datepicker").datepicker({
 			beforeShow: function(input, inst) {
-			    var widget = $(inst).datepicker('widget');
-			    widget.css('margin-left', $(input).outerWidth() - widget.outerWidth());
+				var widget = $(inst).datepicker('widget');
+				widget.css('margin-left', $(input).outerWidth() - widget.outerWidth());
 			}
 		});
 	});
@@ -73,5 +73,20 @@ head.ready(function() {
 			place = $(this).closest('.select').find('.select__span');
 
 		place.text(value);
+	});
+
+	//dial
+	$(function() {
+		if($('body').hasClass('is-inner-girl')){
+			$(".dial").knob({
+				bgColor: "transparent",
+				fgColor: "#ed6247"
+			});
+		} else{
+			$(".dial").knob({
+				bgColor: "transparent"
+			});
+
+		}
 	});
 });

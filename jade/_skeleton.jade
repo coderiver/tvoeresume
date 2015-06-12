@@ -1,38 +1,11 @@
 doctype3
 html
-	head
-		meta(charset="utf-8")
-		meta(http-equiv="X-UA-Compatible", content="IE=edge")
-		meta(name="viewport", content="width=device-width, initial-scale=1")
-		link(rel="stylesheet", href="css/screen.css" media="screen,print")
-		<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-		block title
-			title template
+	include head
 	body
 		.out
 			//BEGIN HEADER
-			header.header
-				.l-center
-					.header__wrap
-						.header__in
-							a(href="#").logo.onleft
-								| Твое<span>Резюме</span>
-							.header__sign.onright
-								span Войти с помощью
-								a(href="#").header__social
-									i.icon-vk
-								p.header__or
-									| или <a href="#" class="js-sign">по паролю</a>
-						.form.js-form
-							form
-								label.form__input
-									i.icon-mail
-									input(type="email" placeholder="Электронная почта").input
-								label.form__input
-									i.icon-pass
-									input(type="password" placeholder="Пароль").input
-								a(href="#").form__link напомнить пароль
-								button(type="submit").form__btn Вход
+			block header
+				include header
 			//END HEADER
 			//BEGIN CONTENT
 			.container

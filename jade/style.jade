@@ -3,8 +3,26 @@ extend _skeleton-style
 block title
 	title Стилевая страница
 
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+					.header__settings
+						a(href="#")
+							i.icon-help
+							p Помощь
+						a(href="#")
+							i.icon-settings
+							p Настройки
+						a(href="#")
+							i.icon-exit
+							p Выход
+
 block content
-	.content.is-inner.bg-bottom
+	.content.is-inner
 		.l-wide
 			.paper
 				i.rect-ico
@@ -13,7 +31,7 @@ block content
 					.l-center
 						.slide-title
 							i.clip-ico
-							h1.h1 Курсы или дополнительно (H1)
+							h1.h1: span Выбери режим работы
 						.slide__in
 							.slide__subttl
 								i.icon-lamp
@@ -189,3 +207,4 @@ block content
 								span
 							li
 								span
+

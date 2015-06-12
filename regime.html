@@ -4,8 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"/>
-    <link rel="stylesheet" href="css/jquery-ui.structure.min.css" media="screen,print"/><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print"/><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Выбери режим работы</title>
   </head>
   <body>
@@ -27,35 +26,47 @@
               <div class="slide">
                 <div class="l-center">
                   <div class="slide-title"><i class="clip-ico"></i>
-                    <h1 class="h1">Выбери режим работы</h1>
+                    <h1 class="h1"><span>Выбери режим работы</span></h1>
                   </div>
                   <div class="slide__in">
                     <div class="regime">
-                      <h4 class="h4">График работы</h4>
+                      <h4 class="h4"><i class="icon-clock"></i><span>График работы</span></h4>
                       <div class="regime__wrap">
                         <div class="regime__bl">
                           <label class="radiobox">
                             <input type="radio" name="time" value="full" checked="checked"/><span></span>
+                            <div class="regime__clock">
+                              <p class="regime__p">Полный день</p>
+                              <input type="text" value="75" data-angleOffset="270" data-width="170" data-thickness="34px" readonly="readonly" class="dial"/>
+                            </div>
                           </label>
-                          <div class="regime__clock"><span>Полный день</span></div>
                         </div>
                         <div class="regime__bl">
                           <label class="radiobox">
                             <input type="radio" name="time" value="remote"/><span></span>
+                            <div class="regime__clock">
+                              <p class="regime__p">Удаленная работа</p>
+                              <input type="text" value="10" data-angleOffset="100" data-width="170" data-thickness="34px" readonly="readonly" class="dial"/>
+                            </div>
                           </label>
-                          <div class="regime__clock"><span>Удаленная работа</span></div>
                         </div>
                         <div class="regime__bl">
                           <label class="radiobox">
                             <input type="radio" name="time" value="shiftable"/><span></span>
+                            <div class="regime__clock">
+                              <p class="regime__p">Сменный график</p>
+                              <input type="text" value="50" data-angleOffset="85" data-width="170" data-thickness="34px" readonly="readonly" class="dial"/>
+                            </div>
                           </label>
-                          <div class="regime__clock"><span>Сменный график</span></div>
                         </div>
                         <div class="regime__bl">
                           <label class="radiobox">
                             <input type="radio" name="time" value="elastic"/><span></span>
+                            <div class="regime__clock">
+                              <p class="regime__p">Гибкий график</p>
+                              <input type="text" value="29" data-angleOffset="-175" data-width="170" data-thickness="34px" readonly="readonly" class="dial"/>
+                            </div>
                           </label>
-                          <div class="regime__clock"><span>Гибкий график</span></div>
                         </div>
                       </div>
                       <div class="regime__bg"></div>
