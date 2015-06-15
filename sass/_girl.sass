@@ -33,11 +33,11 @@ body
 				background: #fff
 				border-color: #DCE6E6
 				&:hover,
-				&.is-active
+				&.active
 					background: #fff
 					border-color: #ED6247
 			&:hover,
-			&.is-active
+			&.active
 				background: #ED6247
 		.item__ico
 			color: #ED6247
@@ -109,5 +109,11 @@ body
 		.item-list
 			.item__link
 				&:hover,
-				&.is-active
+				&.active
 					background: #ed6247
+		.certificate__bl
+			&:hover,
+			&.active
+				&:after
+					+svg(certificate-bg-girl, 293, 86)
+

@@ -1,0 +1,62 @@
+extend _skeleton-is-inner
+
+block title
+	title Твои профессиональные навыки
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Твои профессиональные навыки
+						.slide__in
+							.skills
+								h2.h2
+									| <i class="icon-info"></i><span>Выбери или укажи ключевые навыки</span>
+								ul.item-list
+									li: a(href="#").item__link Навык расчета основных технико-экономические показателей деятельности производственного участка, технологического процесса
+									li: a(href="#").item__link.active Реставрация
+									li: a(href="#").item__link Навыки делового общения
+									li: a(href="#").item__link Изготовитель таблеток
+									li: a(href="#").item__link Реклама
+									li: a(href="#").item__link Штукатур
+									li: a(href="#").item__link Навыки делового общения
+									li: a(href="#").item__link Знание иностранных языков
+									li: a(href="#").item__link Знание языков программирования
+									li: a(href="#").item__link Навыки планирования продаж
+									li: a(href="#").item__link Навыки делового общения
+									li: a(href="#").item__link Реклама
+								i.icon-angle-down
+								.skills__bl
+									h2.h2
+										| <i class="icon-skill"></i><span>Что ты знаешь и умеешь делать:</span>
+									.skills__field
+										.skills__el
+											.skills__in
+												span Архитектор
+												a(href="#").icon-close
+										.skills__el
+											.skills__in
+												span Знание языков программирования
+												a(href="#").icon-close
+										.skills__el.is-block
+											.skills__in
+												span Навыки осуществления закупок товара
+												a(href="#").icon-close
+								.skills__teacher.onright
+									.skills__message
+										span Рекомендация сделает резюме привлекательнее
+						include slide-nav

@@ -152,6 +152,9 @@ a
 	font-size: 15px
 	color: #5DC1E8
 	+slab-b
+	span
+		display: inline-block
+		vertical-align: middle
 
 .h3
 	margin-bottom: 15px
@@ -166,9 +169,6 @@ a
 	font-size: 14px
 	color: #2F5A71
 	+slab-b
-	span
-		display: inline-block
-		vertical-align: middle
 
 .onleft
 	float: left
@@ -207,13 +207,13 @@ a
 			background: none
 			border-color: #DCE6E6
 			&:hover,
-			&.is-active
+			&.active
 				background: none
 				border-color: #5dc1e8
 				span
 					color: #2F5A71
 		&:hover,
-		&.is-active
+		&.active
 			background: #5dc1e8
 			span
 				color: #fff
@@ -263,8 +263,10 @@ a
 	li
 		display: inline-block
 		margin: 0 2px
+		vertical-align: middle
 	.item__link
 		display: block
+		max-width: 515px
 		padding: 4px 15px 7px
 		color: #2F5A71
 		font-size: 14px
@@ -274,7 +276,7 @@ a
 		+box
 		+transition(all 0.1s ease)
 		&:hover,
-		&.is-active
+		&.active
 			background: #5dc1e8
 			color: #FFF
 
@@ -307,7 +309,7 @@ a
 			border-radius: 50%
 			background: #FFF
 		&:after
-			content: "\e804"
+			content: $icon-checked
 			position: absolute
 			font-size: 24px
 			top: -2px
@@ -444,7 +446,7 @@ a
 			.input
 				border-color: #ff7d64
 			&:after
-				content: "\e80a"
+				content: $icon-error
 				position: absolute
 				top: 50%
 				right: -20px
@@ -497,7 +499,10 @@ a
 		+placeholder
 			color: #9FB2B8
 			+rob-li
-
+		&.placeholder
+			+placeholder
+				font-size: 13px
+				+rob
 .input-load
 	position: absolute
 	left: 0

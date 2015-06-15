@@ -288,7 +288,7 @@
 		right: 100%
 	li
 		display: inline-block
-		&.is-active
+		&.active
 			span
 				border-color: #4FD0D7
 				&:before
@@ -455,3 +455,128 @@
 .courses
 	.btn
 		margin-top: 30px
+
+//certificate
+.certificate
+	margin-top: 32px
+	&__wrap
+		margin-top: 37px
+	&__bl
+		position: relative
+		width: 293px
+		height: 70px
+		margin: 0 auto 35px
+		text-align: center
+		color: #2F5A71
+		cursor: pointer
+		+rob-b
+		+vertical
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			+svg(certificate-bg, 293, 86)
+		&:hover,
+		&.active
+			color: #FFF
+			&:after
+				+svg(certificate-bg-boy, 293, 86)
+		span
+			position: relative
+			display: inline-block
+			max-height: 60px
+			vertical-align: middle
+			font-size: 14px
+			z-index: 1
+			overflow: hidden
+	.form
+		.form__input
+			display: inline-block
+			width: 100%
+			max-width: 175px
+			margin-bottom: 0
+			padding-left: 0
+			vertical-align: middle
+			z-index: 1
+	.icon-certificate
+		display: inline-block
+		margin-right: 5px
+		font-size: 24px
+		vertical-align: middle
+
+//skills
+.skills
+	margin-top: 32px
+	&__bl
+		margin-top: 15px
+		padding: 0 15px
+		.h2
+			text-align: left
+	&__field
+		min-height: 115px
+		padding: 6px 0
+		background-color: #FAFAFA
+		border-radius: 3px
+		border: 1px solid #DCE6E6
+		+box
+	&__el
+		display: inline-block
+		margin: 5px
+		&.is-block
+			display: block
+	&__teacher
+		position: relative
+		width: 95px
+		height: 124px
+		margin: 40px 15px 0 0
+		background-image: url(../img/svg/teacher-bg.svg)
+		background-repeat: no-repeat
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+	&__message
+		position: absolute
+		right: 100%
+		bottom: 55px
+		z-index: 0
+		+svg(cloud-bg5, 210, 87)
+		span
+			display: inline-block
+			padding: 19px 0 0 22px
+			color: #FFF
+			font-size: 16px
+			line-height: 22px
+			+nautilus
+	.skills__in
+		display: inline-block
+		padding: 4px 10px 7px 5px
+		font-size: 14px
+		background: #5dc1e8
+		color: #FFF
+		border-radius: 3px
+		+rob-b
+		.icon-close
+			display: inline-block
+			color: #FFF
+			vertical-align: middle
+			&:visited
+				color: #FFF
+	.item-list
+		margin-top: 30px
+	.icon-info
+		display: inline-block
+		font-size: 20px
+		margin-right: 15px
+	.icon-skill
+		display: inline-block
+		margin-right: 12px
+		font-size: 29px
+		vertical-align: middle
+	.icon-angle-down
+		display: block
+		text-align: center
+		font-size: 45px
+		color: #5DC1E8
+		&:before
+			line-height: 0.5
