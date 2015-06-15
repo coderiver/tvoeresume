@@ -206,12 +206,14 @@ a
 		&.no-bg
 			background: none
 			border-color: #DCE6E6
-			&:hover
+			&:hover,
+			&.is-active
 				background: none
 				border-color: #5dc1e8
 				span
 					color: #2F5A71
-		&:hover
+		&:hover,
+		&.is-active
 			background: #5dc1e8
 			span
 				color: #fff
@@ -260,6 +262,7 @@ a
 	font-size: 0
 	li
 		display: inline-block
+		margin: 0 2px
 	.item__link
 		display: block
 		padding: 4px 15px 7px
@@ -270,7 +273,8 @@ a
 		+rob-b
 		+box
 		+transition(all 0.1s ease)
-		&:hover
+		&:hover,
+		&.is-active
 			background: #5dc1e8
 			color: #FFF
 
