@@ -1,3 +1,5 @@
 .sass-cache/
 *.sublime-project
 *.sublime-workspace
+.idea/
+prepros.cfg
