@@ -199,6 +199,7 @@ a
 		vertical-align: top
 		border: 1px solid #8dc8df
 		overflow: hidden
+		white-space: nowrap
 		+box
 		+vertical
 		+transition(background 0.2s ease, border-color 0.2s ease)
@@ -232,6 +233,7 @@ a
 	.item__in
 		display: inline-block
 		vertical-align: middle
+		white-space: normal
 		span
 			display: block
 			text-transform: uppercase
@@ -251,6 +253,27 @@ a
 	.icon-guitar
 		margin-top: -6px
 		font-size: 29px
+
+.item-list
+	text-align: center
+	list-style-type: none
+	font-size: 0
+	li
+		display: inline-block
+	.item__link
+		display: block
+		padding: 4px 15px 7px
+		color: #2F5A71
+		font-size: 14px
+		text-decoration: none
+		border-radius: 3px
+		+rob-b
+		+box
+		+transition(all 0.1s ease)
+		&:hover
+			background: #5dc1e8
+			color: #FFF
+
 
 //radiobox and checkbox
 .radiobox
@@ -315,6 +338,8 @@ a
 	box-shadow: 0px 3px 0px 0px #4FA3C4
 	+rob-b
 	+transition(background 0.2s ease)
+	&-wrap
+		text-align: center
 	&:hover
 		background: #4FA3C4
 	&:active
@@ -331,8 +356,16 @@ a
 			background: #00857C
 	&.is-padding
 		display: inline-block
-		padding-left: 53px
 		cursor: pointer
+		padding: 0
+		span
+			display: block
+			padding: 15px 23px 15px 53px
+		.checkbox
+			span
+				padding-left: 53px
+		&:active
+			top: 0
 	.cross-ico
 		position: absolute
 		top: 0
@@ -362,43 +395,39 @@ a
 			margin-top: -1px
 			background: #FFF
 	.checkbox
-		position: absolute
-		top: 0
-		left: 1px
-		width: 42px
-		height: 44px
 		border-radius: 50%
-		background: #66D4FF
 		span
-			position: absolute
-			top: 50%
-			left: 50%
-			padding: 0
+			padding-left: 53px
 			&:before
 				width: 20px
 				height: 20px
 				top: 50%
-				left: 50%
+				left: 12px
 				border-radius: 20px
-				margin: -10px 0 0 -10px
+				margin-top: -10px
+				box-shadow: 0 0 0 12px #66d4ff
 				+box
 			&:after
 				top: 50%
-				left: 50%
-				margin: -10px 0 0 -9px
+				left: 12px
+				margin-top: -10px
 
 //form
 .form
 	&__group
 		display: inline-block
-		vertical-align: baseline
+		&:not(only-of-type)
+			&:first-child
+				vertical-align: middle
 		&:last-child
 			.form__bl
 				margin-right: 10px
 	&__bl
 		display: inline-block
 		margin-right: 30px
-		vertical-align: top
+		vertical-align: middle
+		&.is-top
+			vertical-align: top
 	&__section
 		display: block
 		margin-bottom: 10px
@@ -457,12 +486,23 @@ a
 		width: 100%
 		padding: 7px 15px
 		background-color: #FAFAFA
-		font-size: 13px
+		font-size: 14px
 		border-radius: 3px
-		+rob
+		color: #2F5A71
+		+rob-b
 		+placeholder
 			color: #9FB2B8
 			+rob-li
+
+.input-load
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	top: 0
+	opacity: 0
+	cursor: pointer
+	z-index: 2
 
 .calendar
 	position: relative
@@ -479,7 +519,7 @@ a
 	position: relative
 	.select
 		position: relative
-		padding: 10px 15px
+		padding: 10px 13px
 		font-size: 13px
 		color: #2F5A71
 		background-color: #FAFAFA
@@ -507,10 +547,12 @@ a
 		border: 1px solid #dce6e6
 		list-style-type: none
 		opacity: 0
+		visibility: hidden
 		z-index: 2
 		+box
 		&.is-visible
 			opacity: 1
+			visibility: visible
 		li
 			margin-bottom: 0
 			&:first-child
@@ -620,6 +662,7 @@ a
 	border: 1px solid #dce6e6
 	border-radius: 5px
 	color: #2F5A71
+	cursor: pointer
 	+rob-b
 	+box
 	+placeholder

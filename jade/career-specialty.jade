@@ -1,0 +1,55 @@
+extend _skeleton-is-inner
+
+block title
+	title Выбери желаемую должность
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Выбери желаемую должность
+						.slide__in
+							.career
+								h4.h4.is-another
+									| <i class="icon-glasses"></i><span>По специальности в дипломе:</span>
+								ul.item-list
+									li: a(href="#").item__link Автомеханик
+									li: a(href="#").item__link Архитектор мостов
+									li: a(href="#").item__link Изготовитель таблеток
+									li: a(href="#").item__link Реклама
+									li: a(href="#").item__link Штукатур
+									li: a(href="#").item__link Информационные системы
+									li: a(href="#").item__link Информационные системы
+									li: a(href="#").item__link Архитектор мостов
+									li: a(href="#").item__link Изготовитель таблеток
+									li: a(href="#").item__link Реклама
+									li: a(href="#").item__link Штукатур
+									li: a(href="#").item__link Информационные системы
+									li: a(href="#").item__link Архитектор мостов
+									li: a(href="#").item__link Изготовитель таблеток
+								.form
+									form
+										.form__section
+											h4.h4.is-another.onleft Название должности:
+											label.form__input
+												input.input(type="text" value="Архитектор мостов")
+										.btn-wrap
+											.btn.is-padding
+												label.checkbox
+													input(type="checkbox" checked)
+													span Не хочу работать по специальности
+						include slide-nav

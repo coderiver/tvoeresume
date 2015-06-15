@@ -16,8 +16,12 @@ body
 				box-shadow: 0px 3px 0px 0px #00857c
 				&:hover
 					background: #00857C
-			.cross-ico, .checkbox
+			.cross-ico
 				background: #ff7c62
+			.checkbox
+				span
+					&:before
+						box-shadow: 0 0 0 12px #ff7c62
 		.header
 			.header__settings
 				i
@@ -100,3 +104,7 @@ body
 						color: #ED6247
 			.h4.is-another
 				color: #ED6247
+		.item-list
+			.item__link
+				&:hover
+					background: #ed6247

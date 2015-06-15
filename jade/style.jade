@@ -40,22 +40,22 @@ block content
 								.form
 									form
 										.form__group
-											.form__bl
+											.form__bl.is-top
 												h4.h4 С:
 												label.calendar
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
-											.form__bl
+											.form__bl.is-top
 												h4.h4 По (Н4):
 												label.calendar
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
 										.form__group
-											.form__bl
+											.form__bl.is-top
 												label.checkbox
 													input(type="checkbox" checked)
 													span по настоящее время
-											.form__bl
+											.form__bl.is-top
 												label.radiobox
 													input(type="radio" name="time" value="1" checked)
 													span по настоящее время
@@ -96,7 +96,7 @@ block content
 										.form__section
 											h4.h4.onleft Название курса:
 											label.form__input
-												input(type="text" value="МГУ ПРГР мкий").input
+												input(type="text" value="МГУ ПРГР мкий").input.small-txt
 												span.form__note *необязательное поле
 										.form__section
 											h4.h4.onleft.no-margin Название курса:
@@ -113,13 +113,15 @@ block content
 												span
 													| 8-495-123-45-67<a href="#"><i class="icon-edit"></i></a>
 												a(href="#").form__link Добавить место работы
-								button(type="button").btn.is-padding
-									| <i class="cross-ico"></i>Добавить курсы повышения квалификации
+								.btn.is-padding
+									label.input-load
+										input(type="file")
+									i.cross-ico
+									span Добавить курсы повышения квалификации
 								.btn.is-padding
 									label.checkbox
 										input(type="checkbox" checked)
-										span
-									| Нет опыта работы
+										span Нет опыта работы
 							section
 								h2.h2 Последнее место обучения (Н2):
 								p.

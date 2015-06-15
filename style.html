@@ -41,13 +41,13 @@
                       <div class="form">
                         <form>
                           <div class="form__group">
-                            <div class="form__bl">
+                            <div class="form__bl is-top">
                               <h4 class="h4">С:</h4>
                               <label class="calendar">
                                 <input type="text" value="25.05.2012" readonly="readonly" class="datepicker"/><i class="icon-calendar"></i>
                               </label>
                             </div>
-                            <div class="form__bl">
+                            <div class="form__bl is-top">
                               <h4 class="h4">По (Н4):</h4>
                               <label class="calendar">
                                 <input type="text" placeholder="Выберите дату" readonly="readonly" class="datepicker"/><i class="icon-calendar"></i>
@@ -55,12 +55,12 @@
                             </div>
                           </div>
                           <div class="form__group">
-                            <div class="form__bl">
+                            <div class="form__bl is-top">
                               <label class="checkbox">
                                 <input type="checkbox" checked="checked"/><span>по настоящее время</span>
                               </label>
                             </div>
-                            <div class="form__bl">
+                            <div class="form__bl is-top">
                               <label class="radiobox">
                                 <input type="radio" name="time" value="1" checked="checked"/><span>по настоящее время</span>
                               </label>
@@ -112,7 +112,7 @@
                           <div class="form__section">
                             <h4 class="h4 onleft">Название курса:</h4>
                             <label class="form__input">
-                              <input type="text" value="МГУ ПРГР мкий" class="input"/><span class="form__note">*необязательное поле</span>
+                              <input type="text" value="МГУ ПРГР мкий" class="input small-txt"/><span class="form__note">*необязательное поле</span>
                             </label>
                           </div>
                           <div class="form__section">
@@ -128,11 +128,15 @@
                           </div>
                         </form>
                       </div>
-                      <button type="button" class="btn is-padding"><i class="cross-ico"></i>Добавить курсы повышения квалификации</button>
+                      <div class="btn is-padding">
+                        <label class="input-load">
+                          <input type="file"/>
+                        </label><i class="cross-ico"></i><span>Добавить курсы повышения квалификации</span>
+                      </div>
                       <div class="btn is-padding">
                         <label class="checkbox">
-                          <input type="checkbox" checked="checked"/><span></span>
-                        </label>Нет опыта работы
+                          <input type="checkbox" checked="checked"/><span>Нет опыта работы</span>
+                        </label>
                       </div>
                     </figure>
                     <section>
@@ -197,6 +201,7 @@
                     <div class="slide-nav-in"><i class="triangle-ico"></i><span>Далее</span><i class="icon-angle-right"></i></div><i class="line-ico"></i></a>
                   <ul class="slide-nav-indication">
                     <li class="is-active"><span></span></li>
+                    <li><span></span></li>
                     <li><span></span></li>
                     <li><span></span></li>
                     <li><span></span></li>

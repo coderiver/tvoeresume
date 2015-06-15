@@ -1,0 +1,74 @@
+extend _skeleton-is-inner
+
+block title
+	title Выбери желаемую должность
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide.courses-bg
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Курсы или дополнительное образование
+						.slide__in
+							.courses
+								.slide__subttl
+									i.icon-lamp
+									h2.h2 Последнее место обучения:
+								section
+									.form
+										form
+											.form__bl
+												h4.h4 С:
+												label.calendar
+													input(type="text" value="25.05.2012" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												h4.h4 По (Н4):
+												label.calendar
+													input(type="text" placeholder="Выберите дату" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												label.radiobox
+													input(type="checkbox" name="time" value="1")
+													span по настоящее время
+								figure
+									.form.is-margin
+										form
+											.form__section
+												i.icon-uni
+												h4.h4.onleft.is-another Учебное заведение:
+												.select-wrap
+													.select
+														span.select__span Напр. МГУ
+														i.icon-angle-down
+														ul.select__list.js-scroll
+															li(data-attr="Красный"): a(href="#") Красный
+															li(data-attr="Синий"): a(href="#") Синий
+															li(data-attr="Зелёный"): a(href="#") Зелёный
+															li(data-attr="Красный"): a(href="#") Красный
+															li(data-attr="Синий"): a(href="#") Синий
+															li(data-attr="Зелёный"): a(href="#") Зелёный
+											.form__section
+												i.icon-feather
+												h4.h4.onleft.is-another Название курса:
+												label.form__input
+													input(type="text" placeholder="Напр. Архитектура").input
+												.btn.is-padding
+													label.input-load
+														input(type="file")
+													i.cross-ico
+													span Добавить курсы повышения квалификации
+						include slide-nav
