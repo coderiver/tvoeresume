@@ -1,0 +1,55 @@
+extend _skeleton-is-inner
+
+block title
+	title Личные качества и хобби
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide.hobby-bg
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Личные качества и хобби
+						.slide__in
+							.hobby
+								h2.h2
+									| <i class="icon-hobby"></i><span>Хобби</span>
+								.hobby__wrap
+									textarea.textarea(placeholder="Каковы твои хобби")
+									a(href="#").hobby__link
+										i.icon-note
+										span Подсказка
+											i.icon-arrow
+									.hint
+										.hint__message
+											a(href="#").icon-close
+											| HR-директора призывают указывать информацию, только о тех хобби и увлечениях, которые соответствуют специальности и характеру будущей работы
+										.hint__message
+											a(href="#").icon-close
+											| В зависимости от специфики должностных обязанностей и профиля деятельности компаний под негласный запрет попадают экстремальный спорт, охота и увлечение современной музыкой.
+											| Рекрутеры объясняют это так: из-за увлечений экстремальными видами спорта сотрудники часто берут длительные больничные, а музыканты вызывают подозрение в злоупотреблении алкоголем.
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+

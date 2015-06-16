@@ -61,6 +61,7 @@
 +font(opensans-bold, opensans-bold)
 +font(opensans-bold-italic, opensans-bold-italic)
 +font(nautilus, nautilus)
++font(badscript, badscript)
 
 =rob
 	font-family: "roboto-regular", Arial, sans-serif
@@ -88,6 +89,8 @@
 	font-family: "opensans-bold-italic", Arial, sans-serif
 =nautilus
 	font-family: "nautilus", Arial, sans-serif
+=script
+	font-family: "badscript", Arial, sans-serif
 
 html, body
 	height: 100%
@@ -115,8 +118,9 @@ body
 
 //layout
 .container
+	position: relative
 	min-height: 500px
-	overflow: hidden
+	//overflow: hidden
 
 .l-wide
 	width: 1000px
@@ -523,6 +527,20 @@ a
 		font-size: 16px
 		color: #34B1E2
 
+//textarea
+.textarea
+	width: 100%
+	height: 131px
+	padding: 10px
+	font-size: 14px
+	background-color: #FAFAFA
+	border-radius: 3px
+	resize: none
+	border-color: #DCE6E6
+	+box
+	+placeholder
+		+rob-li
+
 //select
 .select-wrap
 	position: relative
@@ -679,3 +697,42 @@ a
 		+rob-li
 	+unselectable
 
+//hint
+.hint
+	position: absolute
+	top: 75px
+	right: 0
+	z-index: 2
+	&:before
+		content: ""
+		position: absolute
+		width: 69px
+		height: 155px
+		background-image: url(../img/svg/teacher-bg.svg)
+	&__message
+		position: relative
+		max-width: 330px
+		margin: 0 100px 10px 0
+		padding: 15px 12px
+		background-color: #FFF9E8
+		border-radius: 20px
+		box-shadow: 0 1px 16px #fff9e8
+		color: #666
+		font-size: 13px
+		border: 1px solid #e0dbcc
+		+rob-l
+		a.icon-close
+			position: absolute
+			top: 8px
+			right: 8px
+			background: #E0DBCC
+			padding: 5px 4px 4px 6px
+			font-size: 12px
+			border-radius: 20px
+			color: #fef8e7
+			&:before
+				width: auto
+			&:visited
+				color: #fef8e7
+			&:hover
+				background: red

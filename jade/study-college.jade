@@ -33,7 +33,7 @@ block content
 									a(href="#").item__bl.no-bg
 										.item__in
 											img(src="img/college2.jpg", alt="")
-									a(href="#").item__bl.no-bg.is-active
+									a(href="#").item__bl.no-bg.active
 										.item__in
 											img(src="img/college3.jpg", alt="")
 									a(href="#").item__bl.no-bg
@@ -69,4 +69,16 @@ block content
 												li(data-attr="Красный"): a(href="#") Красный
 												li(data-attr="Синий"): a(href="#") Синий
 												li(data-attr="Зелёный"): a(href="#") Зелёный
-						include slide-nav
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+
