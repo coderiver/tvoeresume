@@ -699,19 +699,35 @@ a
 
 //hint
 .hint
+	opacity: 0
 	position: absolute
 	top: 75px
 	right: 0
-	z-index: 2
-	&:before
+	min-height: 200px
+	z-index: -1
+	overflow: hidden
+	&:after
 		content: ""
 		position: absolute
-		width: 69px
+		top: 125px
+		right: -30px
+		width: 75px
 		height: 155px
+		margin-top: -77.5px
 		background-image: url(../img/svg/teacher-bg.svg)
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		+transform(rotate(-33deg) translateX(70px))
+		+transition(transform 1s ease)
+	&.is-visible
+		opacity: 1
+		z-index: 2
+		&:after
+			+transform(rotate(-33deg) translateX(0px))
 	&__message
 		position: relative
-		max-width: 330px
+		max-width: 310px
 		margin: 0 100px 10px 0
 		padding: 15px 12px
 		background-color: #FFF9E8
@@ -721,12 +737,13 @@ a
 		font-size: 13px
 		border: 1px solid #e0dbcc
 		+rob-l
+		+box
 		a.icon-close
 			position: absolute
 			top: 8px
 			right: 8px
 			background: #E0DBCC
-			padding: 5px 4px 4px 6px
+			padding: 2px 4px 3px 5px
 			font-size: 12px
 			border-radius: 20px
 			color: #fef8e7
@@ -736,3 +753,5 @@ a
 				color: #fef8e7
 			&:hover
 				background: red
+		&.is-hidden
+			display: none

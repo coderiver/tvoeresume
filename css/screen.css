@@ -315,13 +315,16 @@ a:visited { color: #9d35ce; }
 .datepicker::-webkit-input-placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
 .datepicker::placeholder { color: #9fb2b8; font-family: "roboto-light-italic", Arial, sans-serif; }
 
-.hint { position: absolute; top: 75px; right: 0; z-index: 2; }
-.hint:before { content: ""; position: absolute; width: 69px; height: 155px; background-image: url(../img/svg/teacher-bg.svg); }
-.hint__message { position: relative; max-width: 330px; margin: 0 100px 10px 0; padding: 15px 12px; background-color: #fff9e8; border-radius: 20px; box-shadow: 0 1px 16px #fff9e8; color: #666666; font-size: 13px; border: 1px solid #e0dbcc; font-family: "roboto-light", Arial, sans-serif; }
-.hint__message a.icon-close { position: absolute; top: 8px; right: 8px; background: #e0dbcc; padding: 5px 4px 4px 6px; font-size: 12px; border-radius: 20px; color: #fef8e7; }
+.hint { opacity: 0; position: absolute; top: 75px; right: 0; min-height: 200px; z-index: -1; overflow: hidden; }
+.hint:after { content: ""; position: absolute; top: 125px; right: -30px; width: 75px; height: 155px; margin-top: -77.5px; background-image: url(../img/svg/teacher-bg.svg); -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-transform: rotate(-33deg) translateX(70px); -ms-transform: rotate(-33deg) translateX(70px); -webkit-transform: rotate(-33deg) translateX(70px); transform: rotate(-33deg) translateX(70px); -moz-transition: -moz-transform 1s ease; -o-transition: -o-transform 1s ease; -webkit-transition: -webkit-transform 1s ease; transition: transform 1s ease; }
+.hint.is-visible { opacity: 1; z-index: 2; }
+.hint.is-visible:after { -moz-transform: rotate(-33deg) translateX(0px); -ms-transform: rotate(-33deg) translateX(0px); -webkit-transform: rotate(-33deg) translateX(0px); transform: rotate(-33deg) translateX(0px); }
+.hint__message { position: relative; max-width: 310px; margin: 0 100px 10px 0; padding: 15px 12px; background-color: #fff9e8; border-radius: 20px; box-shadow: 0 1px 16px #fff9e8; color: #666666; font-size: 13px; border: 1px solid #e0dbcc; font-family: "roboto-light", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.hint__message a.icon-close { position: absolute; top: 8px; right: 8px; background: #e0dbcc; padding: 2px 4px 3px 5px; font-size: 12px; border-radius: 20px; color: #fef8e7; }
 .hint__message a.icon-close:before { width: auto; }
 .hint__message a.icon-close:visited { color: #fef8e7; }
 .hint__message a.icon-close:hover { background: red; }
+.hint__message.is-hidden { display: none; }
 
 .header { position: relative; background: white; }
 .header:after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; background: url(../img/header-bg.png) bottom repeat-x; z-index: 2; }

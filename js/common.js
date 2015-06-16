@@ -89,4 +89,20 @@ head.ready(function() {
 
 		}
 	});
+
+	//hint
+	$('.js-hint').click(function (e) {
+		e.preventDefault();
+
+		var tipWrap = $(this).parent().find('.js-tip');
+		var message = $(this).parent().find('.js-tip').children();
+
+		message.removeClass('is-hidden');
+		tipWrap.addClass('is-visible');
+	});
+
+	$('.js-close').click(function (e) {
+		e.preventDefault();
+		$(this).parent().addClass('is-hidden');
+	});
 });
