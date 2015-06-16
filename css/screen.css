@@ -367,7 +367,7 @@ a:visited { color: #9d35ce; }
 .header .form .form__btn { display: block; margin: 10px auto; padding: 11px 13px; text-transform: uppercase; font-size: 12px; background-color: #4fd0d7; color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; -moz-box-shadow: 0 1px 0 rgba(85, 141, 158, 0.74); -webkit-box-shadow: 0 1px 0 rgba(85, 141, 158, 0.74); box-shadow: 0 1px 0 rgba(85, 141, 158, 0.74); font-family: "robotoslab-bold", Arial, sans-serif; -moz-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; -webkit-transition: all 0.1s ease-in; transition: all 0.1s ease-in; }
 .header .form .form__btn:hover { background-color: #2a969c; }
 .header .form .form__input { max-width: 162px; }
-.header .form .input { padding-left: 32px; padding-right: 10px; }
+.header .form .input { padding-left: 32px; padding-right: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .logo { text-transform: uppercase; text-decoration: none; font-size: 36px; color: #2f5a71; line-height: 1; font-family: "robotoslab-light", Arial, sans-serif; }
 .logo:visited { color: #2f5a71; }
@@ -399,20 +399,20 @@ a:visited { color: #9d35ce; }
 .character:after { content: " "; display: table; clear: both; }
 .character__bl { position: relative; width: 50%; text-align: center; cursor: pointer; }
 .character__bl:hover .character__img:before { height: 100%; }
-.character__bl:hover .character__img.is-teacher:before { -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
+.character__bl:hover .character__img.is-teacher:before { height: 350px; -moz-transform: translateY(145px); -ms-transform: translateY(145px); -webkit-transform: translateY(145px); transform: translateY(145px); }
 .character__bl.onright .icon-arrow { left: inherit; right: -50px; -moz-transform: scale(-1, 1); -ms-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); transform: scale(-1, 1); }
 .character__bl.is-absolute { position: absolute; width: auto; top: 50%; left: 50%; margin: -125px 0 0 -88px; z-index: 2; }
 .character__bl.is-absolute .icon-arrow { left: inherit; right: -35px; -moz-transform: scale(-1, 1); -ms-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); transform: scale(-1, 1); }
 .character__img { position: relative; display: block; height: 567px; margin: 10px auto 0; z-index: 1; }
-.character__img:before { content: ""; position: absolute; left: 0; bottom: 0; height: 540px; background-size: contain; background-position: center center; background-repeat: no-repeat; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+.character__img:before { content: ""; position: absolute; left: 0; bottom: 0; height: 540px; background-size: contain; background-position: center center; background-repeat: no-repeat; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 .character__img.is-boy { width: 234px; }
 .character__img.is-boy:before { width: 234px; background-image: url(../img/svg/boy-bg.svg); }
 .character__img.is-girl { width: 221px; }
 .character__img.is-girl:before { width: 221px; background-image: url(../img/svg/girl-bg.svg); }
 .character__img.is-teacher { width: 180px; height: 214px; overflow: hidden; border-radius: 50%; }
-.character__img.is-teacher:before { width: 124px; height: 214px; left: 50%; margin-left: -62px; background-image: url(../img/teacher.png); -moz-transform: translateY(30px); -ms-transform: translateY(30px); -webkit-transform: translateY(30px); transform: translateY(30px); }
+.character__img.is-teacher:before { width: 130px; height: 350px; left: 50%; margin-left: -60px; background-image: url(../img/svg/teacher-bg.svg); -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background-position: center center; -moz-transform: translateY(180px); -ms-transform: translateY(180px); -webkit-transform: translateY(180px); transform: translateY(180px); }
 .character__img.is-teacher:after { content: ""; position: absolute; left: 50%; bottom: 0; width: 162px; height: 162px; margin-left: -81px; background-color: #757e82; border-radius: 50%; z-index: -1; }
-.character__img.is-teacher.is-small:before { height: 214px; -moz-transform: translateY(95px); -ms-transform: translateY(95px); -webkit-transform: translateY(95px); transform: translateY(95px); }
+.character__img.is-teacher.is-small:before { height: 350px; -moz-transform: translateY(220px); -ms-transform: translateY(220px); -webkit-transform: translateY(220px); transform: translateY(220px); }
 .character__img.is-small:before { height: 475px; }
 .character__choose { position: absolute; top: 45px; left: 0; text-align: center; z-index: 2; font-family: "nautilus", Arial, sans-serif; background: url("../img/svg/cloud-bg.svg") no-repeat 0 0; -moz-background-size: 184px 83px; -o-background-size: 184px 83px; -webkit-background-size: 184px 83px; background-size: 184px 83px; width: 184px; height: 83px; display: inline-block; }
 .character__choose.is-another { top: 97px; left: inherit; right: 15px; background: url("../img/svg/cloud-bg2.svg") no-repeat 0 0; -moz-background-size: 135px 83px; -o-background-size: 135px 83px; -webkit-background-size: 135px 83px; background-size: 135px 83px; width: 135px; height: 83px; display: inline-block; }
