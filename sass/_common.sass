@@ -441,6 +441,8 @@ a
 	&__section
 		display: block
 		margin-bottom: 10px
+		.input
+			+box
 	&__input
 		position: relative
 		display: block
@@ -509,10 +511,10 @@ a
 				+rob
 .input-load
 	position: absolute
-	left: 0
-	right: 0
-	bottom: 0
 	top: 0
+	left: 0
+	width: 100%
+	height: 100%
 	opacity: 0
 	cursor: pointer
 	z-index: 2
@@ -729,7 +731,7 @@ a
 		position: relative
 		max-width: 310px
 		margin: 0 100px 10px 0
-		padding: 15px 12px
+		padding: 15px 17px 15px 12px
 		background-color: #FFF9E8
 		border-radius: 20px
 		box-shadow: 0 1px 16px #fff9e8
@@ -738,6 +740,38 @@ a
 		border: 1px solid #e0dbcc
 		+rob-l
 		+box
+		&.arr-bottom
+			&:before
+				content: ""
+				position: absolute
+				top: 12px
+				right: -15px
+				z-index: -1
+				+arr(15, 50, #e0dbcc, tr)
+				+transform(rotate(-50deg))
+			&:after
+				content: ""
+				position: absolute
+				top: 19px
+				right: -14px
+				+arr(10, 35, #fff9e8, tr)
+				+transform(rotate(-50deg))
+		&.arr-top
+			&:before
+				content: ""
+				position: absolute
+				top: 6px
+				right: -19px
+				z-index: -1
+				+arr(15, 50, #e0dbcc, tr)
+				+transform(rotate(-125deg))
+			&:after
+				content: ""
+				position: absolute
+				top: 11px
+				right: -17px
+				+arr(10, 35, #fff9e8, tr)
+				+transform(rotate(-125deg))
 		a.icon-close
 			position: absolute
 			top: 8px
@@ -747,11 +781,12 @@ a
 			font-size: 12px
 			border-radius: 20px
 			color: #fef8e7
+			+transition(background 0.2s ease)
 			&:before
 				width: auto
 			&:visited
 				color: #fef8e7
 			&:hover
-				background: red
+				background: #bd3941
 		&.is-hidden
 			display: none

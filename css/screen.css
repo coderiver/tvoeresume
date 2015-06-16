@@ -124,6 +124,10 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 .icon-note:before { content: '\e831'; }
 
+.icon-person:before { content: '\e832'; }
+
+.icon-works:before { content: '\e833'; }
+
 @font-face { font-family: roboto-regular; src: url("fonts/roboto-regular.eot"); src: url("fonts/roboto-regular.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-regular.woff2") format("woff2"), url("fonts/roboto-regular.woff") format("woff"), url("fonts/roboto-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: roboto-light; src: url("fonts/roboto-light.eot"); src: url("fonts/roboto-light.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-light.woff2") format("woff2"), url("fonts/roboto-light.woff") format("woff"), url("fonts/roboto-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: roboto-light-italic; src: url("fonts/roboto-light-italic.eot"); src: url("fonts/roboto-light-italic.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-light-italic.woff2") format("woff2"), url("fonts/roboto-light-italic.woff") format("woff"), url("fonts/roboto-light-italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -239,6 +243,7 @@ a:visited { color: #9d35ce; }
 .form__bl { display: inline-block; margin-right: 30px; vertical-align: middle; }
 .form__bl.is-top { vertical-align: top; }
 .form__section { display: block; margin-bottom: 10px; }
+.form__section .input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .form__input { position: relative; display: block; margin-bottom: 10px; *zoom: 1; }
 .form__input:after { content: " "; display: table; clear: both; }
 .form__input.is-error .input { border-color: #ff7d64; }
@@ -259,7 +264,7 @@ a:visited { color: #9d35ce; }
 .form .input.placeholder::-webkit-input-placeholder { font-size: 13px; font-family: "roboto-regular", Arial, sans-serif; }
 .form .input.placeholder::placeholder { font-size: 13px; font-family: "roboto-regular", Arial, sans-serif; }
 
-.input-load { position: absolute; left: 0; right: 0; bottom: 0; top: 0; opacity: 0; cursor: pointer; z-index: 2; }
+.input-load { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 2; }
 
 .calendar { position: relative; }
 .calendar .icon-calendar { position: absolute; top: 50%; margin-top: -8px; right: 12px; font-size: 16px; color: #34b1e2; }
@@ -319,11 +324,15 @@ a:visited { color: #9d35ce; }
 .hint:after { content: ""; position: absolute; top: 125px; right: -30px; width: 75px; height: 155px; margin-top: -77.5px; background-image: url(../img/svg/teacher-bg.svg); -webkit-background-size: cover; -o-background-size: cover; background-size: cover; -moz-transform: rotate(-33deg) translateX(70px); -ms-transform: rotate(-33deg) translateX(70px); -webkit-transform: rotate(-33deg) translateX(70px); transform: rotate(-33deg) translateX(70px); -moz-transition: -moz-transform 1s ease; -o-transition: -o-transform 1s ease; -webkit-transition: -webkit-transform 1s ease; transition: transform 1s ease; }
 .hint.is-visible { opacity: 1; z-index: 2; }
 .hint.is-visible:after { -moz-transform: rotate(-33deg) translateX(0px); -ms-transform: rotate(-33deg) translateX(0px); -webkit-transform: rotate(-33deg) translateX(0px); transform: rotate(-33deg) translateX(0px); }
-.hint__message { position: relative; max-width: 310px; margin: 0 100px 10px 0; padding: 15px 12px; background-color: #fff9e8; border-radius: 20px; box-shadow: 0 1px 16px #fff9e8; color: #666666; font-size: 13px; border: 1px solid #e0dbcc; font-family: "roboto-light", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.hint__message a.icon-close { position: absolute; top: 8px; right: 8px; background: #e0dbcc; padding: 2px 4px 3px 5px; font-size: 12px; border-radius: 20px; color: #fef8e7; }
+.hint__message { position: relative; max-width: 310px; margin: 0 100px 10px 0; padding: 15px 17px 15px 12px; background-color: #fff9e8; border-radius: 20px; box-shadow: 0 1px 16px #fff9e8; color: #666666; font-size: 13px; border: 1px solid #e0dbcc; font-family: "roboto-light", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.hint__message.arr-bottom:before { content: ""; position: absolute; top: 12px; right: -15px; z-index: -1; width: 0px; height: 0px; border-style: solid; border-width: 0 15px 50px 0; border-color: transparent #e0dbcc transparent transparent; -moz-transform: rotate(-50deg); -ms-transform: rotate(-50deg); -webkit-transform: rotate(-50deg); transform: rotate(-50deg); }
+.hint__message.arr-bottom:after { content: ""; position: absolute; top: 19px; right: -14px; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 35px 0; border-color: transparent #fff9e8 transparent transparent; -moz-transform: rotate(-50deg); -ms-transform: rotate(-50deg); -webkit-transform: rotate(-50deg); transform: rotate(-50deg); }
+.hint__message.arr-top:before { content: ""; position: absolute; top: 6px; right: -19px; z-index: -1; width: 0px; height: 0px; border-style: solid; border-width: 0 15px 50px 0; border-color: transparent #e0dbcc transparent transparent; -moz-transform: rotate(-125deg); -ms-transform: rotate(-125deg); -webkit-transform: rotate(-125deg); transform: rotate(-125deg); }
+.hint__message.arr-top:after { content: ""; position: absolute; top: 11px; right: -17px; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 35px 0; border-color: transparent #fff9e8 transparent transparent; -moz-transform: rotate(-125deg); -ms-transform: rotate(-125deg); -webkit-transform: rotate(-125deg); transform: rotate(-125deg); }
+.hint__message a.icon-close { position: absolute; top: 8px; right: 8px; background: #e0dbcc; padding: 2px 4px 3px 5px; font-size: 12px; border-radius: 20px; color: #fef8e7; -moz-transition: background 0.2s ease; -o-transition: background 0.2s ease; -webkit-transition: background 0.2s ease; transition: background 0.2s ease; }
 .hint__message a.icon-close:before { width: auto; }
 .hint__message a.icon-close:visited { color: #fef8e7; }
-.hint__message a.icon-close:hover { background: red; }
+.hint__message a.icon-close:hover { background: #bd3941; }
 .hint__message.is-hidden { display: none; }
 
 .header { position: relative; background: white; }
@@ -579,6 +588,28 @@ a:visited { color: #9d35ce; }
 .hobby .icon-note { font-size: 31px; }
 .hobby .icon-hobby { display: inline-block; font-size: 24px; margin-right: 5px; vertical-align: middle; }
 .hobby .icon-arrow { position: absolute; bottom: -18px; left: -12px; font-size: 25px; color: #d9dfe1; -moz-transform: scale(-1, 1) rotate(-80deg); -ms-transform: scale(-1, 1) rotate(-80deg); -webkit-transform: scale(-1, 1) rotate(-80deg); transform: scale(-1, 1) rotate(-80deg); }
+.hobby .icon-person { display: inline-block; margin-right: 5px; font-size: 20px; vertical-align: middle; }
+
+.teacher { position: absolute; left: 50%; bottom: 0; width: 119px; height: 145px; margin-left: -59px; background-image: url(../img/svg/teacher-bg.svg); background-repeat: no-repeat; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
+.teacher .hint { top: 0; opacity: 1; z-index: 2; overflow: visible; }
+.teacher .hint:after { display: none; }
+.teacher .hint .hint__message { position: absolute; width: 310px; top: -40px; }
+.teacher .hint .hint__message:only-of-type:first-child { margin: 0 0 40px 0; }
+.teacher .hint .hint__message:not(:only-of-type):first-child { right: 35px; }
+
+.works { margin-top: 30px; }
+.works .form { max-width: 700px; margin: 50px auto 0; font-size: 0; }
+.works .form .form__section { position: relative; display: inline-block; width: 100%; max-width: 650px; }
+.works .form .form__add { position: relative; display: inline-block; margin-top: 7px; padding: 2px 7px 2px 2px; background: #5dc1e8; vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.works .form .form__add:after { content: ""; position: absolute; top: 0; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 14px 5px 14px 0; border-color: transparent white transparent transparent; }
+.works .form .form__add .icon-clip { margin-right: 0; font-size: 16px; color: white; }
+.works .form .form__add .icon-clip:before { width: auto; }
+.works .teacher .hint { top: inherit; bottom: 100%; left: 50%; margin-left: -155px; min-height: 115px; opacity: 1; overflow: visible; }
+.works .teacher .hint__message:before { content: ""; position: absolute; left: 91px; bottom: -42px; z-index: -1; width: 0px; height: 0px; border-style: solid; border-width: 0 18px 47px 0; border-color: transparent #e0dbcc transparent transparent; -moz-transform: rotate(-20deg); -ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); transform: rotate(-20deg); }
+.works .teacher .hint__message:after { content: ""; position: absolute; left: 90px; bottom: -40px; width: 0px; height: 0px; border-style: solid; border-width: 0 17px 50px 0; border-color: transparent #fff9e8 transparent transparent; -moz-transform: rotate(-20deg); -ms-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); transform: rotate(-20deg); }
+.works .icon-works { display: inline-block; margin-right: 5px; font-size: 26px; vertical-align: middle; }
+.works .works__link { display: block; color: #5dc1e8; font-size: 12px; text-decoration: underline; }
+.works .works__link .icon-close { color: #5dc1e8; }
 
 .slide__in section { margin-bottom: 40px; padding: 0 15px; *zoom: 1; }
 .slide__in section.no-margin { margin-bottom: 0; }
@@ -694,6 +725,7 @@ body.is-inner-girl .item__link:hover, body.is-inner-girl .item__link.active { ba
 body.is-inner-girl .certificate__bl:hover:after, body.is-inner-girl .certificate__bl.active:after { background: url("../img/svg/certificate-bg-girl.svg") no-repeat 0 0; -moz-background-size: 293px 86px; -o-background-size: 293px 86px; -webkit-background-size: 293px 86px; background-size: 293px 86px; width: 293px; height: 86px; display: inline-block; }
 body.is-inner-girl .skills__in { background: #ed6247; }
 body.is-inner-girl .skills__message { background: url("../img/svg/cloud-bg6.svg") no-repeat 0 0; -moz-background-size: 210px 87px; -o-background-size: 210px 87px; -webkit-background-size: 210px 87px; background-size: 210px 87px; width: 210px; height: 87px; display: inline-block; }
+body.is-inner-girl .icon-note { color: #ed6247; }
 
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
 .jspContainer { overflow: hidden; position: relative; }

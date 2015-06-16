@@ -609,3 +609,110 @@
 		font-size: 25px
 		color: #D9DFE1
 		+transform(scale(-1, 1) rotate(-80deg))
+	.icon-person
+		display: inline-block
+		margin-right: 5px
+		font-size: 20px
+		vertical-align: middle
+
+
+//teacher block
+.teacher
+	position: absolute
+	left: 50%
+	bottom: 0
+	width: 119px
+	height: 145px
+	margin-left: -59px
+	background-image: url(../img/svg/teacher-bg.svg)
+	background-repeat: no-repeat
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	.hint
+		top: 0
+		opacity: 1
+		z-index: 2
+		overflow: visible
+		&:after
+			display: none
+		.hint__message
+			position: absolute
+			width: 310px
+			top: -40px
+			&:only-of-type
+				&:first-child
+					margin: 0 0 40px 0
+			&:not(:only-of-type)
+				&:first-child
+					right: 35px
+
+//works
+.works
+	margin-top: 30px
+	.form
+		max-width: 700px
+		margin: 50px auto 0
+		font-size: 0
+		.form__section
+			position: relative
+			display: inline-block
+			width: 100%
+			max-width: 650px
+		.form__add
+			position: relative
+			display: inline-block
+			margin-top: 7px
+			padding: 2px 7px 2px 2px
+			background: #5DC1E8
+			vertical-align: top
+			+box
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				+arr(5, 28, #fff, l)
+			.icon-clip
+				margin-right: 0
+				font-size: 16px
+				color: #FFF
+				&:before
+					width: auto
+	.teacher
+		.hint
+			top: inherit
+			bottom: 100%
+			left: 50%
+			margin-left: -155px
+			min-height: 115px
+			opacity: 1
+			overflow: visible
+		.hint__message
+			&:before
+				content: ""
+				position: absolute
+				left: 91px
+				bottom: -42px
+				z-index: -1
+				+arr(18, 47, #e0dbcc, tr)
+				+transform(rotate(-20deg))
+			&:after
+				content: ""
+				position: absolute
+				left: 90px
+				bottom: -40px
+				+arr(17, 50, #fff9e8, tr)
+				+transform(rotate(-20deg))
+	.icon-works
+		display: inline-block
+		margin-right: 5px
+		font-size: 26px
+		vertical-align: middle
+	.works__link
+		display: block
+		color: #5DC1E8
+		font-size: 12px
+		text-decoration: underline
+		.icon-close
+			color: #5DC1E8
