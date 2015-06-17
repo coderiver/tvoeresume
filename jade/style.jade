@@ -66,8 +66,9 @@ block content
 								.form.is-margin
 									form
 										.form__section
-											i.icon-uni
-											h4.h4.onleft.is-another Учебное заведение:
+											h4.h4.is-another
+												i.icon-uni
+												span Учебное заведение:
 											.select-wrap
 												.select
 													span.select__span Напр. МГУ
@@ -80,27 +81,28 @@ block content
 														li(data-attr="Синий"): a(href="#") Синий
 														li(data-attr="Зелёный"): a(href="#") Зелёный
 										.form__section
-											i.icon-feather
-											h4.h4.onleft.is-another Название курса:
-											label.form__input.is-error.js-error
+											h4.h4.is-another
+												i.icon-feather
+												span Название курса:
+											label.form__input.is-error.js-error.no-margin
 												input(type="text" placeholder="Напр. Архитектура").input
 												.error-message Поле заполнено неверно. Повторите попытку
-										.form__section.is-margin
-											h3.h3.onleft Личные данные(Н3)
+										.form__section.is-margin.no-margin
+											h3.h3 Личные данные(Н3)
 											label.special
 												input(type="text")
 										.form__section
-											h4.h4.onleft Учебное заведение:
-											label.form__input
+											h4.h4 Учебное заведение:
+											label.form__input.no-margin
 												input(type="text" placeholder="Напр. Архитектура").input
-										.form__section
-											h4.h4.onleft Название курса:
-											label.form__input
+										.form__section.m-margin
+											h4.h4 Название курса:
+											label.form__input.no-margin
 												input(type="text" value="МГУ ПРГР мкий").input.small-txt
 												span.form__note *необязательное поле
 										.form__section
 											h4.h4.onleft.no-margin Название курса:
-											.form__cut
+											.form__cut.onleft
 												p
 													| <i class="icon-clip"></i>Мои достижения.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a>
 												p

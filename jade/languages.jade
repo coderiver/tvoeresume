@@ -1,0 +1,77 @@
+extend _skeleton-is-inner
+
+block title
+	title Твое портфолио и владение языками
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide.language-bg
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Твое портфолио и владение языками
+						.slide__in
+							.language
+								h2.h2
+									| <i class="icon-language"></i><span>Иностранный язык:</span>
+								.language__wrap
+									.language__bl
+										.language__ico.is-english: span Английский
+										label.radiobox.is-first
+											input(type="radio" name="lang" value="Fluent")
+											span Свободно говорю
+										label.radiobox
+											input(type="radio" name="lang" value="Intermediate")
+											span Могу переводить интервью
+										label.radiobox
+											input(type="radio" name="lang" value="Elementary")
+											span Читаю и перевожу с Google
+										label.radiobox
+											input(type="radio" name="lang" value="Basic")
+											span Знаю буквы (базовые значения)
+									.language__bl
+										.language__ico.is-french: span Французский
+									.language__bl
+										.language__ico.is-german: span Немецкий
+									.language__bl
+										.language__ico
+											.form
+												form
+													label.form__group
+														input(type="text" placeholder="Свой вариант").input
+								.language__skill
+									h2.h2 Владение языками:
+									.language__inside
+										.language__el
+											.language__in
+												span Английский свободно
+												a(href="#").icon-close
+										.language__el
+											.language__in
+												span Немецкий читаю и перевожу с Google
+												a(href="#").icon-close
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+

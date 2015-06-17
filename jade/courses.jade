@@ -48,23 +48,16 @@ block content
 									.form.is-margin
 										form
 											.form__section
-												i.icon-uni
-												h4.h4.onleft.is-another Учебное заведение:
-												.select-wrap
-													.select
-														span.select__span Напр. МГУ
-														i.icon-angle-down
-														ul.select__list.js-scroll
-															li(data-attr="Красный"): a(href="#") Красный
-															li(data-attr="Синий"): a(href="#") Синий
-															li(data-attr="Зелёный"): a(href="#") Зелёный
-															li(data-attr="Красный"): a(href="#") Красный
-															li(data-attr="Синий"): a(href="#") Синий
-															li(data-attr="Зелёный"): a(href="#") Зелёный
+												h4.h4.is-another
+													i.icon-uni
+													span Учебное заведение:
+												label.form__input.no-margin
+													input(type="text" placeholder="Напр. МГУ").input
 											.form__section
-												i.icon-feather
-												h4.h4.onleft.is-another Название курса:
-												label.form__input
+												h4.h4.is-another
+													i.icon-feather
+													span Название курса:
+												label.form__input.no-margin
 													input(type="text" placeholder="Напр. Архитектура").input
 												.btn.is-padding
 													label.input-load

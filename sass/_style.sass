@@ -5,11 +5,22 @@
 		padding: 0 15px
 		&.no-margin
 			margin-bottom: 0
+		&.s-margin
+			margin-bottom: 30px
 		+clr
 		> div
 			&:not(:only-of-type)
 				float: left
 				width: 50%
+		.form
+			.h4
+				display: inline-block
+				margin-right: 10px
+			.calendar
+				display: inline-block
+			.radiobox
+				&:first-child
+					margin-bottom: 10px
 	article
 		div
 			margin-bottom: 40px
@@ -74,51 +85,51 @@
 				left: -15px
 				right: -15px
 				border-top: 1px dashed #ccc
+			&.s-pad
+				padding-top: 30px
 			.btn
 				display: inline-block
 				margin-right: 75px
+		.form
+			&.is-margin
+				margin: 20px 0 40px
+			.h3
+				display: inline-block
+				min-width: 240px
+				margin-bottom: 0
+				text-align: left
+				line-height: 1.4
+				z-index: 1
+			.h4
+				display: inline-block
+				width: 240px
+				font-size: 15px
+				text-align: left
+				margin: 0
+				&.no-margin
+					margin: 0
+					line-height: 1.6
+			.calendar
+				display: inline-block
+			.radiobox
+				display: block
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+			.checkbox
+				margin-bottom: 0
 		.btn
 			margin-right: 30px
 			&:last-child
 				margin-right: 0
-		.form
-			.h3
-				position: relative
-				margin: 0
-				line-height: 1.4
-				z-index: 1
-			.h4
-				margin: 13px 0 0
-
 	.h4
 		text-transform: uppercase
+		text-align: left
 		&.is-another
 			color: #5DC1E8
-	.form
-		&.is-margin
-			margin: 20px 0 40px
-		.h4
-			position: relative
-			display: inline-block
-			margin: 0 10px 0 0
-			font-size: 15px
-			z-index: 1
-			&.no-margin
-				margin: 0
-				line-height: 1.4
-		.calendar
-			display: inline-block
-		.radiobox
-			display: block
-			margin-bottom: 15px
-			&:last-child
-				margin-bottom: 0
-		.checkbox
-			margin-bottom: 0
 	.form__section
+		font-size: 0
 		+clr
-		&.is-margin
-			margin: 15px 0 35px
 	.form__link
 		position: relative
 		float: right
@@ -138,22 +149,29 @@
 			color: #5dc1e8
 	.form__input, .select-wrap
 		max-width: 540px
-		padding-left: 240px
+		width: 100%
+		display: inline-block
+		vertical-align: middle
 	.form__cut
-		padding-left: 240px
+		margin-bottom: 15px
+		font-size: 14px
 		span
 			margin-right: 17px
 		p
-			margin-bottom: 12px
+			margin-bottom: 5px
 			font-size: 12px
 			text-decoration: underline
 			color: #5DC1E8
+			line-height: 1.25
 			+rob
 	.input
 		padding: 10px 13px
 		border: 1px solid #DCE6E6
+		+box
 	.special
-		padding-left: 240px
+		display: inline-block
+		width: 100%
+		max-width: 695px
 	.radiobox, .checkbox
 		span
 			padding-left: 30px
@@ -165,8 +183,8 @@
 			&:after
 				font-size: 18px
 	.icon-clip
-		font-size: 14px
-		margin-right: 8px
+		font-size: 16px
+		margin-right: 10px
 	.icon-close
 		margin-left: 5px
 		font-size: 8px
@@ -179,8 +197,11 @@
 		font-size: 17px
 		text-decoration: none
 		color: #5DC1E8
-	.icon-uni, .icon-feather
-		float: left
+	.icon-uni
 		margin-right: 10px
 		font-size: 28px
-		color: #5DC1E8
+		vertical-align: baseline
+	.icon-feather
+		margin: 0 10px 0 2px
+		font-size: 26px
+		vertical-align: bottom

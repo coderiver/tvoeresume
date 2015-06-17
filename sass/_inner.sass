@@ -48,6 +48,10 @@
 		background: #fff url(../img/svg/courses-bg.svg) center bottom no-repeat
 	&.hobby-bg
 		background: #fff url(../img/svg/hobby-bg.svg) center bottom no-repeat
+	&.language-bg
+		background: #fff url(../img/svg/language-bg.svg) center bottom no-repeat
+	&.experience-bg
+		background: #fff url(../img/svg/experience-bg.svg) center bottom no-repeat
 	&__in
 		padding-top: 53px
 		color: #2F5A71
@@ -278,11 +282,11 @@
 	li
 		display: inline-block
 		&.active
-			span
+			a
 				border-color: #4FD0D7
 				&:before
 					display: block
-	span
+	a
 		position: relative
 		display: block
 		margin: 0 5px
@@ -362,10 +366,8 @@
 	.h4
 		font-size: 15px
 	.icon-clock
-		display: inline-block
 		font-size: 23px
 		margin-right: 5px
-		vertical-align: middle
 
 //study pages
 .study
@@ -380,7 +382,7 @@
 		.h4
 			margin-top: 10px
 		div.select-wrap
-			padding-left: 160px
+			max-width: 293px
 			text-align: left
 	.icon-year
 		display: inline-block
@@ -390,10 +392,8 @@
 	i.icon-uni
 		float: none
 	.icon-globe
-		display: inline-block
 		margin-right: 5px
 		font-size: 24px
-		vertical-align: middle
 
 //career
 .career
@@ -420,13 +420,12 @@
 		padding: 0 15px
 		+box
 		.h4.is-another
-			max-width: 120px
-			margin-top: 2px
+			max-width: 15%
+			margin: 4px 0 0
 			text-align: left
 			line-height: 1.2
 		.form__input
-			max-width: inherit
-			padding-left: 130px
+			max-width: 85%
 		.input
 			+box
 		.btn-wrap
@@ -436,15 +435,15 @@
 		font-size: 24px
 		vertical-align: middle
 	.icon-tie
-		display: inline-block
 		font-size: 30px
-		vertical-align: middle
 
 
 //courses
 .courses
 	.btn
 		margin-top: 30px
+	.h4.is-another
+		vertical-align: top
 
 //certificate
 .certificate
@@ -490,10 +489,8 @@
 			vertical-align: middle
 			z-index: 1
 	.icon-certificate
-		display: inline-block
 		margin-right: 5px
 		font-size: 24px
-		vertical-align: middle
 
 //skills
 .skills
@@ -555,14 +552,11 @@
 	.item-list
 		margin-top: 30px
 	.icon-info
-		display: inline-block
 		font-size: 20px
 		margin-right: 15px
 	.icon-skill
-		display: inline-block
 		margin-right: 12px
 		font-size: 29px
-		vertical-align: middle
 	.icon-angle-down
 		display: block
 		text-align: center
@@ -598,10 +592,8 @@
 	.icon-note
 		font-size: 31px
 	.icon-hobby
-		display: inline-block
 		font-size: 24px
 		margin-right: 5px
-		vertical-align: middle
 	.icon-arrow
 		position: absolute
 		bottom: -18px
@@ -610,10 +602,8 @@
 		color: #D9DFE1
 		+transform(scale(-1, 1) rotate(-80deg))
 	.icon-person
-		display: inline-block
 		margin-right: 5px
 		font-size: 20px
-		vertical-align: middle
 
 
 //teacher block
@@ -705,10 +695,8 @@
 				+arr(17, 50, #fff9e8, tr)
 				+transform(rotate(-20deg))
 	.icon-works
-		display: inline-block
 		margin-right: 5px
 		font-size: 26px
-		vertical-align: middle
 	.works__link
 		display: block
 		color: #5DC1E8
@@ -716,3 +704,179 @@
 		text-decoration: underline
 		.icon-close
 			color: #5DC1E8
+
+//language
+.language
+	margin-top: 30px
+	padding: 0 15px
+	&__wrap
+		margin-top: 50px
+		font-size: 0
+	&__bl
+		position: relative
+		width: 25%
+		min-height: 260px
+		display: inline-block
+		font-size: 14px
+		color: #2F5A71
+		vertical-align: top
+		+rob-l
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 10px
+			width: 2px
+			height: 100%
+			background: #F58220
+			z-index: 1
+		&:after
+			content: ""
+			position: absolute
+			left: 2px
+			bottom: -2px
+			width: 18px
+			height: 5px
+			background-color: #4C5E6B
+			border-radius: 50%
+			+opacity(0.2)
+	&__skill
+		margin-top: 56px
+		.h2
+			text-align: left
+	&__inside
+		font-size: 0
+		margin: 0 -5px
+	&__el
+		display: inline-block
+		margin: 0 5px 10px
+	.language__in
+		display: inline-block
+		padding: 4px 10px 7px 5px
+		font-size: 14px
+		background: #5dc1e8
+		color: #FFF
+		border-radius: 3px
+		+rob-l
+		.icon-close
+			display: inline-block
+			color: #FFF
+			vertical-align: middle
+			&:visited
+				color: #FFF
+	&__ico
+		width: 156px
+		height: 52px
+		position: relative
+		margin-left: 10px
+		background: #5dc1e8
+		z-index: 0
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			+arr(11, 52, #fff, l)
+		&.is-english
+			+s(english)
+		&.is-german
+			+s(german)
+		&.is-french
+			+s(french)
+		span
+			display: inline-block
+			width: 125px
+			margin: 11px 0 0 12px
+			padding: 4px 0 6px
+			font-size: 18px
+			color: #2F5A71
+			background: #FFF
+			border-radius: 20px
+			vertical-align: middle
+			text-align: center
+			line-height: 1
+			+text-overflow
+			+rob-b
+		.form
+			max-width: 129px
+			display: inline-block
+			margin: 6px 0 0 10px
+		.input
+			width: 100%
+			max-height: 40px
+			+box
+	.radiobox
+		position: relative
+		display: block
+		max-width: 160px
+		margin-bottom: 15px
+		z-index: 2
+		&.is-first
+			margin-top: 20px
+		span
+			&:before
+				top: 50%
+				margin-top: -13.5px
+			&:after
+				top: 50%
+				margin-top: -15.5px
+	.icon-language
+		margin-right: 10px
+		font-size: 25px
+
+//experience
+.experience
+	.item-list
+		margin: 20px 0 25px
+	section
+		.form
+			text-align: center
+	.form
+		.h2
+			display: inline-block
+			width: 27%
+			text-align: left
+			margin: 0
+		.form__input
+			width: 73%
+			max-width: inherit
+	.icon-tie
+		margin-right: 5px
+		font-size: 26px
+	.icon-chair
+		margin-right: 10px
+		font-size: 27px
+	.icon-recommend
+		font-size: 26px
+		margin-right: 15px
+
+//practice
+.practice
+	section
+		.form
+			text-align: center
+	.form
+		.h4.is-another
+			width: 295px
+			vertical-align: middle
+			[class^="icon-"], [class*=" icon-"]
+				margin-right: 15px
+	.form__group
+		width: 100%
+		max-width: 540px
+		vertical-align: middle
+		+clr
+		.form__input
+			max-width: 342px
+			&:last-child
+				max-width: 180px
+	.icon-tie
+		margin-right: 5px
+		font-size: 26px
+	.icon-deputy
+		font-size: 21px
+	.icon-language
+		font-size: 20px
+		margin-left: 2px
+	.icon-recommend
+		font-size: 26px

@@ -1,0 +1,88 @@
+extend _skeleton-is-inner
+
+block title
+	title Твой опыт работы и практики
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide.experience-bg
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Твой опыт работы и практики
+						.slide__in
+							.experience
+								.slide__subttl
+									h2.h2
+										i.icon-tie
+										span Последнее место работы:
+								section.s-margin
+									.form
+										form
+											.form__bl
+												h4.h4 С:
+												label.calendar
+													input(type="text" value="25.05.2012" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												h4.h4 По (Н4):
+												label.calendar
+													input(type="text" placeholder="Выберите дату" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												label.radiobox
+													input(type="checkbox" name="time" value="1")
+													span по настоящее время
+								figure
+									figcaption.s-pad
+										h2.h2
+											| <i class="icon-chair"></i><span>Кем ты работал:</span>
+									ul.item-list
+										li: a(href="#").item__link Автомеханик
+										li: a(href="#").item__link Архитектор мостов
+										li: a(href="#").item__link.active Изготовитель таблеток
+										li: a(href="#").item__link Реклама
+										li: a(href="#").item__link Штукатур
+										li: a(href="#").item__link Информационные системы
+										li: a(href="#").item__link Информационные системы
+										li: a(href="#").item__link Архитектор мостов
+										li: a(href="#").item__link Изготовитель таблеток
+										li: a(href="#").item__link Реклама
+										li: a(href="#").item__link Штукатур
+										li: a(href="#").item__link Информационные системы
+										li: a(href="#").item__link Архитектор мостов
+										li: a(href="#").item__link Изготовитель таблеток
+									.form
+										form
+											.form__section
+												h2.h2
+													i.icon-chair
+													span Название должности:
+												label.form__input
+													input.input(type="text" value="Изготовитель таблеток")
+
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+
