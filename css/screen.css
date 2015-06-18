@@ -458,10 +458,10 @@ a:visited { color: #9d35ce; }
 .character .icon-arrow { position: absolute; top: 18px; left: -60px; font-size: 60px; color: white; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; }
 
 .loading { position: relative; display: block; width: 389px; height: 389px; margin: 132px auto 0; background: url(../img/loading.png) no-repeat; overflow: hidden; border-radius: 50%; }
-.loading__helicopter { position: absolute; top: 50%; left: -251px; margin-top: -44.5px; width: 251px; height: 89px; background: url(../img/loader-helicopter.png) no-repeat; animation-name: pulse; animation-duration: 4s; animation-timing-function: ease-in; animation-delay: 0; animation-iteration-count: infinite; animation-play-state: running; animation-fill-mode: backwards; }
-.loading__clouds { position: absolute; top: 35px; left: 10px; right: 0; height: 103px; background: url(../img/clouds.png) center center no-repeat; animation-name: move; animation-duration: 10s; animation-timing-function: ease; animation-delay: 0; animation-iteration-count: infinite; animation-play-state: running; }
+.loading__helicopter { position: absolute; top: 50%; left: -251px; margin-top: -44.5px; width: 251px; height: 89px; background: url(../img/loader-helicopter.png) no-repeat; animation-name: pulse; animation-duration: 4s; animation-timing-function: ease-in; animation-delay: 0s; animation-iteration-count: infinite; animation-play-state: running; animation-fill-mode: backwards; }
+.loading__clouds { position: absolute; top: 35px; left: 10px; right: 0; height: 103px; background: url(../img/clouds.png) center center no-repeat; animation-name: move; animation-duration: 10s; animation-timing-function: ease; animation-delay: 0s; animation-iteration-count: infinite; animation-play-state: running; }
 
-@keyframes pulse { 0 { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+@keyframes pulse { 0% { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
   20% { -moz-transform: translate(300px, 0); -ms-transform: translate(300px, 0); -webkit-transform: translate(300px, 0); transform: translate(300px, 0); }
   32% { -moz-transform: translate(300px, 20px); -ms-transform: translate(300px, 20px); -webkit-transform: translate(300px, 20px); transform: translate(300px, 20px); }
   44% { -moz-transform: translate(300px, 0); -ms-transform: translate(300px, 0); -webkit-transform: translate(300px, 0); transform: translate(300px, 0); }
