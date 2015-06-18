@@ -59,7 +59,6 @@
 +font(robotoslab-light, robotoslab-light)
 +font(opensans, opensans)
 +font(opensans-bold, opensans-bold)
-+font(opensans-bold-italic, opensans-bold-italic)
 +font(nautilus, nautilus)
 +font(badscript, badscript)
 
@@ -303,6 +302,43 @@ a
 			color: #FFF
 
 
+//social
+.social
+	font-size: 0
+	a
+		display: inline-block
+		width: 46px
+		height: 46px
+		margin-right: 10px
+		text-align: center
+		color: #fff
+		border-radius: 50%
+		text-align: center
+		vertical-align: middle
+		+vertical
+		&.vk-ico
+			background: #337a9e
+		&.tw-ico
+			background: #30c3de
+		&.add-ico
+			position: relative
+			width: 17px
+			height: 17px
+			border: 2px solid #5dc1e8
+			border-radius: 0
+			color: #5dc1e8
+			&:after
+				content: "+"
+				display: inline-block
+				font-size: 16px
+				line-height: 1
+				+rob
+	i
+		display: inline-block
+		font-size: 15px
+		vertical-align: middle
+		line-height: 1
+
 //radiobox and checkbox
 .radiobox
 	display: block
@@ -472,16 +508,11 @@ a
 		background-color: #D9DFE1
 		border-radius: 50%
 		overflow: hidden
-		&.is-center
-			text-align: center
 		img
-			width: 100%
-		.icon-person
-			display: inline-block
-			margin-top: 10px
-			font-size: 41px
-			color: #FFF
-			line-height: 1
+			display: block
+			max-width: 50px
+			max-height: 50px
+			margin: 0 auto
 	&__input
 		position: relative
 		display: block
@@ -536,6 +567,40 @@ a
 		font-size: 12px
 		color: #BEC9CC
 		+rob-cl
+	&__load
+		position: relative
+		width: 225px
+		height: 300px
+		border: 1px dashed #c2c2c2
+		text-align: center
+		+vertical
+		&-txt
+			display: inline-block
+			vertical-align: middle
+			color: #9FB2B8
+			font-size: 14px
+			+rob-li
+			b
+				font-family: 'Arial'
+				font-weight: 700
+				font-style: italic
+		&-ico
+			position: relative
+			width: 47px
+			height: 47px
+			margin: 0 auto 30px
+			border: 2px solid #5dc1e8
+			border-radius: 50%
+			&:after
+				content: "+"
+				position: absolute
+				top: 50%
+				left: 50%
+				margin: -12.5px 0 0 -7px
+				font-size: 25px
+				color: #5DC1E8
+				line-height: 1
+				+rob
 	.input
 		width: 100%
 		padding: 7px 15px
