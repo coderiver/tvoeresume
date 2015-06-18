@@ -1,0 +1,92 @@
+extend _skeleton-is-inner
+
+block title
+	title Твои обязанности и достижения
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Твои обязанности и достижения
+						.slide__in
+							.charge
+								h2.h2
+									i.icon-tie
+									span Последнее место работы:
+								section.s-margin
+									.form
+										form
+											.form__bl
+												h4.h4 С:
+												label.calendar
+													input(type="text" value="25.05.2012" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												h4.h4 По (Н4):
+												label.calendar
+													input(type="text" placeholder="Выберите дату" readonly).datepicker
+													i.icon-calendar
+											.form__bl
+												label.radiobox
+													input(type="checkbox" name="time" value="1")
+													span по настоящее время
+								figure
+									figcaption.m-pad
+										.form
+											form
+												.textarea-wrap
+													h2.h2
+														i.icon-hamburger
+														span Обязанности и функции:
+													textarea.textarea(placeholder="Укажите, какие обязанности Вы выполняли на месте работы или практики. Например, к основным обязанностям ахитектора относятся подготовка технических заданий на проектирование разделов архитектурных решений, планирование и отчетность по проектированию, проверка входящей проектной документации, взаимодействие и согласование проектных решений с разработчиками смежных разделов, производством, заказчиками.")
+													a(href="#").textarea__link.js-hint
+														i.icon-note
+														span Подсказка
+															i.icon-arrow
+													.hint.js-tip
+														.hint__message.arr-bottom
+															a(href="#").icon-cancel.js-close
+															| Рекомендуем указать обязанности в виде действий, которые ты выполнял
+														.hint__message.arr-top
+															a(href="#").icon-cancel.js-close
+															| Желательно выписывать обязанности в порядке их значимости: на первом месте – наиболее значимые, а на последнем – наименее
+												.textarea-wrap
+													h2.h2
+														i.icon-achievement
+														span Достижения:
+													textarea.textarea(placeholder="Упоминание достижений поможет выгодно представить Ваше резюме наряду с другими соискателями в отрасли. Например, это может быть успешно завершенная работа по проектированию зданий и сооружений, участие в профессиональных выставках и т. д. Если Вы — молодой специалист без опыта работы, то проанализируйте свою стажировку или практику, которую проходили, дипломную работу, над которой работали, или участвовали в конкурсах.")
+													a(href="#").textarea__link.js-hint
+														i.icon-note
+														span Подсказка
+															i.icon-arrow
+													.hint.js-tip
+														.hint__message.arr-bottom-middle
+															a(href="#").icon-cancel.js-close
+															| Достижения – это твои измеримые успехи, которые выражаются в цифрах, сроках или существенных качественных изменениях в компании. Они обязательно должны быть конкретны, измеримы, внушительны и соответствовать должности
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+

@@ -87,10 +87,9 @@ block content
 											label.form__input.is-error.js-error.no-margin
 												input(type="text" placeholder="Напр. Архитектура").input
 												.error-message Поле заполнено неверно. Повторите попытку
-										.form__section.is-margin.no-margin
-											h3.h3 Личные данные(Н3)
-											label.special
-												input(type="text")
+										.form__divider
+											h3.h3
+												span Личные данные(Н3)
 										.form__section
 											h4.h4 Учебное заведение:
 											label.form__input.no-margin
@@ -100,12 +99,12 @@ block content
 											label.form__input.no-margin
 												input(type="text" value="МГУ ПРГР мкий").input.small-txt
 												span.form__note *необязательное поле
-										.form__section
+										.form__section.m-margin
 											h4.h4.onleft.no-margin Название курса:
 											.form__cut.onleft
-												p
+												p.is-underline
 													| <i class="icon-clip"></i>Мои достижения.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a>
-												p
+												p.is-underline
 													| <i class="icon-clip"></i>Мои достижения длинное название.doc<a href="#" class="icon-close"></a><a href="#" class="icon-edit"></a>
 										.form__section
 											h4.h4.onleft.no-margin Рекомендации:
@@ -113,7 +112,7 @@ block content
 												span
 													| Иван Пётр Николаевич<a href="#"><i class="icon-edit"></i></a>
 												span
-													| 8-495-123-45-67<a href="#"><i class="icon-edit"></i></a>
+													| 8-495-123-45-67<a href="#" class="icon-edit"></a>
 												a(href="#").form__link Добавить место работы
 								.btn.is-padding
 									label.input-load

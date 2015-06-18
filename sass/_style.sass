@@ -73,6 +73,8 @@
 	figure
 		margin-bottom: 55px
 		padding: 0 15px
+		&.s-margin
+			margin-bottom: 35px
 		figcaption
 			position: relative
 			padding-top: 58px
@@ -96,12 +98,9 @@
 			&.is-margin
 				margin: 20px 0 40px
 			.h3
-				display: inline-block
-				min-width: 240px
 				margin-bottom: 0
 				text-align: left
 				line-height: 1.4
-				z-index: 1
 			.h4
 				display: inline-block
 				width: 240px
@@ -110,7 +109,7 @@
 				margin: 0
 				&.no-margin
 					margin: 0
-					line-height: 1.6
+					line-height: 1.7
 			.calendar
 				display: inline-block
 			.radiobox
@@ -153,27 +152,28 @@
 		max-width: 540px
 		width: 100%
 		display: inline-block
-		vertical-align: middle
 	.form__cut
-		margin-bottom: 15px
-		font-size: 14px
 		span
 			margin-right: 17px
+			&.max-width
+				display: inline-block
+				max-width: 295px
+				vertical-align: top
+			&.is-gray
+				color: #9FB2B8
+				+rob-li
 		p
-			margin-bottom: 5px
-			font-size: 12px
-			text-decoration: underline
-			color: #5DC1E8
 			line-height: 1.25
-			+rob
+			&.is-underline
+				font-size: 12px
+				margin-bottom: 5px
+				color: #5DC1E8
+				text-decoration: underline
+				+rob
 	.input
 		padding: 10px 13px
 		border: 1px solid #DCE6E6
 		+box
-	.special
-		display: inline-block
-		width: 100%
-		max-width: 695px
 	.radiobox, .checkbox
 		span
 			padding-left: 30px
