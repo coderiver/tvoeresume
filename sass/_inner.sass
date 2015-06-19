@@ -26,6 +26,8 @@
 		border-radius: 5px
 		background: #D2EDF1
 		+transform(rotate(-2deg))
+		&.is-more-rotate
+			+transform(rotate(-4deg))
 	.rect-ico-2
 		position: absolute
 		top: 30px
@@ -58,6 +60,8 @@
 		font-size: 14px
 		+clr
 		+rob-l
+		&.s-pad
+			padding-top: 40px
 	&__subttl
 		margin: 20px 0 35px
 		text-align: center
@@ -1033,3 +1037,298 @@
 	.icon-planet
 		font-size: 25px
 		margin-right: 11px
+
+//dashboard
+.dashboard
+	position: relative
+	&__in
+		margin-bottom: 15px
+		padding: 0 15px
+		+box
+		+clr
+	&__pen
+		position: relative
+		margin: 10px -24px 0 0
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			background-color: #FFF
+			border-radius: 50px
+			border: 1px dashed #d7d7d7
+		&:after
+			top: -17px
+			left: -13.5px
+			width: 27px
+			height: 27px
+		&:before
+			top: -26px
+			left: -22px
+			width: 44px
+			height: 44px
+		.pen-ico
+			position: relative
+			z-index: 1
+			+svg(pen-bg, 62, 81)
+	&-bg
+		position: relative
+		height: 20px
+		margin-bottom: 25px
+		&:after
+			content: ""
+			position: absolute
+			height: 7px
+			top: 6px
+			left: -15px
+			right: -15px
+			background: url(../img/svg/dots-bg.svg) 0 0 repeat-x
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: -15px
+			right: -15px
+			border-top: 1px dashed #ccc
+	&__table
+		width: 100%
+		margin: 20px 0
+		border-collapse: collapse
+		tr
+			&:first-child
+				th
+					&:first-child
+						width: 265px
+					&:last-child
+						width: 240px
+			th
+				padding: 4px 10px
+				text-transform: uppercase
+				text-align: center
+				font-size: 12px
+				background: #5dc1e8
+				color: #ECF3F3
+				border: 1px solid #d5dbdb
+				line-height: 18px
+				vertical-align: middle
+				+slab-b
+				&.w-200
+					width: 200px
+				&.w-145
+					width: 145px
+			td
+				height: 30px
+				padding: 5px 10px
+				border: 1px solid #d5dbdb
+				color: #2F5A71
+				font-size: 14px
+				vertical-align: middle
+				+rob-l
+				&.txt-center
+					text-align: center
+				&.txt-bold
+					+rob-b
+				&.is-gray
+					color: #ABB7BA
+				i
+					display: inline-block
+					width: 30px
+					line-height: 1
+					vertical-align: middle
+			span
+				display: inline-block
+				vertical-align: middle
+			small
+				display: block
+				font-size: 12px
+				color: #9FB2B8
+				&.txt-brown
+					color: #666
+	.h2
+		text-align: left
+	.btn-wrap
+		margin-top: 45px
+		padding: 22px
+		border-radius: 50px
+		border: 1px dashed #d7d7d7
+	.btn.is-padding
+		display: block
+		text-decoration: none
+		color: #FFF
+	.icon-load
+		position: absolute
+		top: -17px
+		right: 30px
+		font-size: 35px
+		color: #5DC1E8
+		line-height: 1
+		text-decoration: none
+	.icon-recommend
+		font-size: 21px
+		margin-right: 10px
+	.icon-back
+		font-size: 19px
+		color: #34B1E2
+		&.is-green
+			color: #4EC3BC
+			&:before
+				+transform(rotate(180deg))
+	.icon-draft
+		margin-left: 2px
+		font-size: 18px
+		color: #8FA4AA
+	.icon-correct
+		font-size: 19px
+		color: #94C63D
+	.icon-checking
+		font-size: 23px
+		color: #34B1E2
+		&:before
+			width: auto
+	.icon-error
+		font-size: 19px
+		color: #F86964
+
+//tutor block
+.tutor
+	&__bl
+		position: relative
+		width: 617px
+		padding: 12px 10px
+		background-color: #FFF9E8
+		border-radius: 20px
+		box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
+		+box
+		&:before
+			content: ""
+			position: absolute
+			bottom: -17px
+			left: 30px
+			+arr(30, 14, #e0dbcc,tr)
+			+transform(rotate(-60deg))
+		&:after
+			content: ""
+			position: absolute
+			bottom: -16px
+			left: 30px
+			+arr(31, 13, #fff9e8,tr)
+			+transform(rotate(-60deg))
+		&.no-message
+			height: 115px
+			background: none
+			border: 1px dashed #d7d7d7
+			box-shadow: none
+			&:before
+				bottom: -12px
+				border: none
+				+svg(arr-bg, 19, 17)
+				+transform(rotate(0))
+			&:after
+				bottom: 0
+				width: 21px
+				height: 5px
+				background: #fff
+				border: none
+				+transform(rotate(0))
+			p
+				text-align: center
+				padding-top: 35px
+				font-size: 13px
+				color: #9FB2B8
+				+rob-li
+	&__in
+		height: 105px
+		overflow: hidden
+	&__message
+		margin-bottom: 10px
+		font-size: 13px
+		color: #666
+		+rob
+		small
+			padding: 0 3px
+			font-size: 11px
+			background: #EDE7D8
+			color: #999
+			+rob-l
+	&__txt
+		position: relative
+		max-width: 580px
+		+box
+	&__avatar
+		margin-top: 25px
+		font-size: 0
+		p
+			display: inline-block
+			font-size: 14px
+			color: #2F5A71
+			vertical-align: middle
+			+rob-b
+	&__img
+		display: inline-block
+		margin-right: 10px
+		max-width: 32px
+		max-height: 32px
+		vertical-align: middle
+		img
+			width: 100%
+	.h2
+		text-align: left
+	.icon-messages
+		font-size: 22px
+		margin-right: 10px
+	.icon-trash
+		margin: 0 15px
+		font-size: 15px
+		color: #BBB296
+	.jspVerticalBar
+		width: 12px
+		background: #ede6d2
+		box-shadow: inset 0px 0px 0px 1px #E0DBCC
+	.jspTrack
+		background: none
+	.jspDrag
+		width: 8px
+		margin: 0 auto
+		background: none
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			left: 0
+			right: 0
+			bottom: 2px
+			background: #BBB296
+			border-radius: 4px
+
+//gradient block
+.gradients
+	position: relative
+	text-align: center
+	font-size: 12px
+	border: 1px solid #dee3e3
+	border-radius: 9px
+	overflow: hidden
+	+box
+	span
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		bottom: 0
+		+background-image(linear-gradient(to right, #FB5B55 0%, #FFD76B 50%, #90C53B 100%))
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: #fff
+		&.is-load
+			&:after
+				left: 100%
+				+transition(left 1s ease)
+
+	p
+		position: relative
+		line-height: 1
+		z-index: 1

@@ -1,0 +1,188 @@
+extend _skeleton-style
+
+block title
+	title Профиль студента
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+					.header__avatar.onleft
+						.header__img
+							img(src="img/avatar.png" alt="")
+						p Амросимов Иван Валерьевич
+					.header__settings
+						a(href="#")
+							i.icon-help
+							p Помощь
+						a(href="#")
+							i.icon-settings
+							p Настройки
+						a(href="#")
+							i.icon-exit
+							p Выход
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico.is-more-rotate
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide__in.s-pad
+							.dashboard
+								.dashboard__in
+									a(href="#").icon-load
+									.tutor.onleft
+										h2.h2
+											i.icon-messages
+											span Сообщения от наставника
+										.tutor__bl
+											.tutor__in.js-scroll
+												.tutor__message
+													small
+														| 15.09. 12 апреля
+													.tutor__txt
+														a(href="#").icon-trash.onright
+														p.
+															Ребята, просьба всем до 12 мая доделать свои резюме и выслать мне на проверку.
+															Постарайся побыстрее, пожалуйста.
+												.tutor__message
+													small
+														| 15.09. 12 апреля
+													.tutor__txt
+														a(href="#").icon-trash.onright
+														p.
+															Ребята, поторопитесь.
+												.tutor__message
+													small
+														| 15.09. 12 апреля
+													.tutor__txt
+														a(href="#").icon-trash.onright
+														p.
+															Ребята, просьба всем до 12 мая доделать свои резюме и выслать мне на проверку.
+															Постарайся побыстрее, пожалуйста.
+												.tutor__message
+													small
+														| 15.09. 12 апреля
+													.tutor__txt
+														a(href="#").icon-trash.onright
+														p.
+															Ребята, поторопитесь.
+												.tutor__message
+													small
+														| 15.09. 12 апреля
+													.tutor__txt
+														a(href="#").icon-trash.onright
+														p.
+															Ребята, просьба всем до 12 мая доделать свои резюме и выслать мне на проверку.
+															Постарайся побыстрее, пожалуйста.
+												.tutor__message
+													small
+														| 15.09. 12 апреля
+													.tutor__txt
+														a(href="#").icon-trash.onright
+														p.
+															Ребята, поторопитесь.
+										.tutor__avatar
+											.tutor__img
+												img(src="img/avatar.png" alt="")
+											p Иванчук А.Л.
+									.dashboard__bl.onright
+										.btn-wrap
+											a(href="#").btn.is-padding
+												i.cross-ico
+												span Создать новое резюме
+										.dashboard__pen.onright
+											.pen-ico
+								.dashboard-bg
+								.dashboard__in
+									.dashboard__bl
+										h2.h2
+											i.icon-recommend
+											span Мои резюме
+									table.dashboard__table
+										tr
+											th Название
+											th.w-200 Статус
+											th.w-145 Степень заполнения
+											th Дата создания
+											th Сообщение от наставника
+										tr
+											td.txt-bold
+												p Инженер механик 5-го разряда
+											td
+												i.icon-back
+												span Возврат на доработку
+											td
+												.gradients(data-width="60%")
+													span.js-width
+													p 60%
+											td.txt-center 02.02.2014
+											td
+												small 12:23, 12 Апр. Иванчук А.Л.
+												small.txt-brown Ваня, прикрепи, пожалуйста свое...
+										tr
+											td.txt-bold
+												p Инженер механик 5-го разряда
+											td
+												i.icon-back.is-green
+												span Отправлено в Superjob
+											td
+												.gradients(data-width="90%")
+													span.js-width
+													p 90%
+											td.txt-center 02.02.2014
+											td
+										tr
+											td.txt-bold.is-gray
+												p Инженер механик 5-го разряда
+											td.is-gray
+												i.icon-draft
+												span Черновик
+											td
+												.gradients(data-width="0%")
+													span.js-width
+													p 0%
+											td.txt-center 02.02.2014
+											td
+										tr
+											td.txt-bold
+												p Инженер механик 5-го разряда
+											td
+												i.icon-checking
+												span На проверке
+											td
+												.gradients(data-width="90%")
+													span.js-width
+													p 90%
+											td.txt-center 02.02.2014
+											td
+										tr
+											td.txt-bold.is-gray
+												p Инженер механик 5-го разряда
+											td
+												i.icon-correct
+												span Проверено
+											td
+												.gradients(data-width="0%")
+													span.js-width
+													p 0%
+											td.txt-center 02.02.2014
+											td
+										tr
+											td.txt-bold
+												p Инженер механик 5-го разряда
+											td
+												i.icon-error
+												span Удалено
+											td
+												.gradients(data-width="0%")
+													span.js-width
+													p 0%
+											td.txt-center 02.02.2014
+											td

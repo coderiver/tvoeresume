@@ -59,6 +59,9 @@ head.ready(function() {
 
 	//scroll
 	$('.js-scroll').jScrollPane();
+	$('.tutor__in.js-scroll').jScrollPane({
+		verticalDragMaxHeight: 35
+	});
 
 	//select dropdown
 	$('.select').click(function(){
@@ -105,4 +108,23 @@ head.ready(function() {
 		e.preventDefault();
 		$(this).parent().addClass('is-hidden');
 	});
+
+	//gradients on dashboard
+	function gradient(){
+
+		$('.gradients').each(function(){
+
+			var width = $(this).attr('data-width');
+
+			$(this).find('.js-width').css({
+				'width': width
+			});
+			$(this).find('.js-width').addClass('is-load');
+
+		});
+
+	}
+
+	gradient();
+
 });
