@@ -127,4 +127,9 @@ head.ready(function() {
 
 	gradient();
 
+	//overlay
+	if($('.overlay').length > 0){
+		$('body').addClass('is-overflow');
+	}
+
 });

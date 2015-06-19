@@ -180,6 +180,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 html, body { height: 100%; }
 
 body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+body.is-overflow { overflow: hidden; }
 
 .out { position: relative; min-width: 970px; }
 .out.is-loading { height: 100%; min-height: 750px; overflow: hidden; background-color: #a0aeb3; }
@@ -824,8 +825,8 @@ a:visited { color: #9d35ce; }
 .dashboard .icon-checking:before { width: auto; }
 .dashboard .icon-error { font-size: 19px; color: #f86964; }
 
-.tutor__bl { position: relative; width: 617px; padding: 12px 10px; background-color: #fff9e8; border-radius: 20px; box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.tutor__bl:before { content: ""; position: absolute; bottom: -17px; left: 30px; width: 0px; height: 0px; border-style: solid; border-width: 0 30px 14px 0; border-color: transparent #e0dbcc transparent transparent; -moz-transform: rotate(-60deg); -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
+.tutor__bl { position: relative; width: 617px; padding: 12px 10px; background-color: #fff9e8; border-radius: 20px; box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12); border: 1px solid #e0dbcc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.tutor__bl:before { content: ""; position: absolute; bottom: -19px; left: 29px; width: 0px; height: 0px; border-style: solid; border-width: 0 30px 14px 0; border-color: transparent #e0dbcc transparent transparent; -moz-transform: rotate(-60deg); -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 .tutor__bl:after { content: ""; position: absolute; bottom: -16px; left: 30px; width: 0px; height: 0px; border-style: solid; border-width: 0 31px 13px 0; border-color: transparent #fff9e8 transparent transparent; -moz-transform: rotate(-60deg); -ms-transform: rotate(-60deg); -webkit-transform: rotate(-60deg); transform: rotate(-60deg); }
 .tutor__bl.no-message { height: 115px; background: none; border: 1px dashed #d7d7d7; box-shadow: none; }
 .tutor__bl.no-message:before { bottom: -12px; border: none; background: url("../img/svg/arr-bg.svg") no-repeat 0 0; -moz-background-size: 19px 17px; -o-background-size: 19px 17px; -webkit-background-size: 19px 17px; background-size: 19px 17px; width: 19px; height: 17px; display: inline-block; -moz-transform: rotate(0); -ms-transform: rotate(0); -webkit-transform: rotate(0); transform: rotate(0); }
@@ -852,6 +853,11 @@ a:visited { color: #9d35ce; }
 .gradients span:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: white; }
 .gradients span.is-load:after { left: 100%; -moz-transition: left 1s ease; -o-transition: left 1s ease; -webkit-transition: left 1s ease; transition: left 1s ease; }
 .gradients p { position: relative; line-height: 1; z-index: 1; }
+
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 20px 0; background: rgba(255, 255, 255, 0.8); z-index: 200; white-space: nowrap; overflow: auto; text-align: center; font-size: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.overlay__bl { position: relative; display: inline-block; text-align: left; vertical-align: middle; white-space: normal; z-index: 300; }
+.overlay__bl .tutor .h2 { text-align: center; }
 
 .slide__in section { margin-bottom: 40px; padding: 0 15px; *zoom: 1; }
 .slide__in section.no-margin { margin-bottom: 0; }
@@ -951,6 +957,7 @@ body.is-inner-girl .item__bl.no-bg:hover, body.is-inner-girl .item__bl.no-bg.act
 body.is-inner-girl .item__bl:hover, body.is-inner-girl .item__bl.active { background: #ed6247; }
 body.is-inner-girl .item__ico { color: #ed6247; }
 body.is-inner-girl .jspDrag { background: #ed6247; }
+body.is-inner-girl .tutor .jspDrag { background: none; }
 body.is-inner-girl .ui-datepicker.ui-widget .ui-datepicker-header { background: #ed6247; }
 body.is-inner-girl .ui-datepicker.ui-widget .ui-state-highlight:before { border-color: #ed6247; }
 body.is-inner-girl .slide__message { background: url("../img/svg/cloud-bg4.svg") no-repeat 0 0; -moz-background-size: 290px 95px; -o-background-size: 290px 95px; -webkit-background-size: 290px 95px; background-size: 290px 95px; width: 290px; height: 95px; display: inline-block; }
@@ -966,7 +973,7 @@ body.is-inner-girl .slide-nav-prev .slide-nav-in:before { width: 0px; height: 0p
 body.is-inner-girl .slide-nav-prev .slide-nav-in:after { width: 0px; height: 0px; border-style: solid; border-width: 0 0 21px 15px; border-color: transparent transparent #ed6247 transparent; }
 body.is-inner-girl .slide-title:before { background: url("../img/svg/title-left-bg-girl.svg") no-repeat 0 0; -moz-background-size: 16px 70px; -o-background-size: 16px 70px; -webkit-background-size: 16px 70px; background-size: 16px 70px; width: 16px; height: 70px; display: inline-block; }
 body.is-inner-girl .slide-title:after { background: url("../img/svg/title-right-bg-girl.svg") no-repeat 0 0; -moz-background-size: 16px 70px; -o-background-size: 16px 70px; -webkit-background-size: 16px 70px; background-size: 16px 70px; width: 16px; height: 70px; display: inline-block; }
-body.is-inner-girl .h1, body.is-inner-girl .h2, body.is-inner-girl .h3, body.is-inner-girl .icon-lamp, body.is-inner-girl .icon-calendar, body.is-inner-girl .icon-angle-down, body.is-inner-girl .icon-uni, body.is-inner-girl .icon-feather, body.is-inner-girl .icon-clip, body.is-inner-girl .icon-edit, body.is-inner-girl .icon-clock, body.is-inner-girl .icon-print, body.is-inner-girl .icon-save { color: #ed6247; }
+body.is-inner-girl .h1, body.is-inner-girl .h2, body.is-inner-girl .h3, body.is-inner-girl .icon-lamp, body.is-inner-girl .icon-calendar, body.is-inner-girl .icon-angle-down, body.is-inner-girl .icon-uni, body.is-inner-girl .icon-feather, body.is-inner-girl .icon-clip, body.is-inner-girl .icon-edit, body.is-inner-girl .icon-clock, body.is-inner-girl .icon-print, body.is-inner-girl .icon-save, body.is-inner-girl .icon-load { color: #ed6247; }
 body.is-inner-girl .h3 span:before { background: #ed6247; }
 body.is-inner-girl .slide__in ul, body.is-inner-girl .slide__in ol, body.is-inner-girl .slide__in figure .form h4.is-another, body.is-inner-girl .slide__in .form__link, body.is-inner-girl .slide__in .form__cut p.is-underline { color: #ed6247; }
 body.is-inner-girl .slide__in .form__link:before { border-color: #ed6247; }
@@ -984,6 +991,7 @@ body.is-inner-girl .works__link .icon-close { color: #ed6247; }
 body.is-inner-girl .language__in, body.is-inner-girl .language__ico { background-color: #ed6247; }
 body.is-inner-girl .add-ico, body.is-inner-girl .form__load-ico { border: 2px solid #ed6247; }
 body.is-inner-girl .add-ico:after, body.is-inner-girl .form__load-ico:after { color: #ed6247; }
+body.is-inner-girl .dashboard__table tr th { background: #ed6247; }
 
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
 .jspContainer { overflow: hidden; position: relative; }
