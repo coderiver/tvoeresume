@@ -697,6 +697,16 @@ a
 		cursor: pointer
 		+rob-b
 		+nosel
+	.select__span
+		display: block
+		padding-right: 20px
+		font-size: 14px
+		+box
+		&.is-placeholder
+			color: #9FB2B8
+			+rob-li
+		&.is-overflow
+			+text-overflow
 	.icon-angle-down
 		position: absolute
 		line-height: 1
@@ -872,7 +882,7 @@ a
 		position: relative
 		max-width: 310px
 		margin: 0 90px 10px 0
-		padding: 11px 15px 11px 12px
+		padding: 11px 17px 11px 12px
 		background-color: #FFF9E8
 		border-radius: 20px
 		box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
@@ -939,7 +949,7 @@ a
 				width: auto
 				position: absolute
 				left: 50%
-				margin-left: -4.5px
+				margin-left: -5px
 			&:visited
 				color: #fef8e7
 			&:hover

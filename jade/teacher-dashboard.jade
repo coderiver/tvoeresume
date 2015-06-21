@@ -1,0 +1,141 @@
+extend _skeleton-style
+
+block title
+	title Профиль учителя
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+					.header__avatar.onleft
+						.header__img
+							img(src="img/avatar.png" alt="")
+						p Иванчук Лилия Ивановна
+					.header__settings
+						a(href="#")
+							i.icon-help.is-teacher
+							p Помощь
+						a(href="#")
+							i.icon-settings.is-teacher
+							p Настройки
+						a(href="#")
+							i.icon-exit.is-teacher
+							p Выход
+
+block content
+	.content.is-teacher
+		.l-wide
+			.paper
+				i.rect-ico.is-more-rotate
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide__in.s-pad
+							.dashboard
+								.dashboard__in
+									.dashboard__clean
+										a(href="#").dashboard__message-link.onright
+											i.icon-mail
+											span Написать сообщение
+									form.form
+										.dashboard__bl.onleft
+											h4.h4 Группа:
+											.select-wrap
+												.select
+													span.select__span.is-placeholder Все группы
+													i.icon-angle-down
+													ul.select__list.js-scroll
+														li(data-attr="Красный"): a(href="#") Красный очень-очень
+														li(data-attr="Синий"): a(href="#") Синий
+														li(data-attr="Зелёный"): a(href="#") Зелёный
+														li(data-attr="Красный"): a(href="#") Красный
+														li(data-attr="Синий"): a(href="#") Синий
+														li(data-attr="Зелёный"): a(href="#") Зелёный
+										.dashboard__bl.onleft
+											h4.h4 Найти:
+											label.form__input
+												input(type="search" placeholder="Запрос").input
+										.dashboard__bl.onleft
+											h4.h4 Статус:
+											.select-wrap
+												.select
+													span.select__span.is-placeholder На проверке
+													i.icon-angle-down
+													ul.select__list.js-scroll
+														li(data-attr="На проверке"): a(href="#") На проверке
+														li(data-attr="Синий"): a(href="#") Синий
+														li(data-attr="Зелёный"): a(href="#") Зелёный
+														li(data-attr="Красный"): a(href="#") Красный
+														li(data-attr="Синий"): a(href="#") Синий
+														li(data-attr="Зелёный"): a(href="#") Зелёный
+										.dashboard__bl.onleft
+											h4.h4 Занятость:
+											.select-wrap
+												.select
+													span.select__span.is-placeholder На проверке
+													i.icon-angle-down
+													ul.select__list.js-scroll
+														li(data-attr="На проверке"): a(href="#") На проверке
+														li(data-attr="Синий"): a(href="#") Синий
+														li(data-attr="Зелёный"): a(href="#") Зелёный
+														li(data-attr="Красный"): a(href="#") Красный
+														li(data-attr="Синий"): a(href="#") Синий
+														li(data-attr="Зелёный"): a(href="#") Зелёный очень
+									table.dashboard__table.is-teacher
+										tr
+											th Группа
+											th.w-230 ФИО студента
+											th.w-130 Статус
+											th Рекомендации
+											th.w-115 Степень заполнения
+											th Занятость
+											th.w-130 Контакты студента
+										tr
+											td.txt-bold
+												p АРХ-21
+											td
+												span Амросимов Иван Валерьевич
+											td
+												i.icon-checking
+												span На проверке
+											td.txt-red Требуется
+											td
+												.gradients(data-width="60%")
+													span.js-width
+													p 60%
+											td Учится
+											td ambr@mail.ru
+										tr
+											td.txt-bold
+												p ДИЗ-15
+											td
+												span Барсукова Анастасия Павловна
+											td
+												i.icon-correct
+												span Проверено
+											td
+												a(href="#") Барсукова_Реком..
+											td
+												.gradients(data-width="90%")
+													span.js-width
+													p 90%
+											td Безработный
+											td +7 999 123-45-67
+										tr
+											td.txt-bold
+												p ВДС-521
+											td
+												span Вагитов Армен Борисович
+											td
+												i.icon-back
+												span На доработке
+											td Не требуется
+											td
+												.gradients(data-width="10%")
+													span.js-width
+													p 10%
+											td Работает
+											td +7 999 123-45-67

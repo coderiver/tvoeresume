@@ -72,10 +72,20 @@ head.ready(function() {
 	$('.select a').click(function(e){
 		e.preventDefault();
 
-		var value = $(this).parent('li').data('attr'),
-			place = $(this).closest('.select').find('.select__span');
+		var value        = $(this).parent('li').data('attr'),
+			place        = $(this).closest('.select').find('.select__span'),
+			placeWidth   = $(this).closest('.select').find('.select__span').width(),
+			elementWidth = $(this).width();
 
 		place.text(value);
+		place.removeClass('is-placeholder');
+
+		// console.log(placeWidth, elementWidth);
+		// if(placeWidth < elementWidth){
+		// 	place.addClass('is-overflow');
+		// } else{
+		// 	place.removeClass('is-overflow');
+		// }
 	});
 
 	//dial

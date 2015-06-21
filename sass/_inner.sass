@@ -4,6 +4,30 @@
 		padding: 50px 0 30px
 		background: url(../img/bg-1.png) top center no-repeat, url(../img/bg-2.png) center bottom no-repeat
 		background-color: #5BB7D4
+	&.is-teacher
+		padding: 50px 0 30px
+		background: url(../img/teacher-dashbg.jpg) top center repeat
+		background-color: #56baab
+		.paper
+			&:before
+				background: #56baab
+		.dashboard__bl
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+			.h4
+				display: inline-block
+				margin: 0 10px 0 0
+				vertical-align: middle
+			.select-wrap
+				width: 132px
+				vertical-align: middle
+				.jspDrag
+					background: #56baab
+			.form__input
+				max-width: 186px
+		.icon-angle-down
+			color: #56baab
 
 .paper
 	position: relative
@@ -1046,6 +1070,8 @@
 		padding: 0 15px
 		+box
 		+clr
+	&__clean
+		+clr
 	&__pen
 		position: relative
 		margin: 10px -24px 0 0
@@ -1089,62 +1115,88 @@
 			left: -15px
 			right: -15px
 			border-top: 1px dashed #ccc
+	&__message-link
+		font-size: 14px
+		color: #2F5A71
+		+slab-b
+		span
+			vertical-align: middle
+		.icon-mail
+			display: inline-block
+			margin-right: 10px
+			color: #00AA9F
+			vertical-align: middle
+			&:before
+				width: auto
 	&__table
 		width: 100%
 		margin: 20px 0
 		border-collapse: collapse
-		tr
-			&:first-child
-				th
-					&:first-child
-						width: 265px
-					&:last-child
-						width: 240px
+		&__table-clean
+			+clr
+		&.is-teacher
 			th
-				padding: 4px 10px
-				text-transform: uppercase
-				text-align: center
-				font-size: 12px
-				background: #5dc1e8
-				color: #ECF3F3
-				border: 1px solid #d5dbdb
-				line-height: 18px
-				vertical-align: middle
-				+slab-b
-				&.w-200
-					width: 200px
-				&.w-145
-					width: 145px
+				background: #2F5A71
 			td
-				height: 30px
-				padding: 5px 10px
-				border: 1px solid #d5dbdb
-				color: #2F5A71
-				font-size: 14px
-				vertical-align: middle
-				+rob-l
-				&.txt-center
-					text-align: center
-				&.txt-bold
-					+rob-b
-				&.is-gray
-					color: #ABB7BA
+				padding: 5px
 				i
-					display: inline-block
-					width: 30px
-					line-height: 1
-					vertical-align: middle
-			span
-				display: inline-block
-				vertical-align: middle
-			small
-				display: block
-				font-size: 12px
-				color: #9FB2B8
-				&.txt-brown
-					color: #666
+					width: 22px
+		th
+			padding: 4px 10px
+			text-transform: uppercase
+			text-align: center
+			font-size: 12px
+			background: #5dc1e8
+			color: #ECF3F3
+			border: 1px solid #d5dbdb
+			line-height: 18px
+			vertical-align: middle
+			+slab-b
+			&.w-265
+				width: 265px
+			&.w-240
+				width: 240px
+			&.w-230
+				width: 230px
+			&.w-200
+				width: 200px
+			&.w-145
+				width: 145px
+			&.w-130
+				width: 130px
+			&.w-115
+				width: 115px
+		td
+			height: 31px
+			padding: 4px 10px
+			border: 1px solid #d5dbdb
+			color: #2F5A71
+			font-size: 14px
+			vertical-align: middle
+			+rob-l
+			&.txt-center
+				text-align: center
+			&.txt-bold
+				+rob-b
+			&.is-gray
+				color: #ABB7BA
+			&.txt-red
+				color: #FB5E56
+			i
+				float: left
+				width: 30px
+				line-height: 1
+		small
+			display: block
+			font-size: 12px
+			color: #9FB2B8
+			&.txt-brown
+				color: #666
 	.h2
 		text-align: left
+	.form
+		margin: 40px 0 30px
+		+clr
 	.btn-wrap
 		margin-top: 45px
 		padding: 22px
@@ -1232,7 +1284,7 @@
 				+transform(rotate(0))
 			p
 				text-align: center
-				padding-top: 35px
+				padding-top: 31px
 				font-size: 13px
 				color: #9FB2B8
 				+rob-li
