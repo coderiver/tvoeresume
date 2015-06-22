@@ -142,4 +142,36 @@ head.ready(function() {
 		$('body').addClass('is-overflow');
 	}
 
+	//range
+	$('.js-range').slider({
+		range: true,
+		min: 10000,
+		max: 120000,
+		values: [ 50000, 80000 ],
+		step: 10000,
+		slide: function( event, ui ){
+
+			//low
+			if(ui.values[0] < 40000 && ui.values[1] == 40000){
+				$('.js-low').addClass('is-visible');
+			} else{
+				$('.js-low').removeClass('is-visible');
+			}
+
+			//middle
+			if(ui.values[0] > 40000 && ui.values[1] == 80000){
+				$('.js-middle').addClass('is-visible');
+			} else{
+				$('.js-middle').removeClass('is-visible');
+			}
+
+			//high
+			if(ui.values[0] == 90000 && ui.values[1] == 120000){
+				$('.js-high').addClass('is-visible');
+			} else{
+				$('.js-high').removeClass('is-visible');
+			}
+		}
+	});
+
 });

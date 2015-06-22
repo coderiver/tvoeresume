@@ -1508,3 +1508,28 @@
 		z-index: 300
 		.tutor .h2
 			text-align: center
+
+//range
+.range-hint
+	padding: 0 15px
+	.hint
+		position: relative
+		min-height: 155px
+		margin: 0
+		right: 0
+		opacity: 1
+		z-index: 1
+		overflow: visible
+		+clr
+		&:after
+			display: none
+		.hint__message
+			position: absolute
+			bottom: 0
+			margin: 0
+			&.is-left
+				left: 0
+				max-width: 270px
+			&.is-right
+				right: 0
+

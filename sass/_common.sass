@@ -876,6 +876,177 @@ a
 		+rob-li
 	+unselectable
 
+//range
+.range
+	margin-top: 50px
+	padding: 0 40px
+	+box
+	.range__list
+		position: relative
+		height: 10px
+		margin-bottom: 5px
+		padding-left: 0
+		list-style-type: none
+		text-align: justify
+		font-size: 0
+		&:after
+			content: ""
+			width: 100%
+			display: inline-block
+		li
+			position: absolute
+			top: 5px
+			left: 0
+			width: 5px
+			height: 28px
+			margin-left: -2.5px
+			background-color: #FCFCFC
+			border-radius: 3px
+			border: 1px solid #dee3e3
+			+box
+			span
+				position: absolute
+				margin-bottom: 10px
+				left: 50%
+				bottom: 100%
+				white-space: nowrap
+				+transform(translateX(-50%))
+			&:last-child
+				span
+					+slab-l
+			@for $i from 0 to 12
+				$percent: 9.09%
+				&:nth-child(#{$i+1})
+					left: $percent * $i
+		span
+			color: #2F5A71
+			font-size: 14px
+			+slab-b
+	&-wrap
+		position: absolute
+		left: 15px
+		right: 15px
+		bottom: 15px
+		+box
+		+clr
+	&__el
+		position: relative
+		opacity: 0
+		+transition(opacity 0.3s ease-in)
+		&.is-visible
+			opacity: 1
+		&.is-low
+			.range__bl
+				&:before
+					background-image: url(../img/low-bg.png)
+		&.is-middle
+			position: absolute
+			width: 215px
+			height: 235px
+			left: 50%
+			margin-left: -107.5px
+			.range__bl
+				&:before
+					background-image: url(../img/svg/middle-bg.svg)
+		&.is-high
+			.range__message
+				left: inherit
+				right: 100%
+				&:after
+					+transform(scale(-1, 1))
+			.range__bl
+				&:before
+					background-image: url(../img/svg/high-bg.svg)
+	&__bl
+		position: relative
+		top: 0
+		width: 215px
+		height: 235px
+		border-radius: 50%
+		overflow: hidden
+		background: url(../img/income-bg.png) center bottom no-repeat
+		&:before
+			content: ""
+			position: absolute
+			left: 50%
+			bottom: 0
+			width: 128px
+			height: 235px
+			margin-left: -64px
+			background-repeat: no-repeat
+			-webkit-background-size: cover
+			-o-background-size: cover
+			background-size: cover
+	&__message
+		position: absolute
+		top: 0
+		left: 100%
+		width: 100%
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			+svg(cloud-bg8, 220, 125)
+	&__txt
+		position: relative
+		padding-top: 25px
+		text-align: center
+		font-size: 14px
+		color: #FFF
+		z-index: 1
+		+rob-l
+		.beautify
+			font-size: 18px
+			+nautilus
+			span
+				font-size: 36px
+				line-height: 1.3
+	.ui-slider
+		position: relative
+		border-radius: 4px
+		height: 10px
+		background: #fff
+		&:before
+			content: ""
+			position: absolute
+			height: 9px
+			top: 0
+			left: -10px
+			right: -10px
+			bottom: 0
+			border: 1px solid #e0e5e5
+			background: #fff
+			border-radius: 5px
+	.ui-slider-range
+		position: absolute
+		height: 10px
+		background-attachment: fixed
+		border-radius: 5px
+		z-index: 1
+		+background-image(linear-gradient(to right, #FB5B55 25%, #FFD76B 50%, #90C53B 80%))
+	.ui-slider-handle
+		position: absolute
+		width: 27px
+		height: 27px
+		margin: -10px 0 0 -13.5px
+		background-color: #D9DFE1
+		border-radius: 50%
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22), inset 0 -2px 0 rgba(0, 0, 0, 0.2)
+		z-index: 2
+		cursor: default
+		-ms-touch-action: none
+		touch-action: none
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -5.5px 0 0 -5.5px
+			width: 11px
+			height: 11px
+			background: #BCC2C4
+			border-radius: 50%
+
 //hint
 .hint
 	opacity: 0
@@ -960,6 +1131,28 @@ a
 				right: -14px
 				+arr(10, 35, #fff9e8, tr)
 				+transform(rotate(-50deg))
+		&.arr-bottom-left
+			&:before
+				bottom: -24px
+				left: 50%
+				margin-left: -8px
+				+arr(17, 25, #e0dbcc, tl)
+			&:after
+				bottom: -22px
+				left: 50%
+				margin-left: -7px
+				+arr(14, 22, #fff9e8, tl)
+		&.arr-bottom-right
+			&:before
+				bottom: -24px
+				left: 50%
+				margin-left: -9px
+				+arr(17, 25, #e0dbcc, tr)
+			&:after
+				bottom: -22px
+				left: 50%
+				margin-left: -7px
+				+arr(14, 22, #fff9e8, tr)
 		.icon-cancel
 			position: absolute
 			top: 8px

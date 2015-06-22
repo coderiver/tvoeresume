@@ -1,0 +1,85 @@
+extend _skeleton-is-inner
+
+block title
+	title Укажи желаемый доход
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+
+block content
+	.content.is-inner
+		.l-wide
+			.paper
+				i.rect-ico
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide-title
+							i.clip-ico
+							h1.h1 Укажи желаемый доход
+						.slide__in
+							.range-hint
+								.hint
+									.hint__message.is-left.arr-bottom-left
+										p Не будь таким скромным!
+										p Ты можешь зарабатывать больше.
+									.hint__message.is-right.arr-bottom-right
+										p.
+											Завышенный уровень притязаний может отпугнуть потенциального работодателя.
+											Обрати внимание на зарплаты, соответствующие твоим.
+							.range
+								ul.range__list
+									li: span 10 000
+									li: span 20 000
+									li: span 30 000
+									li: span 40 000
+									li: span 50 000
+									li: span 60 000
+									li: span 70 000
+									li: span 80 000
+									li: span 90 000
+									li: span 100 000
+									li: span 110 000
+									li: span > больше
+								.js-range
+							.range-wrap
+								.range__el.onleft.is-low.js-low
+									.range__bl
+									.range__message
+										.range__txt
+											p Такую зарплату получают:
+											p.beautify
+												| <span>30%</span> выпускников
+								.range__el.is-middle.is-visible.js-middle
+									.range__bl
+									.range__message
+										.range__txt
+											p Такую зарплату получают:
+											p.beautify
+												| <span>30%</span> выпускников
+								.range__el.onright.is-high.js-high
+									.range__bl
+									.range__message
+										.range__txt
+											p Такую зарплату получают:
+											p.beautify
+												| <span>30%</span> выпускников
+						a(href="#").slide-nav-prev
+							.slide-nav-in
+								i.triangle-ico
+								i.icon-angle-left
+								span Назад
+							i.line-ico
+						a(href="#").slide-nav-next
+							.slide-nav-in
+								i.triangle-ico
+								span Далее
+								i.icon-angle-right
+							i.line-ico
+
+
