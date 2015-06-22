@@ -391,11 +391,44 @@
 		left: -22px
 		right: -22px
 		bottom: -22px
+	&__item
+		margin-top: 48px
+	&__el
+		display: block
+		max-width: 295px
+		margin: 0 auto 15px
+		padding: 14.5px 0
+		text-align: center
+		text-decoration: none
+		font-size: 14px
+		color: #2F5A71
+		background: #E3F8FF
+		border: 1px solid #8dc8df
+		border-radius: 3px
+		+transition(all 0.2s ease)
+		+rob-b
+		+box
+		&:hover,
+		&.active
+			background: #5dc1e8
+			color: #fff
 	.h4
 		font-size: 15px
 	.icon-clock
 		font-size: 23px
 		margin-right: 5px
+	.icon-hourglass
+		font-size: 24px
+		margin-right: 7px
+	.books-bg
+		position: absolute
+		bottom: 0
+		right: 65px
+		+svg(books, 210, 106)
+		&.left
+			left: 54px
+			right: inherit
+			+svg(books-1, 230, 162)
 
 //study pages
 .study
