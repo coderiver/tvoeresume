@@ -152,4 +152,26 @@ body
 				color: #ED6247
 		.dashboard__table tr th
 			background: #ED6247
+		.range__message
+			&:after
+				+svg(cloud-bg9, 220, 125)
+		.range__el
+			.range__bl
+				&:before
+					width: 131px
+					margin-left: -65.5px
+					bottom: -30px
+			&.is-low
+				.range__bl
+					&:before
+						background-image: url(../img/svg/girl-bg.svg)
+			&.is-middle
+				.range__bl
+					&:before
+						background-image: url(../img/svg/girl-middle-bg.svg)
+			&.is-high
+				.range__bl
+					&:before
+						background-image: url(../img/svg/girl-high-bg.svg)
+
 

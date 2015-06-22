@@ -1121,6 +1121,11 @@ body.is-inner-girl .language__in, body.is-inner-girl .language__ico { background
 body.is-inner-girl .add-ico, body.is-inner-girl .form__load-ico { border: 2px solid #ed6247; }
 body.is-inner-girl .add-ico:after, body.is-inner-girl .form__load-ico:after { color: #ed6247; }
 body.is-inner-girl .dashboard__table tr th { background: #ed6247; }
+body.is-inner-girl .range__message:after { background: url("../img/svg/cloud-bg9.svg") no-repeat 0 0; -moz-background-size: 220px 125px; -o-background-size: 220px 125px; -webkit-background-size: 220px 125px; background-size: 220px 125px; width: 220px; height: 125px; display: inline-block; }
+body.is-inner-girl .range__el .range__bl:before { width: 131px; margin-left: -65.5px; bottom: -30px; }
+body.is-inner-girl .range__el.is-low .range__bl:before { background-image: url(../img/svg/girl-bg.svg); }
+body.is-inner-girl .range__el.is-middle .range__bl:before { background-image: url(../img/svg/girl-middle-bg.svg); }
+body.is-inner-girl .range__el.is-high .range__bl:before { background-image: url(../img/svg/girl-high-bg.svg); }
 
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
 .jspContainer { overflow: hidden; position: relative; }
