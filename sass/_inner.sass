@@ -6,7 +6,7 @@
 		background-color: #5BB7D4
 	&.is-teacher
 		padding: 50px 0 30px
-		background: url(../img/teacher-dashbg.jpg) top center repeat
+		background: url(../img/teacher-dashbg-center.jpg) center 100px no-repeat, url(../img/teacher-dashbg.jpg) top center repeat
 		background-color: #56baab
 		.paper
 			&:before
@@ -975,16 +975,6 @@
 	.form__img
 		display: inline-block
 		vertical-align: middle
-	.textarea
-		display: inline-block
-		width: 375px
-		min-height: 185px
-		padding: 15px
-		color: #2F5A71
-		font-size: 14px
-		border: 1px solid #DCE6E6
-		vertical-align: top
-		+rob-l
 	.h3 span
 		padding-right: 55px
 	.icon-print, .icon-save
@@ -1065,7 +1055,64 @@
 //dashboard
 .dashboard
 	position: relative
+	&.is-teacher
+		figure
+			padding: 0
+		.btn-wrap
+			margin-top: 0
+		.form
+			margin-top: 0
+		.form__divider
+			&.m-top-0
+				margin-top: 0
+		.form__input
+			max-width: 335px
+			margin-bottom: 0
+			&.m-top
+				margin-top: 19px
+			&.m-bottom
+				margin-bottom: 10px
+		.form__cut
+			span
+				display: inline-block
+				margin-top: 5px
+			p
+				&:first-child
+					margin-top: 5px
+			+clr
+		.form__section
+			.h4
+				width: 210px
+				margin: 5px 0 0
+		.input
+			padding: 4.5px 13px
+			line-height: 1.3
+		.textarea
+			&.s-height
+				margin: 20px 0
+		.dashboard__clean
+			margin-bottom: 18px
+			.h3
+				width: 210px
+				text-align: left
+				overflow: visible
+				margin-bottom: 0
+			.h4
+				width: 210px
+				margin: 4px 0 0
+		.txt-red
+			color: #ED6247
+		.icon-view,
+		.icon-save,
+		.icon-print
+			margin-right: 20px
+			font-size: 27px
+			color: #00aa9f
+			text-decoration: none
+			&:before
+				width: auto
 	&__in
+		position: relative
 		margin-bottom: 15px
 		padding: 0 15px
 		+box
@@ -1105,16 +1152,28 @@
 			position: absolute
 			height: 7px
 			top: 6px
-			left: -15px
-			right: -15px
+			left: -30px
+			right: -30px
 			background: url(../img/svg/dots-bg.svg) 0 0 repeat-x
 		&:before
 			content: ""
 			position: absolute
 			top: 0
+			left: -30px
+			right: -30px
+			border-top: 1px dashed #ccc
+		&.is-absolute
+			position: absolute
 			left: -15px
 			right: -15px
-			border-top: 1px dashed #ccc
+			height: 40px
+			bottom: -12px
+			margin-bottom: 0
+			background: #fff
+			z-index: 2
+			&:before, &:after
+				left: 0
+				right: 0
 	&__message-link
 		font-size: 14px
 		color: #2F5A71
@@ -1128,6 +1187,10 @@
 			vertical-align: middle
 			&:before
 				width: auto
+	&__btn
+		font-size: 0
+		.btn
+			margin-right: 20px
 	&__table
 		width: 100%
 		margin: 20px 0
@@ -1197,6 +1260,9 @@
 	.form
 		margin: 40px 0 30px
 		+clr
+	.form__img
+		display: inline-block
+		vertical-align: middle
 	.btn-wrap
 		margin-top: 45px
 		padding: 22px

@@ -1,0 +1,318 @@
+extend _skeleton-style
+
+block title
+	title Проверка резюме
+
+block header
+	header.header
+		.l-center
+			.header__wrap
+				.header__in
+					a(href="#").logo.onleft
+						| Твое<span>Резюме</span>
+					.header__avatar.onleft
+						.header__img
+							img(src="img/avatar.png" alt="")
+						p Иванчук Лилия Ивановна
+					.header__settings
+						a(href="#")
+							i.icon-help.is-teacher
+							p Помощь
+						a(href="#")
+							i.icon-settings.is-teacher
+							p Настройки
+						a(href="#")
+							i.icon-exit.is-teacher
+							p Выход
+
+block content
+	.content.is-teacher
+		.l-wide
+			.paper
+				i.rect-ico.is-more-rotate
+				i.rect-ico-2
+				.slide
+					.l-center
+						.slide__in.s-pad
+							.dashboard.is-teacher
+								.dashboard__in
+									.dashboard__bl.onleft
+										.dashboard__clean
+											h3.h3.onleft Проверка резюме:
+											p.onleft Абросимов Иван Валерьевич
+										.dashboard__clean
+											h3.h4.onleft Группа:
+											p.onleft АРХ-21
+										.dashboard__clean
+											h3.h4.onleft Статус резюме:
+											p.onleft.txt-red На проверке/Требуется рекомендация
+									.dashboard__bl.onright
+										.btn-wrap
+											.btn Выдать рекомендацию
+										.dashboard__pen.onright
+											.pen-ico
+									.dashboard-bg.is-absolute
+								.dashboard__in
+									figure.s-margin
+										.form
+											form
+												.form__divider.m-top-0
+													h3.h3
+														span Личные данные
+												.form__section
+													h4.h4.is-middle Фото для резюме:
+													.form__cut.is-middle
+														.form__img
+															img(src="img/avatar.png" alt="")
+													label.form__input.onright.m-top
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Меня зовут:
+													.form__cut.onleft
+														span
+															| Абросимов Иван Валерьевич
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Дата рождения:
+													.form__cut.onleft
+														span
+															| 12.12.98
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Контакты:
+													.form__cut.onleft
+														p
+															| +7 999 123-45-67
+														p
+															| kovalev@26kadr.ru
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Ищу работу:
+													.form__cut.onleft
+														span
+															| Москва
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__divider
+													h3.h3
+														span Желаемая должность
+												.form__section
+													h4.h4.is-float Название должности:
+													.form__cut.onleft
+														span
+															| Инженер-механик по работе с населением
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Направление:
+													.form__cut.onleft
+														p
+															| Строительство
+														p
+															| Дорожное строительство
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Специальность:
+													.form__cut.onleft
+														span
+															| Трубопровод
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Желаемая зарплата:
+													.form__cut.onleft
+														span
+															| от 30 000 руб. до 45 000 руб.
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float График работы:
+													.form__cut.onleft
+														span
+															| Полный рабочий день
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Тип занятости:
+													.form__cut.onleft
+														span
+															| Проектная
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__divider
+													h3.h3
+														span Опыт работы/практики
+												.form__section
+													h4.h4.is-float График работы:
+													.form__cut.onleft
+														span
+															| с 12.12.2014 по н/в
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Специализация:
+													.form__cut.onleft
+														span
+															| Строительство
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Название компании:
+													.form__cut.onleft
+														span
+															| Рога и копыта
+														span
+															| www.abc.ru
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Должность:
+													.form__cut.onleft
+														span
+															| Столяр
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section.m-top
+													h4.h4.is-float Обязанности и функции:
+													.form__cut.onleft
+														textarea.textarea(readonly).readonly
+															| Вытачивание и изготовление изделий из дерева или на деревянной основе, изготовление мебели (столов, стульев, шкафов, сервантов, табуреток, тумбочек, полок и т. д.), окон, плинтусов, карнизов, лестниц, деревянных частей самолетов и фигурной резьбе по дереву. Распиливание и строгание вручную необлицованных брусковых деталей простого
+													textarea.textarea(placeholder="Ваши комментарии").is-comment.onright
+												.form__section.m-bottom
+													h4.h4.is-float Достижения:
+													.form__cut.onleft
+														textarea.textarea(readonly).readonly
+															| Вытачивание и изготовление изделий из дерева или на деревянной основе, изготовление мебели (столов, стульев, шкафов, сервантов, табуреток, тумбочек, полок и т. д.), окон, плинтусов, карнизов, лестниц, деревянных частей самолетов и фигурной резьбе по дереву. Распиливание и строгание вручную необлицованных брусковых деталей простого
+													textarea.textarea(placeholder="Ваши комментарии").is-comment.onright
+												.form__section
+													h4.h4.is-float Рекомендации:
+													.form__cut.onleft
+														span
+															| Иван Пётр Николаевич
+														span
+															| 8-495-123-45-67
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__divider
+													h3.h3
+														span Образование и ключевые навыки
+												.form__section
+													h4.h4.is-float Период обучения:
+													.form__cut.onleft
+														span
+															| с 12.12.2014 по н/в
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Учебное заведение:
+													.form__cut.onleft
+														span
+															| Колледж Архитектуры и Дизайна №26
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Направление:
+													.form__cut.onleft
+														span
+															| Архитектура
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Специальность:
+													.form__cut.onleft
+														span
+															| Архитектор мостов
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Ключевые навыки:
+													.form__cut.onleft
+														p
+															| навыки бюджетирования
+														p
+															| навыки делового общения
+														p
+															| навыки деловой переписки
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Допуски и сертификаты:
+													.form__cut.onleft
+														span.is-gray
+															| Сертификат “Строительно-монтажные работы”
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Личные качества:
+													.form__cut.onleft
+														span.max-width
+															| Организован, собран, быстро обучаюсь, развитые аналитические способности, опыт и навыки подготовки и проведения презентаций.
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__divider
+													h3.h3
+														span Курсы или дополнительное образование
+												.form__section
+													h4.h4.is-float Период обучения:
+													.form__cut.onleft
+														span.is-gray
+															| не заполнено
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Учебное заведение:
+													.form__cut.onleft
+														span.is-gray
+															| не заполнено
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Название курса:
+													.form__cut.onleft
+														span.is-gray
+															| не заполнено
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Иностранный язык:
+													.form__cut.onleft
+														span
+															| Английский язык-читаю со словарем
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section
+													h4.h4.is-float Портфолио:
+													.form__cut.onleft
+														p.is-underline
+															| <i class="icon-clip"></i>Мои достижения.doc<a href="#" class="icon-close"></a>
+														p.is-underline
+															| <i class="icon-clip"></i>Мои достижения.doc<a href="#" class="icon-close"></a>
+													label.form__input.onright.m-bottom
+														input(type="text" placeholder="Ваши комментарии").input
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__divider
+													h3.h3
+														span Хобби
+												.form__section
+													h4.h4.is-float Мои хобби:
+													.form__cut.onleft
+														span
+															| Играю в футбол, фотографирую
+													label.form__input.onright
+														input(type="text" placeholder="Ваши комментарии").input
+												.form__section.l-margin
+													h3.h3 Комментарий
+													textarea.textarea(placeholder="Ваня, довольно много ошибок, давай исправляй и потом присылай повторно.").s-height
+													a(href="#").icon-view
+													a(href="#").icon-save
+													a(href="#").icon-print
+												.dashboard-bg
+												.dashboard__btn
+													button.btn.is-red Вернуть на доработку
+													button.btn.is-olive Одобрить
+

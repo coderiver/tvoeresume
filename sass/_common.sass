@@ -413,6 +413,11 @@ a
 		box-shadow: 0px 3px 0px 0px #00857c
 		&:hover
 			background: #00857C
+	&.is-red
+		background: #ED6247
+		box-shadow: 0px 3px 0px 0px #ab4733
+		&:hover
+			background: #ab4733
 	&.is-padding
 		display: inline-block
 		cursor: pointer
@@ -493,6 +498,12 @@ a
 		margin-bottom: 10px
 		&.m-margin
 			margin-bottom: 30px
+		&.m-top
+			margin-top: 15px
+		&.m-bottom
+			margin-bottom: 15px
+		&.l-margin
+			margin-top: 40px
 		.input
 			+box
 	&__divider
@@ -662,10 +673,27 @@ a
 	background-color: #FAFAFA
 	border-radius: 3px
 	resize: none
-	border-color: #DCE6E6
+	border: 1px solid #DCE6E6
 	+box
 	+placeholder
+		color: #9FB2B8
 		+rob-li
+	&.readonly
+		display: inline-block
+		width: 375px
+		min-height: 166px
+		padding: 12px 5px 12px 15px
+		color: #2F5A71
+		font-size: 14px
+		border: 1px solid #DCE6E6
+		vertical-align: top
+		+rob-l
+		+box
+	&.is-comment
+		width: 335px
+		min-height: 166px
+	&.s-height
+		height: 72px
 	&__link
 		display: inline-block
 		margin-left: 10px
@@ -681,7 +709,6 @@ a
 			font-size: 13px
 			color: #7C919E
 			+transform(rotate(20deg))
-
 
 //select
 .select-wrap
