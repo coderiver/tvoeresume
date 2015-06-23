@@ -50,10 +50,20 @@ head.ready(function() {
 			$.extend($.datepicker.regional["ru"])
 		);
 		$(".datepicker").datepicker({
+			changeMonth: true,
+			changeYear: true,
 			beforeShow: function(input, inst) {
 				var widget = $(inst).datepicker('widget');
 				widget.css('margin-left', $(input).outerWidth() - widget.outerWidth());
 			}
+		});
+		$(".datepicker").click(function(){
+			$('.ui-datepicker-month').select2({
+				minimumResultsForSearch: Infinity
+			});
+			$('.ui-datepicker-year').select2({
+				minimumResultsForSearch: Infinity
+			});
 		});
 	});
 
@@ -63,29 +73,14 @@ head.ready(function() {
 		verticalDragMaxHeight: 35
 	});
 
-	//select dropdown
-	$('.select').click(function(){
-		$(this).find('.select__list').toggleClass('is-visible');
-		return false;
+	//tags
+	$(".js-tags").select2({
+		tags: true,
+		tokenSeparators: [',', ' ']
 	});
 
-	$('.select a').click(function(e){
-		e.preventDefault();
-
-		var value        = $(this).parent('li').data('attr'),
-			place        = $(this).closest('.select').find('.select__span'),
-			placeWidth   = $(this).closest('.select').find('.select__span').width(),
-			elementWidth = $(this).width();
-
-		place.text(value);
-		place.removeClass('is-placeholder');
-
-		// console.log(placeWidth, elementWidth);
-		// if(placeWidth < elementWidth){
-		// 	place.addClass('is-overflow');
-		// } else{
-		// 	place.removeClass('is-overflow');
-		// }
+	$(".js-select").select2({
+		minimumResultsForSearch: Infinity
 	});
 
 	//dial

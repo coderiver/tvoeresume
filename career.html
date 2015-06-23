@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Выбери желаемую должность</title>
   </head>
   <body>
@@ -32,24 +33,60 @@
                     <div class="career">
                       <h2 class="h2"><i class="icon-tie"></i><span>В других областях:</span></h2>
                       <div class="item-wrap"><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-it"></i><span>IT</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-auto"></i><span>Автосервис</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-bank"></i><span>Банки</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-waiter"></i><span>Административная работа</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-security"></i><span>Охрана</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-sale"></i><span>Продажи</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-account"></i><span>Бухгалтерия</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-deputy"></i><span>Гос. служба</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-design"></i><span>Дизайн</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-production"></i><span>Промышленность</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-restaurant"></i><span>Рестораны</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-realty"></i><span>Недвижимость</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-logistic"></i><span>Логистика</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-medicine"></i><span>Медицина</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-oil"></i><span>Нефть</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-transport"></i><span>Транспорт</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-tourism"></i><span>Туризм</span></div></a><a href="#" class="item__bl">
-                          <div class="item__in"><i class="item__ico icon-guitar"></i><span>Другое</span></div></a></div>
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/it.svg)" class="item__ico it"></div><span>IT</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/auto.svg)" class="item__ico auto"></div><span>Автосервис</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/bank.svg)" class="item__ico bank"></div><span>Банки</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/waiter.svg)" class="item__ico waiter"></div><span>Административная работа</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/security.svg)" class="item__ico security"></div><span>Охрана</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/sale.svg)" class="item__ico sale"></div><span>Продажи</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/account.svg)" class="item__ico account"></div><span>Бухгалтерия</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/deputy.svg)" class="item__ico deputy"></div><span>Гос. служба</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/design.svg)" class="item__ico design"></div><span>Дизайн</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/production.svg)" class="item__ico production"></div><span>Промышленность</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/restaurant.svg)" class="item__ico restaurant"></div><span>Рестораны</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/realty.svg)" class="item__ico realty"></div><span>Недвижимость</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/logistic.svg)" class="item__ico logistic"></div><span>Логистика</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/medicine.svg)" class="item__ico medicine"></div><span>Медицина</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/oil.svg)" class="item__ico oil"></div><span>Нефть</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/transport.svg)" class="item__ico transport"></div><span>Транспорт</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/tourism.svg)" class="item__ico tourism"></div><span>Туризм</span>
+                          </div></a><a href="#" class="item__bl">
+                          <div class="item__in">
+                            <div style="background-image: url(img/svg/guitar.svg)" class="item__ico guitar"></div><span>Другое</span>
+                          </div></a></div>
                       <div class="form">
                         <form>
                           <div class="form__section">

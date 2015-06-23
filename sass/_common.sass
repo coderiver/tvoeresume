@@ -234,7 +234,6 @@ a
 		border-radius: 3px
 		vertical-align: top
 		border: 1px solid #8dc8df
-		overflow: hidden
 		white-space: nowrap
 		+box
 		+vertical
@@ -253,16 +252,51 @@ a
 			background: #5dc1e8
 			span
 				color: #fff
-			i
-				color: #FFF
+			.it
+				background-image: url(../img/svg/it-h.svg) !important
+			.auto
+				background-image: url(../img/svg/auto-h.svg) !important
+			.bank
+				background-image: url(../img/svg/bank-h.svg) !important
+			.waiter
+				background-image: url(../img/svg/waiter-h.svg) !important
+			.security
+				background-image: url(../img/svg/security-h.svg) !important
+			.sale
+				background-image: url(../img/svg/sale-h.svg) !important
+			.account
+				background-image: url(../img/svg/account-h.svg) !important
+			.deputy
+				background-image: url(../img/svg/deputy-h.svg) !important
+			.design
+				background-image: url(../img/svg/design-h.svg) !important
+			.production
+				background-image: url(../img/svg/production-h.svg) !important
+			.restaurant
+				background-image: url(../img/svg/restaurant-h.svg) !important
+			.realty
+				background-image: url(../img/svg/realty-h.svg) !important
+			.logistic
+				background-image: url(../img/svg/logistic-h.svg) !important
+			.medicine
+				background-image: url(../img/svg/medicine-h.svg) !important
+			.oil
+				background-image: url(../img/svg/oil-h.svg) !important
+			.transport
+				background-image: url(../img/svg/transport-h.svg) !important
+			.tourism
+				background-image: url(../img/svg/tourism-h.svg) !important
+			.guitar
+				background-image: url(../img/svg/guitar-h.svg) !important
 		span
 			display: inline-block
+			max-height: 25px
+			overflow: hidden
 			font-size: 14px
 			vertical-align: middle
 			color: #2F5A71
 			line-height: 1
 			+rob-b
-			+transition(color 0.2s ease)
 		img
 			display: inline-block
 			max-width: 100%
@@ -279,18 +313,10 @@ a
 	.item__ico
 		display: block
 		margin: 0 auto 10px
-		font-size: 23px
-		color: #5dc1e8
-		+transition(color 0.2s ease)
-		&:before
-			width: auto
-	.icon-waiter
-		font-size: 29px
-	.icon-it
-		font-size: 22px
-	.icon-guitar
-		margin-top: -6px
-		font-size: 29px
+		width: 30px
+		height: 30px
+		background-position: center bottom
+		background-repeat: no-repeat
 
 .item-list
 	text-align: center
@@ -550,7 +576,7 @@ a
 			margin-bottom: 0
 		&.is-error
 			.input
-				border: 2px solid #ff7d64
+				border: 1px solid #ff7d64
 			.icon-error
 				position: absolute
 				top: 50%
@@ -671,6 +697,7 @@ a
 
 .calendar
 	position: relative
+	width: 180px
 	.icon-calendar
 		position: absolute
 		top: 50%
@@ -743,71 +770,44 @@ a
 //select
 .select-wrap
 	position: relative
-	.select
-		position: relative
-		padding: 10px 13px
-		font-size: 13px
-		color: #2F5A71
-		background-color: #FAFAFA
-		border-radius: 3px
-		border: 1px solid #dce6e6
-		cursor: pointer
-		+rob-b
-		+nosel
-	.select__span
-		display: block
-		padding-right: 20px
-		font-size: 14px
-		+box
-		&.is-placeholder
-			color: #9FB2B8
-			+rob-li
-		&.is-overflow
-			+text-overflow
-	.icon-angle-down
-		position: absolute
-		line-height: 1
-		top: 50%
-		right: 10px
-		margin-top: -12px
-		font-size: 24px
-		color: #34b1e2
-	.select__list
-		position: absolute
-		top: 100%
-		left: -1px
-		right: -1px
-		height: 115px
-		overflow-y: auto
-		background: #fff
-		border: 1px solid #dce6e6
-		list-style-type: none
-		opacity: 0
-		visibility: hidden
-		z-index: 2
-		+box
-		&.is-visible
-			opacity: 1
-			visibility: visible
-		li
-			margin-bottom: 0
-			&:first-child
-				padding-top: 20px
-			&:last-child
-				padding-bottom: 20px
-				a
-					margin-bottom: 0
-		a
-			display: block
-			padding: 0 20px
-			margin-bottom: 10px
-			text-decoration: none
+	.select2.select2-container
+		&.select2-container--focus
+			.select2-selection
+				border-color: darken(#DCE6E6, 20%)
+		.select2-selection
+			height: 40px
+			padding: 0 13px
+			font-size: 13px
+			background-color: #FAFAFA
+			border-radius: 3px
+			border: 1px solid #dce6e6
+			cursor: pointer
+			+rob-b
+			+transition(border-color 0.2s ease)
+		.select2-selection__rendered
+			padding-left: 0 !important
+			line-height: 40px
 			color: #2F5A71
-			+rob-l
-			&:visited
-				color: #2f5a71
-			&:hover
-				+rob-b
+			font-size: 13px
+		.select2-selection__arrow
+			position: absolute
+			width: auto !important
+			height: auto !important
+			line-height: 1
+			top: 50%
+			right: 10px
+			margin-top: -12px
+			font-size: 24px
+			color: #34b1e2
+			&:before
+				content: $icon-angle-down
+				font-family: 'fontello'
+			b
+				display: none
+		.select2-selection__placeholder
+			color: #9FB2B8
+			font-size: 14px
+			+rob-li
 	.jspDrag
 		background: #5dc1e8
 		border-radius: 8px
@@ -819,6 +819,18 @@ a
 	.jspScrollable
 		&:focus
 			outline: none
+
+.select2-container
+	.select2-results__option
+		color: #2F5A71
+		font-size: 13px
+		+rob-l
+	.select2-results__option--highlighted[aria-selected]
+		color: #2F5A71 !important
+		background-color: transparent !important
+		+rob-b
+	.select2-results__option[aria-selected=true]
+		background-color: transparent !important
 
 //datepicker
 .ui-datepicker.ui-widget
@@ -837,11 +849,34 @@ a
 		background: #34B1E2
 		color: #fff
 	.ui-datepicker-month
-		text-transform: uppercase
-		font-size: 16px
-		+rob-b
+		width: 96px
+		padding: 0px 0 1px 5px
+		font-size: 13px
+		border-radius: 3px
+		border: none
+		background-position: right center
+		background-repeat: no-repeat
+		background-image: url(../img/svg/select-bg.svg)
+		cursor: pointer
+		-webkit-appearance: none
+		-moz-appearance: none
+		+rob
+		&:-ms-expand
+			display: none
 	.ui-datepicker-year
-		display: none
+		width: 96px
+		margin-left: 10px
+		padding: 0px 0 1px 5px
+		font-size: 13px
+		border-radius: 3px
+		border: none
+		background-repeat: no-repeat
+		background-position: right center
+		background-image: url(../img/svg/select-bg.svg)
+		cursor: pointer
+		-webkit-appearance: none
+		-moz-appearance: none
+		+rob
 	.ui-state-default
 		display: block
 		padding: 10px 0
@@ -1076,6 +1111,37 @@ a
 			height: 11px
 			background: #BCC2C4
 			border-radius: 50%
+
+//tags selector
+.tags + .select2.select2-container
+	&.select2-container--focus
+		.select2-selection
+			border-color: darken(#DCE6E6, 20%)
+	.select2-selection
+		min-height: 115px
+		padding: 6px 0
+		background-color: #fafafa
+		border-radius: 3px
+		border: 1px solid #DCE6E6
+		+box
+	.select2-selection--multiple .select2-selection__choice
+		margin-bottom: 5px
+		padding: 4px 5px 7px 5px
+		font-size: 14px
+		background: #5dc1e8
+		color: #FFF
+		border-radius: 3px
+		border: none
+		+rob-b
+		+clr
+	.select2-selection__choice__remove
+		float: right
+		margin-left: 5px
+		color: #FFF !important
+	.select2-search--inline .select2-search__field
+		line-height: 30px
+		color: #2F5A71
+		+rob
 
 //hint
 .hint

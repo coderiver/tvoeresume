@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Личные данные</title>
   </head>
   <body>
@@ -66,16 +67,21 @@
                             <div class="form__section">
                               <h4 class="h4 is-another"><i class="icon-planet"></i><span>Ищу работу:</span></h4>
                               <div class="select-wrap">
-                                <div class="select"><span class="select__span">Выберите город</span><i class="icon-angle-down"></i>
-                                  <ul class="select__list js-scroll">
-                                    <li data-attr="Красный"><a href="#">Киев</a></li>
-                                    <li data-attr="Синий"><a href="#">Спарта</a></li>
-                                    <li data-attr="Зелёный"><a href="#">Афины</a></li>
-                                    <li data-attr="Красный"><a href="#">Минск</a></li>
-                                    <li data-attr="Синий"><a href="#">Нью-Йорк</a></li>
-                                    <li data-attr="Зелёный"><a href="#">Токио</a></li>
-                                  </ul>
-                                </div>
+                                <select style="width: 100%; height: 40px;" data-placeholder="Выберите город" class="js-select">
+                                  <option></option>
+                                  <option>Красный</option>
+                                  <option>Зеленый</option>
+                                  <option>Синий</option>
+                                  <option>Красный</option>
+                                  <option>Зеленый</option>
+                                  <option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!</option>
+                                  <option>Красный</option>
+                                  <option>Зеленый</option>
+                                  <option>Синий</option>
+                                  <option>Красный</option>
+                                  <option>Зеленый</option>
+                                  <option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!</option>
+                                </select>
                               </div>
                             </div>
                           </div>
