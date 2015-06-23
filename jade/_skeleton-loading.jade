@@ -1,7 +1,7 @@
 doctype html
 html
 	include head
-	body
+	body.is-full
 		.out.is-loading
 			//BEGIN HEADER
 			block header
@@ -11,8 +11,8 @@ html
 			.container
 				block content
 			//END CONTENT
-			//BEGIN FOOTER
-			include footer
-			//END FOOTER
+		//BEGIN FOOTER
+		include footer
+		//END FOOTER
 
 		script(src="js/lib/head.js", data-headjs-load="js/init.js")

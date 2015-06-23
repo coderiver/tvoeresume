@@ -1,0 +1,35 @@
+extend _skeleton-loading
+
+block title
+	title Регистрация
+
+block content
+	.content
+		.popup
+			.popup-bg.is-another
+			.popup__in
+				.popup__ttl: p Регистрация
+				.popup__txt
+					p Зарегистрируйтесь через
+					.social
+						a(href="#").vk-ico
+							i.icon-vk
+						a(href="#").fb-ico
+							i.icon-facebook
+					small или
+					p введите данные вручную:
+				form.form
+					label.form__input
+						i.icon-avatar
+						input(type="text" placeholder="Имя").input.placeholder
+					label.form__input
+						i.icon-avatar
+						input(type="text" placeholder="Фамилия").input.placeholder
+					label.form__input.is-error
+						i.icon-mail
+						input(type="email" placeholder="Электронная почта").input.placeholder
+						i.icon-error
+						.error-message.
+							Поле заполнено неверно. Повторите попытку.
+					button(type="submit").form__btn.t-margin Регистрация
+			.popup-shadow.is-another

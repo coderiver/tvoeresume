@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <title>Регистрация</title>
+  </head>
+  <body class="is-full">
+    <div class="out is-loading">
+      <!--BEGIN HEADER-->
+      <header class="header">
+        <div class="l-center">
+          <div class="header__wrap">
+            <div class="header__in"><a href="#" class="logo onleft">Твое<span>Резюме</span></a>
+              <div class="header__sign onright"><span>Войти с помощью</span><a href="#" class="header__social"><i class="icon-vk"></i></a>
+                <p class="header__or">или <a href="#" class="js-sign">по паролю</a></p>
+              </div>
+            </div>
+            <div class="form js-form">
+              <form>
+                <label class="form__input"><i class="icon-mail"></i>
+                  <input type="email" placeholder="Электронная почта" class="input placeholder">
+                </label>
+                <label class="form__input"><i class="icon-pass"></i>
+                  <input type="password" placeholder="Пароль" class="input placeholder">
+                </label><a href="#" class="form__link">напомнить пароль</a>
+                <button type="submit" class="form__btn">Вход</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--END HEADER-->
+      <!--BEGIN CONTENT-->
+      <div class="container">
+        <div class="content">
+          <div class="popup">
+            <div class="popup-bg is-another"></div>
+            <div class="popup__in">
+              <div class="popup__ttl">
+                <p>Регистрация</p>
+              </div>
+              <div class="popup__txt">
+                <p>Зарегистрируйтесь через</p>
+                <div class="social"><a href="#" class="vk-ico"><i class="icon-vk"></i></a><a href="#" class="fb-ico"><i class="icon-facebook"></i></a></div><small>или</small>
+                <p>введите данные вручную:</p>
+              </div>
+              <form class="form">
+                <label class="form__input"><i class="icon-avatar"></i>
+                  <input type="text" placeholder="Имя" class="input placeholder">
+                </label>
+                <label class="form__input"><i class="icon-avatar"></i>
+                  <input type="text" placeholder="Фамилия" class="input placeholder">
+                </label>
+                <label class="form__input is-error"><i class="icon-mail"></i>
+                  <input type="email" placeholder="Электронная почта" class="input placeholder"><i class="icon-error"></i>
+                  <div class="error-message">Поле заполнено неверно. Повторите попытку.</div>
+                </label>
+                <button type="submit" class="form__btn t-margin">Регистрация</button>
+              </form>
+            </div>
+            <div class="popup-shadow is-another"></div>
+          </div>
+        </div>
+      </div>
+      <!--END CONTENT-->
+    </div>
+    <!--BEGIN FOOTER-->
+    <footer class="footer">
+      <div class="l-center">
+        <div class="footer__in">
+          <div class="footer__bl footer__tel onleft"><span>Техподдержка:</span><span class="footer__call">+7 (495) <b>222-33-22</b></span></div>
+          <div class="footer__social onleft"><a href="#"><i class="icon-vk"></i></a><a href="#"><i class="icon-ok"></i></a></div>
+          <div class="footer__bl onright">
+            <p class="footer__copyright">© 2015 Мастер Резюме. Все права защищены.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--END FOOTER-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

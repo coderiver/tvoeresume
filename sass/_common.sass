@@ -100,20 +100,34 @@ body
 	line-height: 1.4
 	&.is-overflow
 		overflow: hidden
+	&.is-full
+		.footer
+			min-width: 970px
+			height: 100px
 
 .out
 	position: relative
 	min-width: 970px
 	&.is-loading
 		height: 100%
-		min-height: 750px
-		overflow: hidden
-		background-color: #a0aeb3
-		.footer
+		min-height: 850px
+		margin-bottom: -100px
+		.header
 			position: absolute
-			bottom: 0
+			top: 0
 			left: 0
 			right: 0
+			z-index: 2
+		.container
+			height: 100%
+		.content
+			height: 100%
+			padding-top: 120px
+			background: url(../img/popup-bg.png) top center no-repeat
+			background-color: #5bb7d4
+			+box
+			&.is-loading
+				background-color: #a0aeb3
 	&.is-inner
 		min-width: 1200px
 
@@ -121,7 +135,6 @@ body
 .container
 	position: relative
 	min-height: 500px
-	//overflow: hidden
 
 .l-wide
 	width: 1000px
@@ -322,6 +335,8 @@ a
 			background: #337a9e
 		&.tw-ico
 			background: #30c3de
+		&.fb-ico
+			background: #205ea4
 		&.add-ico
 			position: relative
 			width: 17px
@@ -535,15 +550,15 @@ a
 			margin-bottom: 0
 		&.is-error
 			.input
-				border-color: #ff7d64
-			&:after
-				content: $icon-error
+				border: 2px solid #ff7d64
+			.icon-error
 				position: absolute
 				top: 50%
-				right: -20px
-				margin-top: -9.5px
-				font-family: "fontello"
+				left: 100%
+				margin: -7.5px 0 0 10px
+				font-size: 15px
 				color: #ff7d64
+				line-height: 1
 			.error-message
 				content: "Поле заполнено неверно. Повторите попытку."
 				position: absolute
@@ -557,21 +572,36 @@ a
 				background: #F6E0E0
 				border-radius: 20px
 				border: 1px solid #ff7d64
+				box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
 				+nosel
 				+box
 				+rob-l
 				&:before
 					content: ""
 					position: absolute
-					top: 20px
-					left: -14px
-					+arr(13, 12, #ff7d64, br)
+					top: 50%
+					left: -20px
+					margin-top: -7px
+					+arr(26, 8, #ff7d64,tr)
+					+transform(rotate(-40deg))
 				&:after
 					content: ""
 					position: absolute
-					top: 19px
-					left: -11px
-					+arr(13, 12, #F6E0E0, br)
+					top: 50%
+					left: -19px
+					margin-top: -6.5px
+					+arr(26, 7, #F6E0E0,tr)
+					+transform(rotate(-40deg))
+		&.is-correct
+			.input
+				border: 2px solid #98C05C
+			i.icon-correct
+				position: absolute
+				top: 50%
+				left: 100%
+				margin: -7.5px 0 0 5px
+				font-size: 15px
+				color: #9FC85D
 	&__note
 		position: absolute
 		top: 100%

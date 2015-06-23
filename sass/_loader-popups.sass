@@ -1,0 +1,175 @@
+//loader and sign popups
+.loading-wrap
+	padding-top: 90px
+
+.loading
+	position: relative
+	display: block
+	width: 389px
+	height: 389px
+	margin: 0 auto
+	background: url(../img/loading.png) no-repeat
+	overflow: hidden
+	border-radius: 50%
+	&__helicopter
+		position: absolute
+		top: 50%
+		left: -251px
+		margin-top: -44.5px
+		width: 251px
+		height: 89px
+		background: url(../img/loader-helicopter.png) no-repeat
+		animation-name: pulse
+		animation-duration: 4s
+		animation-timing-function: ease-in
+		animation-delay: 0s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		animation-fill-mode: backwards
+	&__clouds
+		position: absolute
+		top: 35px
+		left: 10px
+		right: 0
+		height: 103px
+		background: url(../img/clouds.png) center center no-repeat
+		animation-name: move
+		animation-duration: 10s
+		animation-timing-function: ease
+		animation-delay: 0s
+		animation-iteration-count: infinite
+		animation-play-state: running
+
+//popups
+.popup
+	position: relative
+	max-width: 335px
+	margin: 0 auto
+	&__in
+		background: #334c55
+		border-bottom: 3px solid #4fd0d7
+	&-bg
+		width: 101px
+		height: 118px
+		margin: 0 auto
+		background-image: url(../img/svg/teacher-bg.svg)
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		background-repeat: no-repeat
+		&.is-another
+			background-image: url(../img/svg/girl-bg.svg)
+	&-shadow
+		position: absolute
+		left: 50%
+		bottom: -195px
+		width: 295px
+		height: 15px
+		margin-left: -147.5px
+		background-color: #6F8B94
+		border-radius: 50%
+		&.is-another
+			bottom: -35px
+	&__ttl
+		position: relative
+		top: -7px
+		width: 326px
+		min-height: 59px
+		margin: 0 auto 5px
+		padding: 3px 0
+		background: #fff
+		background: url(../img/svg/popup-ttl.svg) no-repeat
+		+box
+		&.m-bottom
+			margin-bottom: 40px
+		p
+			position: relative
+			width: 318px
+			margin: 0 auto
+			text-align: center
+			padding: 8px 0
+			font-size: 33px
+			color: #2F5A71
+			line-height: 1
+			border-top: 1px dashed #CDCDCD
+			border-bottom: 1px dashed #CDCDCD
+			+nautilus
+	&__txt
+		text-align: center
+		font-size: 14px
+		color: #FFF
+		line-height: 1.75
+		+slab-b
+		small
+			+slab-l
+	.social
+		margin: 10px 0
+		a
+			width: 65px
+			height: 65px
+			margin-right: 20px
+			&:last-child
+				margin-right: 0
+		i
+			font-size: 20px
+			&.icon-facebook
+				font-size: 30px
+	.form
+		margin-top: 20px
+		i
+			position: absolute
+			top: 50%
+			left: 7px
+			color: #9FB2B8
+			line-height: 1
+			&.icon-mail
+				margin-top: -7px
+				font-size: 14px
+			&.icon-pass
+				margin-top: -9px
+				font-size: 18px
+			&.icon-avatar
+				margin-top: -8.5px
+				font-size: 17px
+	.form__link
+		display: block
+		margin: 14px 0 20px
+		text-align: center
+		text-decoration: underline
+		font-size: 11px
+		color: #52B3D2
+		&:hover
+			text-decoration: none
+	.form__btn
+		display: block
+		margin: 0 auto 37px
+		min-width: 220px
+		padding: 11px 13px
+		text-transform: uppercase
+		font-size: 12px
+		background-color: #4FD0D7
+		color: #FFF
+		+box
+		+border-radius(15px)
+		+box-shadow(0 1px 0 rgba(85, 141, 158, 0.74))
+		+slab-b
+		+transition(all 0.1s ease-in)
+		&:hover
+			background-color: #2A969C
+		&.t-margin
+			margin-top: 30px
+	.form__input
+		max-width: 220px
+		margin: 0 auto 10px
+		&.is-error
+			.error-message
+				width: 300px
+				margin-left: 40px
+				padding: 8px
+				&:before,
+				&:after
+					margin: 0
+	.input
+		padding-left: 32px
+		padding-right: 10px
+		+box
