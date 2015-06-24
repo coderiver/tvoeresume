@@ -263,6 +263,9 @@ a:visited { color: #9d35ce; }
 .item-wrap .item__in span { display: block; text-transform: uppercase; font-size: 11.5px; }
 .item-wrap .item__ico { display: block; margin: 0 auto 10px; width: 30px; height: 30px; background-position: center bottom; background-repeat: no-repeat; }
 
+.item-list-wrap.is-overflow { position: relative; height: 125px; overflow: hidden; }
+.item-list-wrap.is-overflow .item-list { position: absolute; top: 0; left: -17px; right: -17px; bottom: 0; overflow-y: auto; }
+
 .item-list { text-align: center; list-style-type: none; font-size: 0; }
 .item-list li { display: inline-block; margin: 0 2px; vertical-align: middle; }
 .item-list .item__link { display: block; max-width: 515px; padding: 4px 15px 7px; color: #2f5a71; font-size: 14px; text-decoration: none; border-radius: 3px; font-family: "roboto-bold", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-transition: all 0.1s ease; -o-transition: all 0.1s ease; -webkit-transition: all 0.1s ease; transition: all 0.1s ease; }
@@ -744,13 +747,15 @@ a:visited { color: #9d35ce; }
 .skills { margin-top: 32px; }
 .skills__bl { padding: 0 15px; }
 .skills__bl .h2 { text-align: left; }
+.skills__wrap { text-align: center; }
 .skills__teacher { position: relative; width: 95px; height: 124px; margin: 40px 15px -20px 0; background-image: url(../img/svg/teacher-bg.svg); background-repeat: no-repeat; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 .skills__message { position: absolute; right: 100%; bottom: 55px; z-index: 0; background: url("../img/svg/cloud-bg5.svg") no-repeat 0 0; -moz-background-size: 210px 87px; -o-background-size: 210px 87px; -webkit-background-size: 210px 87px; background-size: 210px 87px; width: 210px; height: 87px; display: inline-block; }
 .skills__message span { display: inline-block; padding: 18px 0px 0px 23px; color: white; font-size: 16px; line-height: 22px; font-family: "nautilus", Arial, sans-serif; }
-.skills .item-list { margin-top: 30px; }
 .skills .icon-info { font-size: 20px; margin-right: 15px; }
 .skills .icon-skill { margin-right: 12px; font-size: 29px; }
-.skills .icon-angle-down { display: block; text-align: center; margin-top: 15px; font-size: 45px; color: #5dc1e8; }
+.skills .icon-angle-down { display: inline-block; margin-top: 10px; font-size: 45px; color: #5dc1e8; cursor: pointer; line-height: 0; }
+.skills .icon-angle-down.is-up { margin: 0 0 10px; opacity: 0; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.skills .icon-angle-down.is-up.is-visible { opacity: 1; }
 .skills .icon-angle-down:before { line-height: 0.5; }
 
 .hobby { margin-top: 30px; }

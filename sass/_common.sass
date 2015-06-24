@@ -318,6 +318,20 @@ a
 		background-position: center bottom
 		background-repeat: no-repeat
 
+
+.item-list-wrap
+	&.is-overflow
+		position: relative
+		height: 125px
+		overflow: hidden
+		.item-list
+			position: absolute
+			top: 0
+			left: -17px
+			right: -17px
+			bottom: 0
+			overflow-y: auto
+
 .item-list
 	text-align: center
 	list-style-type: none

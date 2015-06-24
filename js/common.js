@@ -44,7 +44,7 @@ head.ready(function() {
 		}
 	});
 
-	// //datepicker
+	//datepicker
 	$(function(){
 		$.datepicker.setDefaults(
 			$.extend($.datepicker.regional["ru"])
@@ -71,6 +71,30 @@ head.ready(function() {
 	$('.js-scroll').jScrollPane();
 	$('.tutor__in.js-scroll').jScrollPane({
 		verticalDragMaxHeight: 35
+	});
+
+	$('.js-list').scroll(function(){
+		var scroll = $(".js-list").scrollTop(),
+			wrapHeight = $('.item-list-wrap').height();
+
+		if(scroll > 0){
+			$('.js-up').addClass('is-visible');
+		} else{
+			$('.js-up').removeClass('is-visible');
+		}
+		console.log(scroll);
+	});
+
+	$(".js-down").click(function() {
+		$('.js-list').animate({
+			scrollTop: $(".js-list").scrollTop() + $('.item-list-wrap').height()
+		 }, 300);
+	});
+
+	$(".js-up").click(function() {
+		$('.js-list').animate({
+			scrollTop: $(".js-list").scrollTop() - $('.item-list-wrap').height()
+		 }, 300);
 	});
 
 	//tags
