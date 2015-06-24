@@ -112,19 +112,18 @@ head.ready(function() {
 		var el 	 = $(this),
 			elValue = el.data('val');
 
-		setTimeout(function(){
+		if($(".js-tags").length > 0){
+			setTimeout(function(){
+				var tags = $(".js-tags").val();
 
-			var tags = $(".js-tags").val();
-			if(tags.indexOf(elValue) == -1){
-				tags[tags.length] = elValue;
-				$(".js-tags").val(tags).trigger('change');
-				console.log(tags, elValue);
-			}
-		}, 0);
+				if(tags.indexOf(elValue) == -1){
+					tags[tags.length] = elValue;
+					$(".js-tags").val(tags).trigger('change');
+				}
+			}, 0);
+		}
 
-
-
-		//$(this).closest('.js-parent').find('.js-input').val(val);
+		$(this).closest('.js-parent').find('.js-input').val(elValue);
 	});
 
 	//dial
