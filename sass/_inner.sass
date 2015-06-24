@@ -71,13 +71,13 @@
 	&.start-bg
 		background: #fff url(../img/svg/start-bg.svg) center bottom no-repeat
 	&.courses-bg
-		background: #fff url(../img/svg/courses-bg.svg) center bottom no-repeat
+		background: #fff url(../img/courses-bg.png) center bottom no-repeat
 	&.hobby-bg
-		background: #fff url(../img/svg/hobby-bg.svg) center bottom no-repeat
+		background: #fff url(../img/hobby-bg.png) center bottom no-repeat
 	&.language-bg
 		background: #fff url(../img/svg/language-bg.svg) center bottom no-repeat
 	&.experience-bg
-		background: #fff url(../img/svg/experience-bg.svg) center bottom no-repeat
+		background: #fff url(../img/experience-bg.png) center bottom no-repeat
 	&__in
 		padding: 53px 0 20px
 		color: #2F5A71
@@ -459,6 +459,8 @@
 //career
 .career
 	padding-top: 40px
+	&-wrap
+		text-align: center
 	&__wrap
 		font-size: 0
 		margin: 30px auto 0
@@ -474,8 +476,6 @@
 		+box
 		+vertical
 		+transition(background 0.2s ease, border-color 0.2s ease)
-	.item-list
-		margin: 45px 0 55px
 	.form
 		margin-top: 20px
 		padding: 0 15px
@@ -497,6 +497,23 @@
 		vertical-align: middle
 	.icon-tie
 		font-size: 30px
+	.icon-angle-down
+		display: inline-block
+		margin-top: 10px
+		font-size: 45px
+		color: #5DC1E8
+		cursor: pointer
+		line-height: 0
+		opacity: 0
+		+nosel
+		&.is-up
+			margin: 0 0 10px
+			opacity: 0
+			+transform(rotate(180deg))
+		&.is-visible
+			opacity: 1
+		&:before
+			line-height: 0.5
 
 
 //courses
@@ -598,12 +615,14 @@
 		color: #5DC1E8
 		cursor: pointer
 		line-height: 0
+		opacity: 0
+		+nosel
 		&.is-up
 			margin: 0 0 10px
 			opacity: 0
 			+transform(rotate(180deg))
-			&.is-visible
-				opacity: 1
+		&.is-visible
+			opacity: 1
 		&:before
 			line-height: 0.5
 
@@ -840,9 +859,13 @@
 
 //experience
 .experience
-	margin-top: 30px
-	.item-list
-		margin: 20px 0 25px
+	margin-top: 15px
+	&-wrap
+		margin-bottom: 10px
+		text-align: center
+	.item-list-wrap
+		height: 70px
+		margin-top: 10px
 	section
 		.form
 			text-align: center
@@ -864,6 +887,23 @@
 	.icon-recommend
 		font-size: 26px
 		margin-right: 15px
+	.icon-angle-down
+		display: inline-block
+		margin-top: 10px
+		font-size: 45px
+		color: #5DC1E8
+		cursor: pointer
+		line-height: 0
+		opacity: 0
+		+nosel
+		&.is-up
+			margin: 0 0 10px
+			opacity: 0
+			+transform(rotate(180deg))
+		&.is-visible
+			opacity: 1
+		&:before
+			line-height: 0.5
 
 //practice
 .practice

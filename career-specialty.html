@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Выбери желаемую должность</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
       <header class="header">
         <div class="l-center">
           <div class="header__wrap">
-            <div class="header__in"><a href="#" class="logo onleft">Твое<span>Резюме</span></a></div>
+            <div class="header__in"><a href="#" data-val="Информационные системы" class="logo onleft">Твое<span>Резюме</span></a></div>
           </div>
         </div>
       </header>
@@ -29,30 +30,48 @@
                     <h1 class="h1">Выбери желаемую должность</h1>
                   </div>
                   <div class="slide__in">
-                    <div class="career">
+                    <div class="career js-parent">
                       <h2 class="h2"><i class="icon-glasses"></i><span>По специальности в дипломе:</span></h2>
-                      <ul class="item-list">
-                        <li class="is-margin"><a href="#" class="item__link">Автомеханик</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Архитектор мостов</a></li>
-                        <li class="is-margin"><a href="#" class="item__link active">Изготовитель таблеток</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Реклама</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Штукатур</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Информационные системы</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Информационные системы</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Архитектор мостов</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Изготовитель таблеток</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Реклама</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Штукатур</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Информационные системы</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Архитектор мостов</a></li>
-                        <li class="is-margin"><a href="#" class="item__link">Изготовитель таблеток</a></li>
-                      </ul>
+                      <div class="career-wrap"><span class="icon-angle-down is-up js-up"></span>
+                        <div class="item-list-wrap is-overflow">
+                          <ul class="item-list js-list">
+                            <li class="is-margin"><a href="#" data-val="Автомеханик" class="item__link">Автомеханик</a></li>
+                            <li class="is-margin"><a href="#" data-val="Архитектор мостов" class="item__link">Архитектор мостов</a></li>
+                            <li class="is-margin"><a href="#" data-val="Изготовитель таблеток" class="item__link active">Изготовитель таблеток</a></li>
+                            <li class="is-margin"><a href="#" data-val="Реклама" class="item__link">Реклама</a></li>
+                            <li class="is-margin"><a href="#" data-val="Штукатур" class="item__link">Штукатур</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Информационные системы</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Информационные системы</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Архитектор мостов</a></li>
+                            <li class="is-margin"><a href="#" data-val="Изготовитель таблеток" class="item__link">Изготовитель таблеток</a></li>
+                            <li class="is-margin"><a href="#" data-val="Реклама" class="item__link">Реклама</a></li>
+                            <li class="is-margin"><a href="#" data-val="Штукатур" class="item__link">Штукатур</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Информационные системы</a></li>
+                            <li class="is-margin"><a href="#" data-val="Архитектор мостов" class="item__link">Архитектор мостов</a></li>
+                            <li class="is-margin"><a href="#" data-val="Изготовитель таблеток" class="item__link">Изготовитель таблеток</a></li>
+                            <li class="is-margin"><a href="#" data-val="Автомеханик" class="item__link">Автомеханик</a></li>
+                            <li class="is-margin"><a href="#" data-val="Архитектор мостов" class="item__link">Архитектор мостов</a></li>
+                            <li class="is-margin"><a href="#" data-val="Изготовитель таблеток" class="item__link active">Изготовитель таблеток</a></li>
+                            <li class="is-margin"><a href="#" data-val="Реклама" class="item__link">Реклама</a></li>
+                            <li class="is-margin"><a href="#" data-val="Штукатур" class="item__link">Штукатур</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Информационные системы</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Информационные системы</a></li>
+                            <li class="is-margin"><a href="#" data-val="Архитектор мостов" class="item__link">Архитектор мостов</a></li>
+                            <li class="is-margin"><a href="#" data-val="Изготовитель таблеток" class="item__link">Изготовитель таблеток</a></li>
+                            <li class="is-margin"><a href="#" data-val="Реклама" class="item__link">Реклама</a></li>
+                            <li class="is-margin"><a href="#" data-val="Штукатур" class="item__link">Штукатур</a></li>
+                            <li class="is-margin"><a href="#" data-val="Информационные системы" class="item__link">Информационные системы</a></li>
+                            <li class="is-margin"><a href="#" data-val="Архитектор мостов" class="item__link">Архитектор мостов</a></li>
+                            <li class="is-margin"><a href="#" data-val="Изготовитель таблеток" class="item__link">Изготовитель таблеток</a></li>
+                          </ul>
+                        </div><span class="icon-angle-down is-visible js-down"></span>
+                      </div>
                       <div class="form">
                         <form>
                           <div class="form__section">
                             <h4 class="h4 is-another onleft">Название должности:</h4>
                             <label class="form__input">
-                              <input type="text" value="Архитектор мостов" class="input">
+                              <input type="text" value="Архитектор мостов" class="input js-input">
                             </label>
                           </div>
                           <div class="btn-wrap">
@@ -65,8 +84,8 @@
                         </form>
                       </div>
                     </div>
-                  </div><a href="#" class="slide-nav-prev">
-                    <div class="slide-nav-in"><i class="triangle-ico"></i><i class="icon-angle-left"></i><span>Назад</span></div><i class="line-ico"></i></a><a href="#" class="slide-nav-next">
+                  </div><a href="#" data-val="Информационные системы" class="slide-nav-prev">
+                    <div class="slide-nav-in"><i class="triangle-ico"></i><i class="icon-angle-left"></i><span>Назад</span></div><i class="line-ico"></i></a><a href="#" data-val="Информационные системы" class="slide-nav-next">
                     <div class="slide-nav-in"><i class="triangle-ico"></i><span>Далее</span><i class="icon-angle-right"></i></div><i class="line-ico"></i></a>
                 </div>
               </div>

@@ -8,7 +8,7 @@ block header
 		.l-center
 			.header__wrap
 				.header__in
-					a(href="#").logo.onleft
+					a(href="#" data-val="Информационные системы").logo.onleft
 						| Твое<span>Резюме</span>
 
 block content
@@ -23,42 +23,60 @@ block content
 							i.clip-ico
 							h1.h1 Выбери желаемую должность
 						.slide__in
-							.career
+							.career.js-parent
 								h2.h2
 									| <i class="icon-glasses"></i><span>По специальности в дипломе:</span>
-								ul.item-list
-									li.is-margin: a(href="#").item__link Автомеханик
-									li.is-margin: a(href="#").item__link Архитектор мостов
-									li.is-margin: a(href="#").item__link.active Изготовитель таблеток
-									li.is-margin: a(href="#").item__link Реклама
-									li.is-margin: a(href="#").item__link Штукатур
-									li.is-margin: a(href="#").item__link Информационные системы
-									li.is-margin: a(href="#").item__link Информационные системы
-									li.is-margin: a(href="#").item__link Архитектор мостов
-									li.is-margin: a(href="#").item__link Изготовитель таблеток
-									li.is-margin: a(href="#").item__link Реклама
-									li.is-margin: a(href="#").item__link Штукатур
-									li.is-margin: a(href="#").item__link Информационные системы
-									li.is-margin: a(href="#").item__link Архитектор мостов
-									li.is-margin: a(href="#").item__link Изготовитель таблеток
+								.career-wrap
+									span.icon-angle-down.is-up.js-up
+									.item-list-wrap.is-overflow
+										ul.item-list.js-list
+											li.is-margin: a(href="#" data-val="Автомеханик").item__link Автомеханик
+											li.is-margin: a(href="#" data-val="Архитектор мостов").item__link Архитектор мостов
+											li.is-margin: a(href="#" data-val="Изготовитель таблеток").item__link.active Изготовитель таблеток
+											li.is-margin: a(href="#" data-val="Реклама").item__link Реклама
+											li.is-margin: a(href="#" data-val="Штукатур").item__link Штукатур
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Информационные системы
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Информационные системы
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Архитектор мостов
+											li.is-margin: a(href="#" data-val="Изготовитель таблеток").item__link Изготовитель таблеток
+											li.is-margin: a(href="#" data-val="Реклама").item__link Реклама
+											li.is-margin: a(href="#" data-val="Штукатур").item__link Штукатур
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Информационные системы
+											li.is-margin: a(href="#" data-val="Архитектор мостов").item__link Архитектор мостов
+											li.is-margin: a(href="#" data-val="Изготовитель таблеток").item__link Изготовитель таблеток
+											li.is-margin: a(href="#" data-val="Автомеханик").item__link Автомеханик
+											li.is-margin: a(href="#" data-val="Архитектор мостов").item__link Архитектор мостов
+											li.is-margin: a(href="#" data-val="Изготовитель таблеток").item__link.active Изготовитель таблеток
+											li.is-margin: a(href="#" data-val="Реклама").item__link Реклама
+											li.is-margin: a(href="#" data-val="Штукатур").item__link Штукатур
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Информационные системы
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Информационные системы
+											li.is-margin: a(href="#" data-val="Архитектор мостов").item__link Архитектор мостов
+											li.is-margin: a(href="#" data-val="Изготовитель таблеток").item__link Изготовитель таблеток
+											li.is-margin: a(href="#" data-val="Реклама").item__link Реклама
+											li.is-margin: a(href="#" data-val="Штукатур").item__link Штукатур
+											li.is-margin: a(href="#" data-val="Информационные системы").item__link Информационные системы
+											li.is-margin: a(href="#" data-val="Архитектор мостов").item__link Архитектор мостов
+											li.is-margin: a(href="#" data-val="Изготовитель таблеток").item__link Изготовитель таблеток
+									span.icon-angle-down.is-visible.js-down
 								.form
 									form
 										.form__section
 											h4.h4.is-another.onleft Название должности:
 											label.form__input
-												input.input(type="text" value="Архитектор мостов")
+												input.input(type="text" value="Архитектор мостов").js-input
 										.btn-wrap
 											.btn.is-padding
 												label.checkbox
 													input(type="checkbox" checked)
 													span Не хочу работать по специальности
-						a(href="#").slide-nav-prev
+						a(href="#" data-val="Информационные системы").slide-nav-prev
 							.slide-nav-in
 								i.triangle-ico
 								i.icon-angle-left
 								span Назад
 							i.line-ico
-						a(href="#").slide-nav-next
+						a(href="#" data-val="Информационные системы").slide-nav-next
 							.slide-nav-in
 								i.triangle-ico
 								span Далее

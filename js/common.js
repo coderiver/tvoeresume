@@ -75,14 +75,21 @@ head.ready(function() {
 
 	$('.js-list').scroll(function(){
 		var scroll = $(".js-list").scrollTop(),
-			wrapHeight = $('.item-list-wrap').height();
+			wrapHeight = $('.item-list-wrap').height(),
+			elHeight = $('.js-list')[0].scrollHeight;
 
 		if(scroll > 0){
 			$('.js-up').addClass('is-visible');
 		} else{
 			$('.js-up').removeClass('is-visible');
 		}
-		console.log(scroll);
+
+		if(scroll >= elHeight - wrapHeight){
+			$('.js-down').removeClass('is-visible');
+		} else{
+			$('.js-down').addClass('is-visible');
+		}
+
 	});
 
 	$(".js-down").click(function() {
@@ -107,6 +114,16 @@ head.ready(function() {
 		minimumResultsForSearch: Infinity
 	});
 
+	$(".item__link").on("click", function (e) {
+		e.preventDefault();
+
+		var val = $(this).data('val');
+		console.log(val);
+
+		$(".js-tags").val(val).trigger("change");
+
+		$(this).closest('.js-parent').find('.js-input').val(val);
+	});
 	//dial
 	$(function() {
 		if($('body').hasClass('is-inner-girl')){
