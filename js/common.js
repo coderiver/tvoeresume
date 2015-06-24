@@ -117,7 +117,7 @@ head.ready(function() {
 				var tags = $(".js-tags").val();
 
 				if(tags.indexOf(elValue) == -1){
-					tags[tags.length] = elValue;
+					tags.push(elValue);
 					$(".js-tags").val(tags).trigger('change');
 				}
 			}, 0);
