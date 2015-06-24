@@ -123,7 +123,7 @@ body
 		.content
 			height: 100%
 			padding-top: 120px
-			background: url(../img/popup-bg.png) top center no-repeat
+			background: url(../img/popup-bg.jpg) top center no-repeat
 			background-color: #5bb7d4
 			+box
 			&.is-loading
@@ -179,7 +179,6 @@ a
 	text-align: center
 	font-size: 24px
 	color: #5DC1E8
-	overflow: hidden
 	+nautilus
 	span
 		position: relative
@@ -1289,3 +1288,13 @@ a
 				background: #bd3941
 		&.is-hidden
 			display: none
+
+//ie
+.ie
+	.header .form .input
+		height: 33px
+
+.ie9
+	.range .ui-slider-range
+		background-image: url(../img/gradient.jpg)
+		background-position: 50% 50%
