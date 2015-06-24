@@ -57,14 +57,6 @@ head.ready(function() {
 				widget.css('margin-left', $(input).outerWidth() - widget.outerWidth());
 			}
 		});
-		$(".datepicker").click(function(){
-			$('.ui-datepicker-month').select2({
-				minimumResultsForSearch: Infinity
-			});
-			$('.ui-datepicker-year').select2({
-				minimumResultsForSearch: Infinity
-			});
-		});
 	});
 
 	//scroll
@@ -117,13 +109,24 @@ head.ready(function() {
 	$(".item__link").on("click", function (e) {
 		e.preventDefault();
 
-		var val = $(this).data('val');
-		console.log(val);
+		var el 	 = $(this),
+			elValue = el.data('val');
 
-		$(".js-tags").val(val).trigger("change");
+		setTimeout(function(){
 
-		$(this).closest('.js-parent').find('.js-input').val(val);
+			var tags = $(".js-tags").val();
+			if(tags.indexOf(elValue) == -1){
+				tags[tags.length] = elValue;
+				$(".js-tags").val(tags).trigger('change');
+				console.log(tags, elValue);
+			}
+		}, 0);
+
+
+
+		//$(this).closest('.js-parent').find('.js-input').val(val);
 	});
+
 	//dial
 	$(function() {
 		if($('body').hasClass('is-inner-girl')){
