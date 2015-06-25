@@ -22,45 +22,44 @@ block content
 						.slide-title
 							i.clip-ico
 							h1.h1 Курсы или дополнительное образование
-						.slide__in
+						.slide__in.js-parent
 							.courses
 								.slide__subttl
 									i.icon-lamp
 									h2.h2 Последнее место обучения:
-								section
-									.form
-										form
-											.form__bl
-												h4.h4 С:
-												label.calendar
-													input(type="text" value="25.05.2012" readonly).datepicker
-													i.icon-calendar
-											.form__bl
-												h4.h4 По (Н4):
-												label.calendar
-													input(type="text" placeholder="Выберите дату" readonly).datepicker
-													i.icon-calendar
-											.form__bl
-												label.radiobox
-													input(type="checkbox" name="time" value="1")
-													span по настоящее время
-								figure
-									.form.is-margin
-										form
-											.form__section
-												h4.h4.is-another
-													i.icon-uni
-													span Учебное заведение:
-												label.form__input.no-margin
-													input(type="text" placeholder="Напр. МГУ").input
-											.form__section
-												h4.h4.is-another
-													i.icon-feather
-													span Название курса:
-												label.form__input.no-margin
-													input(type="text" placeholder="Напр. Архитектура").input
-												.btn.is-padding
-													label.input-load
-														input(type="file")
-													i.cross-ico
-													span Добавить курсы повышения квалификации
+								.js-clone
+									section
+										.form
+											form
+												.form__bl
+													h4.h4 С:
+													label.calendar
+														input(type="text" value="25.05.2012" readonly).datepicker
+														i.icon-calendar
+												.form__bl
+													h4.h4 По (Н4):
+													label.calendar
+														input(type="text" placeholder="Выберите дату" readonly).datepicker
+														i.icon-calendar
+												.form__bl
+													label.radiobox
+														input(type="checkbox" name="time" value="1")
+														span по настоящее время
+									figure.s-margin
+										.form
+											form
+												.form__section
+													h4.h4.is-another
+														i.icon-uni
+														span Учебное заведение:
+													label.form__input.no-margin
+														input(type="text" placeholder="Напр. МГУ").input
+												.form__section
+													h4.h4.is-another
+														i.icon-feather
+														span Название курса:
+													label.form__input.no-margin
+														input(type="text" placeholder="Напр. Архитектура").input
+							.btn.is-padding.js-add
+								i.cross-ico
+								span Добавить курсы повышения квалификации

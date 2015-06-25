@@ -624,6 +624,7 @@ a:visited { color: #9d35ce; }
 .slide.study-bg { background: white url(../img/study-bg.png) center bottom no-repeat; }
 .slide.start-bg { background: white url(../img/svg/start-bg.svg) center bottom no-repeat; background-size: 100% auto; }
 .slide.courses-bg { background: white url(../img/courses-bg.png) center bottom no-repeat; }
+.slide.courses-bg .btn { margin: 0 0 150px 15px; }
 .slide.hobby-bg { background: white url(../img/hobby-bg.png) center bottom no-repeat; }
 .slide.language-bg { background: white url(../img/svg/language-bg.svg) center bottom no-repeat; }
 .slide.experience-bg { background: white url(../img/experience-bg.png) center bottom no-repeat; }
@@ -751,7 +752,6 @@ a:visited { color: #9d35ce; }
 .career .icon-angle-down.is-visible { opacity: 1; }
 .career .icon-angle-down:before { line-height: 0.5; }
 
-.courses .btn { margin-top: 30px; }
 .courses .h4.is-another { vertical-align: top; }
 
 .certificate { margin-top: 32px; }
