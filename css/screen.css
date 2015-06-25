@@ -923,7 +923,6 @@ a:visited { color: #9d35ce; }
 .dashboard.is-teacher .form__cut p:first-child { margin-top: 5px; }
 .dashboard.is-teacher .form__cut:after { content: " "; display: table; clear: both; }
 .dashboard.is-teacher .form__section .h4 { width: 210px; margin: 5px 0 0; }
-.dashboard.is-teacher .input { padding: 4.5px 13px; line-height: 1.3; }
 .dashboard.is-teacher .textarea.s-height { margin: 20px 0; }
 .dashboard.is-teacher .dashboard__clean { margin-bottom: 18px; }
 .dashboard.is-teacher .dashboard__clean .h3 { width: 210px; text-align: left; overflow: visible; margin-bottom: 0; }
@@ -931,6 +930,7 @@ a:visited { color: #9d35ce; }
 .dashboard.is-teacher .txt-red { color: #ed6247; }
 .dashboard.is-teacher .icon-view, .dashboard.is-teacher .icon-save, .dashboard.is-teacher .icon-print { margin-right: 20px; font-size: 27px; color: #00aa9f; text-decoration: none; }
 .dashboard.is-teacher .icon-view:before, .dashboard.is-teacher .icon-save:before, .dashboard.is-teacher .icon-print:before { width: auto; }
+.dashboard.is-teacher .select-wrap .select2.select2-container .select2-selection__arrow { color: #00aa9f; }
 .dashboard__in { position: relative; margin-bottom: 15px; padding: 0 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
 .dashboard__in:after { content: " "; display: table; clear: both; }
 .dashboard__clean { *zoom: 1; }
@@ -1213,6 +1213,7 @@ body.is-inner-girl .range__el .range__bl:before { width: 131px; margin-left: -65
 body.is-inner-girl .range__el.is-low .range__bl:before { background-image: url(../img/svg/girl-bg.svg); }
 body.is-inner-girl .range__el.is-middle .range__bl:before { background-image: url(../img/svg/girl-middle-bg.svg); }
 body.is-inner-girl .range__el.is-high .range__bl:before { background-image: url(../img/svg/girl-high-bg.svg); }
+body.is-inner-girl .select-wrap .select2.select2-container .select2-selection__arrow { color: #ed6247; }
 
 /* CSS Styles that are needed by jScrollPane for it to operate correctly.  Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane may not operate correctly without them. */
 .jspContainer { overflow: hidden; position: relative; }
