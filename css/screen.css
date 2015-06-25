@@ -694,6 +694,16 @@ a:visited { color: #9d35ce; }
 .slide-nav-indication a:before { display: none; content: ""; position: absolute; top: 50%; left: 50%; margin: -4.5px 0 0 -4.5px; width: 9px; height: 9px; background: #4fd0d7; border-radius: 100%; }
 
 .regime { padding-top: 35px; }
+.regime.project .books-bg { right: 71.5px; background: url("../img/svg/books-2.svg") no-repeat 0 0; -moz-background-size: 230px 159px; -o-background-size: 230px 159px; -webkit-background-size: 230px 159px; background-size: 230px 159px; width: 230px; height: 159px; display: inline-block; }
+.regime.project .books-bg.left { left: 50.5px; background: url("../img/svg/books.svg") no-repeat 0 0; -moz-background-size: 210px 106px; -o-background-size: 210px 106px; -webkit-background-size: 210px 106px; background-size: 210px 106px; width: 210px; height: 106px; display: inline-block; }
+.regime.volunteer .books-bg { background: url("../img/svg/books.svg") no-repeat 0 0; -moz-background-size: 210px 106px; -o-background-size: 210px 106px; -webkit-background-size: 210px 106px; background-size: 210px 106px; width: 210px; height: 106px; display: inline-block; }
+.regime.volunteer .books-bg.left { background: url("../img/svg/books-1.svg") no-repeat 0 0; -moz-background-size: 230px 162px; -o-background-size: 230px 162px; -webkit-background-size: 230px 162px; background-size: 230px 162px; width: 230px; height: 162px; display: inline-block; }
+.regime.parttime .books-bg { right: 71.5px; background: url("../img/svg/books-3.svg") no-repeat 0 0; -moz-background-size: 230px 212px; -o-background-size: 230px 212px; -webkit-background-size: 230px 212px; background-size: 230px 212px; width: 230px; height: 212px; display: inline-block; }
+.regime.parttime .books-bg.left { left: 50.5px; background: url("../img/svg/books.svg") no-repeat 0 0; -moz-background-size: 210px 106px; -o-background-size: 210px 106px; -webkit-background-size: 210px 106px; background-size: 210px 106px; width: 210px; height: 106px; display: inline-block; }
+.regime.internship .books-bg { right: 71.5px; background: url("../img/svg/books-4.svg") no-repeat 0 0; -moz-background-size: 230px 265px; -o-background-size: 230px 265px; -webkit-background-size: 230px 265px; background-size: 230px 265px; width: 230px; height: 265px; display: inline-block; }
+.regime.internship .books-bg.left { left: 50.5px; background: url("../img/svg/books.svg") no-repeat 0 0; -moz-background-size: 210px 106px; -o-background-size: 210px 106px; -webkit-background-size: 210px 106px; background-size: 210px 106px; width: 210px; height: 106px; display: inline-block; }
+.regime.fulltime .books-bg { right: 71.5px; background: url("../img/svg/books-5.svg") no-repeat 0 0; -moz-background-size: 230px 318px; -o-background-size: 230px 318px; -webkit-background-size: 230px 318px; background-size: 230px 318px; width: 230px; height: 318px; display: inline-block; }
+.regime.fulltime .books-bg.left { left: 50.5px; background: url("../img/svg/books.svg") no-repeat 0 0; -moz-background-size: 210px 106px; -o-background-size: 210px 106px; -webkit-background-size: 210px 106px; background-size: 210px 106px; width: 210px; height: 106px; display: inline-block; }
 .regime__bg { position: absolute; width: 147px; height: 184px; z-index: 1; left: 50%; bottom: 0; margin-left: -73.5px; background: url(../img/svg/clock-bg.svg) center bottom no-repeat; }
 .regime__wrap { margin-top: 42px; text-align: center; font-size: 0; }
 .regime__bl { display: inline-block; vertical-align: middle; }
@@ -705,6 +715,8 @@ a:visited { color: #9d35ce; }
 .regime__item { margin-top: 48px; }
 .regime__el { display: block; max-width: 295px; margin: 0 auto 15px; padding: 14.5px 0; text-align: center; text-decoration: none; font-size: 14px; color: #2f5a71; background: #e3f8ff; border: 1px solid #8dc8df; border-radius: 3px; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; font-family: "roboto-bold", Arial, sans-serif; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .regime__el:hover, .regime__el.active { background: #5dc1e8; color: white; }
+.regime__el:hover:visited, .regime__el.active:visited { color: white; }
+.regime__el:visited { color: #2f5a71; }
 .regime .h4 { font-size: 15px; }
 .regime .icon-clock { font-size: 23px; margin-right: 5px; }
 .regime .icon-hourglass { font-size: 24px; margin-right: 7px; }

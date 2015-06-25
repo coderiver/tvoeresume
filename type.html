@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Выбери режим работы(тип занятости)</title>
   </head>
   <body>
@@ -29,9 +30,9 @@
                     <h1 class="h1"><span>Выбери режим работы</span></h1>
                   </div>
                   <div class="slide__in">
-                    <div class="regime">
+                    <div class="regime js-parent">
                       <h4 class="h2"><i class="icon-hourglass"></i><span>Тип занятости</span></h4>
-                      <div class="regime__item"><a href="#" class="regime__el">Полная занятость</a><a href="#" class="regime__el">Стажировка</a><a href="#" class="regime__el">Частичная занятость</a><a href="#" class="regime__el">Проектная/Временная работа</a><a href="#" class="regime__el active">Волонтерство</a></div>
+                      <div class="regime__item"><a href="#" data-class="fulltime" class="regime__el js-bg">Полная занятость</a><a href="#" data-class="internship" class="regime__el js-bg">Стажировка</a><a href="#" data-class="parttime" class="regime__el js-bg">Частичная занятость</a><a href="#" data-class="project" class="regime__el js-bg">Проектная/Временная работа</a><a href="#" data-class="volunteer" class="regime__el active js-bg">Волонтерство</a></div>
                       <div class="books-bg"></div>
                       <div class="books-bg left"></div>
                     </div>

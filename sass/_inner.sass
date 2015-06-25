@@ -339,6 +339,39 @@
 //regime page
 .regime
 	padding-top: 35px
+	&.project
+		.books-bg
+			right: 71.5px
+			+svg(books-2, 230, 159)
+			&.left
+				left: 50.5px
+				+svg(books, 210, 106)
+	&.volunteer
+		.books-bg
+			+svg(books, 210, 106)
+			&.left
+				+svg(books-1, 230, 162)
+	&.parttime
+		.books-bg
+			right: 71.5px
+			+svg(books-3, 230, 212)
+			&.left
+				left: 50.5px
+				+svg(books, 210, 106)
+	&.internship
+		.books-bg
+			right: 71.5px
+			+svg(books-4, 230, 265)
+			&.left
+				left: 50.5px
+				+svg(books, 210, 106)
+	&.fulltime
+		.books-bg
+			right: 71.5px
+			+svg(books-5, 230, 318)
+			&.left
+				left: 50.5px
+				+svg(books, 210, 106)
 	&__bg
 		position: absolute
 		width: 147px
@@ -413,6 +446,10 @@
 		&.active
 			background: #5dc1e8
 			color: #fff
+			&:visited
+				color: #fff
+		&:visited
+			color: #2F5A71
 	.h4
 		font-size: 15px
 	.icon-clock

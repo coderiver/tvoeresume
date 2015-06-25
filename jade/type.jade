@@ -23,15 +23,15 @@ block content
 							i.clip-ico
 							h1.h1: span Выбери режим работы
 						.slide__in
-							.regime
+							.regime.js-parent
 								h4.h2
 									| <i class="icon-hourglass"></i><span>Тип занятости</span>
 								.regime__item
-									a(href="#").regime__el Полная занятость
-									a(href="#").regime__el Стажировка
-									a(href="#").regime__el Частичная занятость
-									a(href="#").regime__el Проектная/Временная работа
-									a(href="#").regime__el.active Волонтерство
+									a(href="#" data-class="fulltime").regime__el.js-bg Полная занятость
+									a(href="#" data-class="internship").regime__el.js-bg Стажировка
+									a(href="#" data-class="parttime").regime__el.js-bg Частичная занятость
+									a(href="#" data-class="project").regime__el.js-bg Проектная/Временная работа
+									a(href="#" data-class="volunteer").regime__el.active.js-bg Волонтерство
 								.books-bg
 								.books-bg.left
 						a(href="#").slide-nav-prev

@@ -44,6 +44,31 @@ head.ready(function() {
 		}
 	});
 
+	var elClass;
+
+	$('.js-bg').click(function(e){
+
+		e.preventDefault();
+
+		var parent = $(this).closest('.js-parent'),
+			el     = $(this),
+			elData = $(this).data('class');
+
+		$('.js-bg').removeClass('active');
+		el.addClass('active');
+
+		setTimeout(function(){
+			if(typeof elClass === 'string'){
+				parent.removeClass(elClass);
+			}
+
+			parent.addClass(elData);
+			elClass = elData;
+
+		}, 0);
+
+	});
+
 	//datepicker
 	$(function(){
 		$.datepicker.setDefaults(
