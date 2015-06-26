@@ -2,4 +2,5 @@
 *.sublime-project
 *.sublime-workspace
 .idea/
+html/
 prepros.cfg
