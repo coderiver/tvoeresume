@@ -1,114 +1,126 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Template</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="format-detection" content="telephone=no">
-	<!-- theme color for android 5.0 -->
-	<meta name="theme-color" content="#fff">
-	<!-- <meta name="viewport" content="width=1200"> -->
-	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
-	<link rel="stylesheet" media="all" href="css/screen.css" >
-	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!-- theme color for android 5.0 -->
+    <meta name="theme-color" content="#fff">
+    <!-- <meta name="viewport" content="width=1200"> -->
+    <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+    <link rel="stylesheet" media="all" href="css/screen.css">
+    <!--[if IE]>
+    <script src="js/html5shiv.js"></script><![endif]-->
+
+    <style>
+        .index-list {
+            font-size: 18px;
+            color: gray;
+        }
+
+        .index-list > li {
+            margin-bottom: 15px;
+        }
+
+        .index-list ul {
+            margin-left: 30px;
+        }
+    </style>
 </head>
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<ul class="index-list">
-		<li>
-			<a href="main.html">Главная</a>
-		</li>
-		<!-- START STEPS -->
-		<li>
-			<a href="study-year.html">1.1. Расскажи о своей учебе: Год поступления</a>
-		</li>
-		<li>
-			<a href="study-college.html">1.2. Расскажи о своей учебе: Учебное заведение</a>
-		</li>
-		<li>
-			<a href="start.html">2. Создание резюме</a>
-		</li>
-		<li>
-			<a href="career-specialty.html">3.1. Выбор желаемой должности: По специальности</a>
-		</li>
-		<li>
-			<a href="career.html">3.2. Выбор желаемой должности: В других областях</a>
-		</li>
-		<li>
-			<a href="income.html">4. Укажи желаемый доход</a>
-		</li>
-		<li>
-			<a href="regime.html">5.1. Выбери режим работы: График работы</a>
-		</li>
-		<li>
-			<a href="type.html">5.2. Выбери режим работы: Тип занятости</a>
-		</li>
-		<li>
-			<a href="experience.html">6.1. Опыт работы или практики: Работа</a>
-		</li>
-		<li>
-			<a href="practice.html">6.2. Опыт работы или практики: Практика</a>
-		</li>
-		<li>
-			<a href="charge.html">6.3. Опыт работы или практики: Твои обязанности и достижения</a>
-		</li>
-		<li>
-			<a href="skills.html">7.1. Твои профессиональные навыки: Выбери или укажи ключевые навыки</a>
-		</li>
-		<li>
-			<a href="certificate.html">7.2. Твои профессиональные навыки: Допуски и сертификаты</a>, (<a href="certificate-empty.html">пустые cертификаты</a>)
-		</li>
-		<li>
-			<a href="traits.html">8.1. Личные качества и хобби: Личные качества</a>
-		</li>
-		<li>
-			<a href="hobby.html">8.2. Личные качества и хобби: Хобби</a>
-		</li>
-		<li>
-			<a href="courses.html">9. Курсы или дополнительное образование</a>
-		</li>
-		<li>
-			<a href="portfolio.html">10.1. Твое портфолио и владение языками: Мои работы</a>
-		</li>
-		<li>
-			<a href="languages.html">10.2. Твое портфолио и владение языками: Иностранный язык</a>
-		</li>
-		<li>
-			<a href="personal-info.html">11. Личные данные</a>
-		</li>
-		<li>
-			<a href="check-resume.html">12. Проверь свое резюме</a>
-		</li>
-		<!-- END STEPS -->
-		<li>
-			<a href="style.html">Стилевая</a>
-		</li>
-		<li>
-			<a href="dashboard_student.html">Профиль студента</a>
-		</li>
-		<li>
-			<a href="dashboard_student_no-message.html">Профиль студента (нет сообщений)</a>
-		</li>
-		<li>
-			<a href="personal-popup.html">Personal-popup</a>
-		</li>
-		<li>
-			<a href="teacher-dashboard.html">Профиль учителя</a>
-		</li>
-		<li>
-			<a href="check-resume-teacher.html">Проверка резюме учителем</a>
-		</li>
-		<li>
-			<a href="loading.html">Preloader</a>
-		</li>
-		<li>
-			<a href="popup-sign.html">Вход в систему</a>
-		</li>
-		<li>
-			<a href="popup-registration.html">Регистрация</a>
-		</li>
-	</ul>
+    <ul class="index-list">
+        <li><a href="main.html">Главная</a></li>
+        <!-- START STEPS -->
+        <li>
+            1. Расскажи о своей учебе
+            <ul>
+                <li>1.1. <a href="study-year.html">Год поступления</a></li>
+                <li>1.2. <a href="study-college.html">Учебное заведение</a></li>
+            </ul>
+        <li>2. <a href="start.html">Создание резюме</a></li>
+        <li>
+            3. Выбор желаемой должности
+            <ul>
+                <li>3.1. <a href="career-specialty.html">По специальности</a></li>
+                <li>3.2. <a href="career.html">В других областях</a></li>
+            </ul>
+        </li>
+        <li>4. <a href="income.html">Укажи желаемый доход</a></li>
+        <li>
+            5. Выбери режим работы
+            <ul>
+                <li>5.1. <a href="regime.html">График работы</a></li>
+                <li>5.2. <a href="type.html">Тип занятости</a></li>
+            </ul>
+        </li>
+        <li>
+            6. Опыт работы или практики
+            <ul>
+                <li>6.1. <a href="experience.html">Работа</a></li>
+                <li>6.2. <a href="practice.html">Практика</a></li>
+                <li>6.3. <a href="charge.html">Твои обязанности и достижения</a></li>
+            </ul>
+        </li>
+        <li>
+            7. Твои профессиональные навыки
+            <ul>
+                <li>7.1. <a href="skills.html">Выбери или укажи ключевые навыки</a></li>
+                <li>7.2. <a href="certificate.html">Допуски и сертификаты</a> (<a href="certificate-empty.html">пустые</a>)</li>
+            </ul>
+        </li>
+        <li>
+            8. Личные качества и хобби
+            <ul>
+                <li>8.1. <a href="traits.html">Личные качества</a></li>
+                <li>8.2. <a href="hobby.html">Хобби</a></li>
+            </ul>
+        </li>
+        <li>9. <a href="courses.html">Курсы или дополнительное образование</a></li>
+        <li>
+            10. Твое портфолио и владение языками
+            <ul>
+                <li>10.1. <a href="portfolio.html">Мои работы</a></li>
+                <li>10.2. <a href="languages.html">Иностранный язык</a></li>
+            </ul>
+        </li>
+        <li>11. <a href="personal-info.html">Личные данные</a></li>
+        <li>12. <a href="check-resume.html">Проверь свое резюме</a>
+        </li>
+        <!-- END STEPS -->
+        <li>
+            <hr>
+        </li>
+        <li>
+            <a href="style.html">Стилевая</a>
+        </li>
+        <li>
+            <a href="dashboard_student.html">Профиль студента</a>
+        </li>
+        <li>
+            <a href="dashboard_student_no-message.html">Профиль студента (нет сообщений)</a>
+        </li>
+        <li>
+            <a href="personal-popup.html">Personal-popup</a>
+        </li>
+        <li>
+            <a href="teacher-dashboard.html">Профиль учителя</a>
+        </li>
+        <li>
+            <a href="check-resume-teacher.html">Проверка резюме учителем</a>
+        </li>
+        <li>
+            <a href="loading.html">Preloader</a>
+        </li>
+        <li>
+            <a href="popup-sign.html">Вход в систему</a>
+        </li>
+        <li>
+            <a href="popup-registration.html">Регистрация</a>
+        </li>
+    </ul>
 </div>
 <!-- END out-->
 <!-- load scripts -->
