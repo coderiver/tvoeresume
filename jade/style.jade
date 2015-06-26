@@ -90,8 +90,9 @@ block content
 												span Название курса:
 											label.form__input.is-error.js-error.no-margin
 												input(type="text" placeholder="Напр. Архитектура").input
-												i.icon-error
-												.error-message Поле заполнено неверно. Повторите попытку
+												.error-wrap
+													i.icon-error
+													.error-message Поле заполнено неверно. Повторите попытку
 										.form__divider
 											h3.h3
 												span Личные данные(Н3)
@@ -126,8 +127,6 @@ block content
 													| 8-495-123-45-67<a href="#" class="icon-edit"></a>
 											a(href="#").form__link.onright Добавить место работы
 								.btn.is-padding
-									label.input-load
-										input(type="file")
 									i.cross-ico
 									span Добавить курсы повышения квалификации
 								.btn.is-padding

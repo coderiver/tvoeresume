@@ -46,8 +46,10 @@
 	max-width: 335px
 	margin: 0 auto
 	&__in
+		position: relative
 		background: #334c55
 		border-bottom: 3px solid #4fd0d7
+		z-index: 0
 	&-bg
 		width: 101px
 		height: 118px
@@ -162,9 +164,11 @@
 		max-width: 220px
 		margin: 0 auto 10px
 		&.is-error
+			.icon-error
+				color: #ff7d64
 			.error-message
 				width: 300px
-				margin-left: 40px
+				margin: -36px 0 0 46px
 				padding: 8px
 				&:before,
 				&:after

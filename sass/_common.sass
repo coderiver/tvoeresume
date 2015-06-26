@@ -593,47 +593,6 @@ a
 		&.is-error
 			.input
 				border: 1px solid #ff7d64
-			.icon-error
-				position: absolute
-				top: 50%
-				left: 100%
-				margin: -7.5px 0 0 10px
-				font-size: 15px
-				color: #ff7d64
-				line-height: 1
-			.error-message
-				content: "Поле заполнено неверно. Повторите попытку."
-				position: absolute
-				top: 50%
-				left: 100%
-				width: 145px
-				padding: 8px 10px
-				margin: -39px 0 0 29px
-				font-size: 13px
-				color: #666
-				background: #F6E0E0
-				border-radius: 20px
-				border: 1px solid #ff7d64
-				box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
-				+nosel
-				+box
-				+rob-l
-				&:before
-					content: ""
-					position: absolute
-					top: 50%
-					left: -20px
-					margin-top: -7px
-					+arr(26, 8, #ff7d64,tr)
-					+transform(rotate(-40deg))
-				&:after
-					content: ""
-					position: absolute
-					top: 50%
-					left: -19px
-					margin-top: -6.5px
-					+arr(26, 7, #F6E0E0,tr)
-					+transform(rotate(-40deg))
 		&.is-correct
 			.input
 				border: 2px solid #98C05C
@@ -711,6 +670,54 @@ a
 	cursor: pointer
 	z-index: 2
 
+.error-wrap
+	position: absolute
+	top: 50%
+	right: 0
+	z-index: 0
+	.icon-error
+		position: absolute
+		top: 50%
+		left: 100%
+		margin: -7.5px 0 0 8px
+		font-size: 15px
+		color: #ff7d64
+		line-height: 1
+	.error-message
+		content: "Поле заполнено неверно. Повторите попытку."
+		position: absolute
+		top: 50%
+		left: 100%
+		width: 145px
+		padding: 8px 10px
+		margin: -39px 0 0 29px
+		font-size: 13px
+		color: #666
+		background: #F6E0E0
+		border-radius: 20px
+		border: 1px solid #ff7d64
+		box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
+		+nosel
+		+box
+		+rob-l
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: -14px
+			margin-top: -15px
+			z-index: -1
+			+arr(23, 11, #ff7d64,tr)
+			+transform(rotate(-52deg))
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: -12px
+			margin-top: -15px
+			+arr(20, 7, #F6E0E0,tr)
+			+transform(rotate(-52deg))
+
 .calendar
 	position: relative
 	width: 180px
@@ -769,9 +776,7 @@ a
 		height: 72px
 	&__link
 		display: inline-block
-		margin-left: 10px
 		text-decoration: none
-		vertical-align: top
 		+script
 		&:visited
 			color: #5fc1e7
@@ -1201,6 +1206,9 @@ a
 		border: 1px solid #e0dbcc
 		+rob-l
 		+box
+		span
+			position: relative
+			z-index: 1
 		&:before
 			content: ""
 			position: absolute
@@ -1254,6 +1262,19 @@ a
 				left: 50%
 				margin-left: -7px
 				+arr(14, 22, #fff9e8, tl)
+		&.arr-left
+			&:before
+				top: 15px
+				left: 0
+				margin-left: -15px
+				+arr(11, 40, #e0dbcc, tl)
+				+transform(rotate(50deg))
+			&:after
+				top: 10px
+				left: 0
+				margin-left: -7px
+				+arr(10, 40, #fff9e8, tl)
+				+transform(rotate(50deg))
 		&.arr-bottom-right
 			&:before
 				bottom: -24px

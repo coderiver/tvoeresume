@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Регистрация</title>
   </head>
   <body class="is-full">
@@ -55,8 +56,10 @@
                   <input type="text" placeholder="Фамилия" class="input placeholder">
                 </label>
                 <label class="form__input is-error"><i class="icon-mail"></i>
-                  <input type="email" placeholder="Электронная почта" class="input placeholder"><i class="icon-error"></i>
-                  <div class="error-message">Поле заполнено неверно. Повторите попытку.</div>
+                  <input type="email" placeholder="Электронная почта" class="input placeholder">
+                  <div class="error-wrap"><i class="icon-error"></i>
+                    <div class="error-message">Поле заполнено неверно. Повторите попытку.</div>
+                  </div>
                 </label>
                 <button type="submit" class="form__btn t-margin">Регистрация</button>
               </form>
