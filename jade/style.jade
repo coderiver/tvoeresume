@@ -42,14 +42,16 @@ block content
 										.form__group
 											.form__bl.is-top
 												h4.h4 С:
-												label.is-error.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+												label.is-error.calendar.is-error
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 											.form__bl.is-top
 												h4.h4 По (Н4):
-												label.is-error.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+												label.is-error.calendar.is-error
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__group
 											.form__bl.is-top
 												label.checkbox
@@ -88,8 +90,9 @@ block content
 											h4.h4.is-another
 												i.icon-feather
 												span Название курса:
-											label.form__input.is-error.js-error.no-margin(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+											label.form__input.is-error.no-margin.is-error
 												input(type="text" placeholder="Напр. Архитектура").input
+												i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__divider
 											h3.h3
 												span Личные данные(Н3)

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Вход в систему</title>
   </head>
   <body class="is-full">
@@ -37,7 +38,7 @@
       <div class="container">
         <div class="content">
           <div class="popup">
-            <div class="popup-bg"></div>
+            <div class="popup-bg is-girl"></div>
             <div class="popup__in">
               <div class="popup__ttl m-bottom">
                 <p>Вход в систему</p>
@@ -47,7 +48,7 @@
                   <input type="password" value="55555577" class="input placeholder"><i class="icon-correct"></i>
                 </label>
                 <label class="form__input"><i class="icon-mail"></i>
-                  <input type="email" placeholder="Электронная почта" class="input placeholder">
+                  <input type="email" placeholder="Электронная почта" class="input placeholder"><i data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
                 </label><a href="#" class="form__link">напомнить пароль</a>
                 <button type="submit" class="form__btn">Вход</button>
               </form>

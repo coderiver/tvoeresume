@@ -22,11 +22,14 @@ block content
 					label.form__input
 						i.icon-avatar
 						input(type="text" placeholder="Имя").input.placeholder
+						i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 					label.form__input
 						i.icon-avatar
 						input(type="text" placeholder="Фамилия").input.placeholder
-					label.form__input.is-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+						i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+					label.form__input.is-error
 						i.icon-mail
 						input(type="email" placeholder="Электронная почта").input.placeholder
+						i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 					button(type="submit").form__btn.t-margin Регистрация
 			.popup-shadow.is-another

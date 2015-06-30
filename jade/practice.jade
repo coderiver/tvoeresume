@@ -32,14 +32,16 @@ block content
 										form
 											.form__bl
 												h4.h4 С:
-												label.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
+												label.calendar.is-error
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
 											.form__bl
 												h4.h4 По (Н4):
-												label.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
+												label.calendar.is-error
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
 											.form__bl
 												label.radiobox
 													input(type="checkbox" name="time" value="1")
@@ -71,21 +73,25 @@ block content
 														i.icon-deputy
 														span Название компании:
 													.form__group
-														label.form__input.no-margin.onleft(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
+														label.form__input.no-margin.onleft.is-error
 															input(type="text" placeholder="Укажите название компании").input
-														label.form__input.no-margin.is-small.onright(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
+															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
+														label.form__input.no-margin.is-small.onright.is-error
 															input(type="text" placeholder="Сайт").input
+															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
 												.form__section.m-margin
 													h4.h4.is-another
 														i.icon-recommend
 														span Рекомендации:
 													.form__group
-														label.form__input.no-margin.onleft(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. ")
+														label.form__input.no-margin.onleft.is-error
 															input(type="text" placeholder="Укажите имя").input
 															span.form__note *необязательное поле
-														label.form__input.is-small.no-margin.onright(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно.")
+															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. ")
+														label.form__input.is-small.no-margin.onright.is-error
 															input(type="text" placeholder="+70").input
 															span.form__note *необязательное поле
+															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно.")
 												.btn-wrap
 													.btn.is-padding
 														label.checkbox

@@ -189,7 +189,7 @@ head.ready(function() {
 			template: '<div class="tooltip error" role="tooltip"><div class="tooltip-wrap"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div></div>',
 			trigger: 'hover'
 		});
-		$('.icon-error').tooltip('show');
+		// $('.icon-error').tooltip('show');
 	})
 
 	//gradients on dashboard

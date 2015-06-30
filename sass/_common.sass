@@ -561,6 +561,14 @@ a
 			margin-bottom: 15px
 		&.l-margin
 			margin-top: 40px
+		&.is-error
+			position: relative
+			.input
+				border: 1px solid #ff7d64
+			.icon-error
+				margin-left: 35px
+				opacity: 1
+				visibility: visible
 		.input
 			+box
 	&__divider
@@ -594,6 +602,9 @@ a
 			position: relative
 			.input
 				border: 1px solid #ff7d64
+			.icon-error
+				opacity: 1
+				visibility: visible
 		&.is-correct
 			.input
 				border: 2px solid #98C05C
@@ -680,6 +691,9 @@ a
 	color: #ff7d64
 	line-height: 1
 	cursor: pointer
+	opacity: 0
+	visibility: hidden
+	+transition(opacity 0.2s ease)
 
 //tooltip
 .tooltip
@@ -718,6 +732,9 @@ a
 	&.is-error
 		input
 			border: 1px solid #ff7d64
+		.icon-error
+			opacity: 1
+			visibility: visible
 	.icon-calendar
 		position: absolute
 		top: 50%
@@ -1296,10 +1313,10 @@ a
 			text-decoration: none
 			+transition(background 0.2s ease)
 			&:before
-				width: auto
+				width: 9px
 				position: absolute
 				left: 50%
-				margin-left: -5px
+				margin-left: -4.5px
 			&:visited
 				color: #fef8e7
 			&:hover
