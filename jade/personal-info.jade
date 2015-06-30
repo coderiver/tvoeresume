@@ -31,12 +31,15 @@ block content
 												i.icon-avatar
 												span Меня зовут:
 											.form__group
-												label.form__input
+												label.form__input.is-error
 													input(type="text" placeholder="Фамилия").input
-												label.form__input
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+												label.form__input.is-error
 													input(type="text" placeholder="Имя").input
-												label.form__input
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
+												label.form__input.is-error
 													input(type="text" placeholder="Отчество").input
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__wrap.onleft
 											.social
 												a(href="#").vk-ico
@@ -48,17 +51,17 @@ block content
 												h4.h4.is-another
 													i.icon-year
 													span Дата рождения:
-												label.calendar
+												label.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
 											.form__section
 												h4.h4.is-another
 													i.icon-contacts
 													span Контакты:
-												label.form__input
+												label.form__input(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 													i.icon-call
 													input(type="tel" placeholder="Введите телефон").input.with-pad
-												label.form__input
+												label.form__input(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 													i.icon-mail
 													input(type="email" placeholder="Введите эл. почту").input.with-pad
 											.form__section

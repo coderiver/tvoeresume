@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen,print"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>Твое портфолио и владение языками</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
                       <h2 class="h2"><i class="icon-works"></i><span>Мои работы</span></h2>
                       <div class="form">
                         <form>
-                          <div class="form__in">
+                          <div data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку" class="form__in">
                             <label class="form__section">
                               <input type="text" placeholder="Ссылка на портфолио" class="input">
                             </label>

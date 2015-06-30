@@ -42,12 +42,12 @@ block content
 										.form__group
 											.form__bl.is-top
 												h4.h4 С:
-												label.calendar
+												label.is-error.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
 											.form__bl.is-top
 												h4.h4 По (Н4):
-												label.calendar
+												label.is-error.calendar(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
 										.form__group
@@ -88,11 +88,8 @@ block content
 											h4.h4.is-another
 												i.icon-feather
 												span Название курса:
-											label.form__input.is-error.js-error.no-margin
+											label.form__input.is-error.js-error.no-margin(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 												input(type="text" placeholder="Напр. Архитектура").input
-												.error-wrap
-													i.icon-error
-													.error-message Поле заполнено неверно. Повторите попытку
 										.form__divider
 											h3.h3
 												span Личные данные(Н3)

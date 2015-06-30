@@ -543,7 +543,7 @@ a
 		&:first-child
 			.form__bl
 				&:first-child
-					margin-right: 10px
+					margin-right: 20px
 	&__bl
 		display: inline-block
 		margin-right: 30px
@@ -591,6 +591,7 @@ a
 		&.no-margin
 			margin-bottom: 0
 		&.is-error
+			position: relative
 			.input
 				border: 1px solid #ff7d64
 		&.is-correct
@@ -670,57 +671,53 @@ a
 	cursor: pointer
 	z-index: 2
 
-.error-wrap
+.icon-error
 	position: absolute
 	top: 50%
-	right: 0
-	z-index: 0
-	.icon-error
-		position: absolute
-		top: 50%
-		left: 100%
-		margin: -7.5px 0 0 8px
-		font-size: 15px
-		color: #ff7d64
-		line-height: 1
-	.error-message
-		content: "Поле заполнено неверно. Повторите попытку."
-		position: absolute
-		top: 50%
-		left: 100%
-		width: 145px
-		padding: 8px 10px
-		margin: -39px 0 0 29px
-		font-size: 13px
-		color: #666
-		background: #F6E0E0
-		border-radius: 20px
-		border: 1px solid #ff7d64
-		box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
-		+nosel
-		+box
-		+rob-l
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			left: -14px
-			margin-top: -15px
-			z-index: -1
-			+arr(23, 11, #ff7d64,tr)
-			+transform(rotate(-52deg))
-		&:after
-			content: ""
-			position: absolute
-			top: 50%
-			left: -12px
-			margin-top: -15px
-			+arr(20, 7, #F6E0E0,tr)
-			+transform(rotate(-52deg))
+	left: 100%
+	margin: -7.5px 0 0 4px
+	font-size: 14px
+	color: #ff7d64
+	line-height: 1
+	cursor: pointer
+
+//tooltip
+.tooltip
+	&.error
+		&.in
+			opacity: 1
+		&.right
+			margin-left: 2px
+			.tooltip-arrow
+				left: inherit
+				right: 100%
+				border-right-color: #ff7d64
+				&:before
+					content: ""
+					position: absolute
+					top: -7px
+					left: 1px
+					+arr(10, 14, #F6E0E0, l)
+		.tooltip-wrap
+			position: relative
+			width: 145px
+		.tooltip-inner
+			padding: 8px 10px
+			text-align: left
+			color: #666
+			background: #F6E0E0
+			border-radius: 20px
+			border: 1px solid #ff7d64
+			box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12)
+			+nosel
+			+rob-l
 
 .calendar
 	position: relative
 	width: 180px
+	&.is-error
+		input
+			border: 1px solid #ff7d64
 	.icon-calendar
 		position: absolute
 		top: 50%

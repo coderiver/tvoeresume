@@ -314,7 +314,7 @@ a:visited { color: #9d35ce; }
 
 .form__group { display: inline-block; }
 .form__group:not(only-of-type):first-child { vertical-align: middle; }
-.form__group:first-child .form__bl:first-child { margin-right: 10px; }
+.form__group:first-child .form__bl:first-child { margin-right: 20px; }
 .form__bl { display: inline-block; margin-right: 30px; vertical-align: middle; }
 .form__bl.is-top { vertical-align: top; }
 .form__section { display: block; margin-bottom: 10px; }
@@ -331,6 +331,7 @@ a:visited { color: #9d35ce; }
 .form__input { position: relative; display: block; margin-bottom: 10px; *zoom: 1; }
 .form__input:after { content: " "; display: table; clear: both; }
 .form__input.no-margin { margin-bottom: 0; }
+.form__input.is-error { position: relative; }
 .form__input.is-error .input { border: 1px solid #ff7d64; }
 .form__input.is-correct .input { border: 2px solid #98c05c; }
 .form__input.is-correct i.icon-correct { position: absolute; top: 50%; left: 100%; margin: -7.5px 0 0 5px; font-size: 15px; color: #9fc85d; }
@@ -355,13 +356,17 @@ a:visited { color: #9d35ce; }
 
 .input-load { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 2; }
 
-.error-wrap { position: absolute; top: 50%; right: 0; z-index: 0; }
-.error-wrap .icon-error { position: absolute; top: 50%; left: 100%; margin: -7.5px 0 0 8px; font-size: 15px; color: #ff7d64; line-height: 1; }
-.error-wrap .error-message { content: "Поле заполнено неверно. Повторите попытку."; position: absolute; top: 50%; left: 100%; width: 145px; padding: 8px 10px; margin: -39px 0 0 29px; font-size: 13px; color: #666666; background: #f6e0e0; border-radius: 20px; border: 1px solid #ff7d64; box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "roboto-light", Arial, sans-serif; }
-.error-wrap .error-message:before { content: ""; position: absolute; top: 50%; left: -14px; margin-top: -15px; z-index: -1; width: 0px; height: 0px; border-style: solid; border-width: 0 23px 11px 0; border-color: transparent #ff7d64 transparent transparent; -moz-transform: rotate(-52deg); -ms-transform: rotate(-52deg); -webkit-transform: rotate(-52deg); transform: rotate(-52deg); }
-.error-wrap .error-message:after { content: ""; position: absolute; top: 50%; left: -12px; margin-top: -15px; width: 0px; height: 0px; border-style: solid; border-width: 0 20px 7px 0; border-color: transparent #f6e0e0 transparent transparent; -moz-transform: rotate(-52deg); -ms-transform: rotate(-52deg); -webkit-transform: rotate(-52deg); transform: rotate(-52deg); }
+.icon-error { position: absolute; top: 50%; left: 100%; margin: -7.5px 0 0 4px; font-size: 14px; color: #ff7d64; line-height: 1; cursor: pointer; }
+
+.tooltip.error.in { opacity: 1; }
+.tooltip.error.right { margin-left: 2px; }
+.tooltip.error.right .tooltip-arrow { left: inherit; right: 100%; border-right-color: #ff7d64; }
+.tooltip.error.right .tooltip-arrow:before { content: ""; position: absolute; top: -7px; left: 1px; width: 0px; height: 0px; border-style: solid; border-width: 7px 10px 7px 0; border-color: transparent #f6e0e0 transparent transparent; }
+.tooltip.error .tooltip-wrap { position: relative; width: 145px; }
+.tooltip.error .tooltip-inner { padding: 8px 10px; text-align: left; color: #666666; background: #f6e0e0; border-radius: 20px; border: 1px solid #ff7d64; box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-family: "roboto-light", Arial, sans-serif; }
 
 .calendar { position: relative; width: 180px; }
+.calendar.is-error input { border: 1px solid #ff7d64; }
 .calendar .icon-calendar { position: absolute; top: 50%; margin-top: -11px; right: 12px; font-size: 16px; color: #34b1e2; }
 
 .textarea-wrap { position: relative; padding: 0 15px; }
@@ -857,7 +862,7 @@ a:visited { color: #9d35ce; }
 .practice .form__group { width: 100%; max-width: 540px; vertical-align: middle; *zoom: 1; }
 .practice .form__group:after { content: " "; display: table; clear: both; }
 .practice .form__group .form__input { max-width: 342px; }
-.practice .form__group .form__input:last-child { max-width: 180px; }
+.practice .form__group .form__input.is-small { max-width: 180px; }
 .practice .btn-wrap { position: relative; padding-top: 75px; background: url(../img/svg/dots-bg.svg) 0 10px repeat-x; }
 .practice .btn-wrap:before { content: ""; position: absolute; top: 23px; left: -15px; right: -15px; border-top: 1px dashed #cccccc; }
 .practice .teacher { left: 30px; margin-left: 0; }
@@ -898,12 +903,12 @@ a:visited { color: #9d35ce; }
 .personal { margin-top: 55px; padding: 0 15px; }
 .personal .form form { *zoom: 1; }
 .personal .form form:after { content: " "; display: table; clear: both; }
-.personal .form .form__input { max-width: 191px; margin: 0 10px 0 0; }
+.personal .form .form__input { max-width: 191px; margin: 0 20px 0 0; }
 .personal .form .form__group { width: 75%; vertical-align: middle; }
 .personal .form .form__load { display: inline-block; vertical-align: top; }
 .personal .form .form__bl { margin: 25px 0 0; }
 .personal .form .calendar { display: inline-block; max-width: 191px; }
-.personal .form .select-wrap { max-width: 392px; }
+.personal .form .select-wrap { max-width: 402px; }
 .personal .h4 { display: inline-block; width: 204px; margin-bottom: 0; vertical-align: middle; }
 .personal .input.with-pad { padding-left: 38px; }
 .personal .social { margin: 20px 0 30px; padding-left: 204px; }
@@ -1047,7 +1052,8 @@ a:visited { color: #9d35ce; }
 .popup { position: relative; max-width: 335px; margin: 0 auto; }
 .popup__in { position: relative; background: #334c55; border-bottom: 3px solid #4fd0d7; z-index: 0; }
 .popup-bg { width: 101px; height: 118px; margin: 0 auto; background-image: url(../img/svg/teacher-bg.svg); -webkit-background-size: cover; -o-background-size: cover; background-size: cover; background-repeat: no-repeat; }
-.popup-bg.is-another { background-image: url(../img/svg/girl-bg.svg); }
+.popup-bg.is-girl { background-image: url(../img/svg/girl-bg.svg); }
+.popup-bg.is-boy { background-image: url(../img/svg/boy-bg.svg); }
 .popup-shadow { position: absolute; left: 50%; bottom: -195px; width: 295px; height: 15px; margin-left: -147.5px; background-color: #6f8b94; border-radius: 50%; }
 .popup-shadow.is-another { bottom: -35px; }
 .popup__ttl { position: relative; top: -7px; width: 326px; min-height: 59px; margin: 0 auto 5px; padding: 3px 0; background: white; background: url(../img/svg/popup-ttl.svg) no-repeat; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -1255,3 +1261,23 @@ body.is-inner-girl .select-wrap .select2.select2-container .select2-selection__a
 
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 * html .jspCorner { margin: 0 -3px 0 0; }
+
+.tooltip { position: absolute; z-index: 1070; display: block; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; line-height: 1.42857143; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; word-break: normal; word-spacing: normal; word-wrap: normal; white-space: normal; filter: alpha(opacity=0); opacity: 0; line-break: auto; }
+.tooltip.in { filter: alpha(opacity=90); opacity: .9; }
+.tooltip.top { padding: 5px 0; margin-top: -3px; }
+.tooltip.right { padding: 0 5px; margin-left: 3px; }
+.tooltip.bottom { padding: 5px 0; margin-top: 3px; }
+.tooltip.left { padding: 0 5px; margin-left: -3px; }
+
+.tooltip-inner { max-width: 200px; padding: 3px 8px; color: #fff; text-align: center; background-color: #000; border-radius: 4px; }
+
+.tooltip-arrow { position: absolute; width: 0; height: 0; border-color: transparent; border-style: solid; }
+
+.tooltip.top .tooltip-arrow { bottom: 0; left: 50%; margin-left: -5px; border-width: 5px 5px 0; border-top-color: #000; }
+.tooltip.top-left .tooltip-arrow { right: 5px; bottom: 0; margin-bottom: -5px; border-width: 5px 5px 0; border-top-color: #000; }
+.tooltip.top-right .tooltip-arrow { bottom: 0; left: 5px; margin-bottom: -5px; border-width: 5px 5px 0; border-top-color: #000; }
+.tooltip.right .tooltip-arrow { top: 50%; left: 0; margin-top: -5px; border-width: 5px 5px 5px 0; border-right-color: #000; }
+.tooltip.left .tooltip-arrow { top: 50%; right: 0; margin-top: -5px; border-width: 5px 0 5px 5px; border-left-color: #000; }
+.tooltip.bottom .tooltip-arrow { top: 0; left: 50%; margin-left: -5px; border-width: 0 5px 5px; border-bottom-color: #000; }
+.tooltip.bottom-left .tooltip-arrow { top: 0; right: 5px; margin-top: -5px; border-width: 0 5px 5px; border-bottom-color: #000; }
+.tooltip.bottom-right .tooltip-arrow { top: 0; left: 5px; margin-top: -5px; border-width: 0 5px 5px; border-bottom-color: #000; }
