@@ -110,7 +110,7 @@
 				&.is-teacher
 					&:before
 						height: 350px
-						+transform(translateY(145px))
+						margin-bottom: -150px
 		&.onright
 			.icon-arrow
 				left: inherit
@@ -157,18 +157,21 @@
 			width: 180px
 			height: 214px
 			overflow: hidden
-			border-radius: 50%
+			border-radius: 100%
 			&:before
+				content: ""
 				width: 130px
 				height: 350px
 				left: 50%
 				margin-left: -60px
+				margin-bottom: -175px
 				background-image: url(../img/svg/teacher-bg.svg)
 				-webkit-background-size: contain
 				-o-background-size: contain
 				background-size: contain
 				background-position: center center
-				+transform(translateY(180px))
+				z-index: 2
+				+transition(margin-bottom 0.3s ease)
 			&:after
 				content: ""
 				position: absolute
@@ -179,11 +182,11 @@
 				margin-left: -81px
 				background-color: #757E82
 				border-radius: 50%
-				z-index: -1
+				z-index: 1
 			&.is-small
 				&:before
 					height: 350px
-					+transform(translateY(220px))
+					margin-bottom: -220px
 		&.is-small
 			&:before
 				height: 475px

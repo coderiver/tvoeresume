@@ -312,6 +312,7 @@ a:visited { color: #9d35ce; }
 .btn .checkbox span:before { width: 20px; height: 20px; top: 50%; left: 12px; border-radius: 20px; margin-top: -10px; box-shadow: 0 0 0 12px #66d4ff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .btn .checkbox span:after { top: 50%; left: 12px; margin-top: -10px; }
 
+.form-wrap { margin-bottom: 73px; }
 .form__group { display: inline-block; }
 .form__group:not(only-of-type):first-child { vertical-align: middle; }
 .form__group:first-child .form__bl:first-child { margin-right: 20px; }
@@ -596,7 +597,7 @@ a:visited { color: #9d35ce; }
 .character:after { content: " "; display: table; clear: both; }
 .character__bl { position: relative; width: 50%; text-align: center; cursor: pointer; }
 .character__bl:hover .character__img:before { height: 100%; }
-.character__bl:hover .character__img.is-teacher:before { height: 350px; -moz-transform: translateY(145px); -ms-transform: translateY(145px); -webkit-transform: translateY(145px); transform: translateY(145px); }
+.character__bl:hover .character__img.is-teacher:before { height: 350px; margin-bottom: -150px; }
 .character__bl.onright .icon-arrow { left: inherit; right: -50px; -moz-transform: scale(-1, 1); -ms-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); transform: scale(-1, 1); }
 .character__bl.is-absolute { position: absolute; width: auto; top: 50%; left: 50%; margin: -125px 0 0 -88px; z-index: 2; }
 .character__bl.is-absolute .icon-arrow { left: inherit; right: -35px; -moz-transform: scale(-1, 1); -ms-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); transform: scale(-1, 1); }
@@ -606,10 +607,10 @@ a:visited { color: #9d35ce; }
 .character__img.is-boy:before { width: 234px; background-image: url(../img/low-bg.png); }
 .character__img.is-girl { width: 221px; }
 .character__img.is-girl:before { width: 221px; background-image: url(../img/svg/girl-bg.svg); }
-.character__img.is-teacher { width: 180px; height: 214px; overflow: hidden; border-radius: 50%; }
-.character__img.is-teacher:before { width: 130px; height: 350px; left: 50%; margin-left: -60px; background-image: url(../img/svg/teacher-bg.svg); -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background-position: center center; -moz-transform: translateY(180px); -ms-transform: translateY(180px); -webkit-transform: translateY(180px); transform: translateY(180px); }
-.character__img.is-teacher:after { content: ""; position: absolute; left: 50%; bottom: 0; width: 162px; height: 162px; margin-left: -81px; background-color: #757e82; border-radius: 50%; z-index: -1; }
-.character__img.is-teacher.is-small:before { height: 350px; -moz-transform: translateY(220px); -ms-transform: translateY(220px); -webkit-transform: translateY(220px); transform: translateY(220px); }
+.character__img.is-teacher { width: 180px; height: 214px; overflow: hidden; border-radius: 100%; }
+.character__img.is-teacher:before { content: ""; width: 130px; height: 350px; left: 50%; margin-left: -60px; margin-bottom: -175px; background-image: url(../img/svg/teacher-bg.svg); -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background-position: center center; z-index: 2; -moz-transition: margin-bottom 0.3s ease; -o-transition: margin-bottom 0.3s ease; -webkit-transition: margin-bottom 0.3s ease; transition: margin-bottom 0.3s ease; }
+.character__img.is-teacher:after { content: ""; position: absolute; left: 50%; bottom: 0; width: 162px; height: 162px; margin-left: -81px; background-color: #757e82; border-radius: 50%; z-index: 1; }
+.character__img.is-teacher.is-small:before { height: 350px; margin-bottom: -220px; }
 .character__img.is-small:before { height: 475px; }
 .character__choose { position: absolute; top: 45px; left: 0; text-align: center; z-index: 2; font-family: "nautilus", Arial, sans-serif; background: url("../img/svg/cloud-bg.svg") no-repeat 0 0; -moz-background-size: 184px 83px; -o-background-size: 184px 83px; -webkit-background-size: 184px 83px; background-size: 184px 83px; width: 184px; height: 83px; display: inline-block; }
 .character__choose.is-another { top: 97px; left: inherit; right: 15px; background: url("../img/svg/cloud-bg2.svg") no-repeat 0 0; -moz-background-size: 135px 83px; -o-background-size: 135px 83px; -webkit-background-size: 135px 83px; background-size: 135px 83px; width: 135px; height: 83px; display: inline-block; }
@@ -1128,6 +1129,7 @@ a:visited { color: #9d35ce; }
 .slide__in blockquote p:before { content: "“"; position: absolute; top: -8px; left: 0; font-size: 108px; color: #5bb7d4; font-family: Arial; font-weight: bold; line-height: 1; }
 .slide__in figure { margin-bottom: 55px; padding: 0 15px; }
 .slide__in figure.s-margin { margin-bottom: 35px; }
+.slide__in figure.no-margin { margin-bottom: 0; }
 .slide__in figure figcaption { position: relative; padding-top: 58px; font-size: 0; }
 .slide__in figure figcaption:before { content: ""; position: absolute; top: 0; left: -30px; right: -30px; border-top: 1px dashed #cccccc; }
 .slide__in figure figcaption:after { content: ""; position: absolute; height: 7px; top: 7px; left: -30px; right: -30px; background: url(../img/svg/dots-bg.svg) 0 0 repeat-x; }
