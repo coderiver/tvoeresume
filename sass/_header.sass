@@ -13,10 +13,9 @@
 		z-index: 2
 	&__wrap
 		position: relative
-		height: 76px
 	&__in
-		padding: 15px
-		background: #fff
+		padding: 15px 15px 5px
+		height: 76px
 		+box
 		+clr
 	&__sign
@@ -90,8 +89,10 @@
 				text-decoration: none
 		i
 			display: inline-block
+			margin-bottom: 5px
 			font-size: 26px
 			color: #5DC1E8
+			line-height: 1
 			&.is-teacher
 				color: #56baab
 	&__avatar
@@ -116,7 +117,7 @@
 	.form
 		position: absolute
 		right: 0
-		padding: 25px 15px 0
+		padding: 25px 20px 0
 		background-color: #334c55
 		font-size: 14px
 		z-index: 2
@@ -129,21 +130,32 @@
 			position: absolute
 			left: 0
 			bottom: -40px
-			+s(angle-2)
+			width: 202px
+			height: 40px
+			background-image: url(../img/icons/angle-2.png)
+			background-repeat: no-repeat
+			-webkit-background-size: cover
+			-o-background-size: cover
+			background-size: cover
 		&.is-visible
 			+opacity(1)
-		i
+		.icon-pass,
+		.icon-mail
 			position: absolute
 			top: 50%
 			left: 5px
 			color: #9FB2B8
 			line-height: 1
-			&.icon-mail
-				margin-top: -7px
-				font-size: 14px
-			&.icon-pass
-				margin-top: -9px
-				font-size: 18px
+		.icon-mail
+			margin-top: -7px
+			font-size: 14px
+		.icon-pass
+			margin-top: -9px
+			font-size: 18px
+		.icon-error
+			left: inherit
+			right: 100%
+			margin: -7.5px 3px 0 0
 		.form__link
 			display: block
 			text-align: center

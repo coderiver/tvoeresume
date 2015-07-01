@@ -21,12 +21,12 @@
             </div>
             <div class="form js-form">
               <form>
-                <label class="form__input"><i class="icon-mail"></i>
-                  <input type="email" placeholder="Электронная почта" class="input placeholder">
-                </label>
-                <label class="form__input"><i class="icon-pass"></i>
-                  <input type="password" placeholder="Пароль" class="input placeholder">
-                </label><a href="#" class="form__link">напомнить пароль</a>
+                <div class="form__input is-error"><i class="icon-mail"></i>
+                  <input type="email" placeholder="Электронная почта" class="input placeholder"><i data-toggle="tooltip" data-placement="left" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
+                </div>
+                <div class="form__input is-error"><i class="icon-pass"></i>
+                  <input type="password" placeholder="Пароль" class="input placeholder"><i data-toggle="tooltip" data-placement="left" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
+                </div><a href="#" class="form__link">напомнить пароль</a>
                 <button type="submit" class="form__btn">Вход</button>
               </form>
             </div>

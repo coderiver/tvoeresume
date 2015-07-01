@@ -37,15 +37,15 @@
                           <form>
                             <div class="form__bl">
                               <h4 class="h4">С:</h4>
-                              <label class="calendar">
+                              <div class="form__input calendar is-error">
                                 <input type="text" value="25.05.2012" readonly class="datepicker"><i class="icon-calendar"></i><i data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
-                              </label>
+                              </div>
                             </div>
                             <div class="form__bl">
                               <h4 class="h4">По (Н4):</h4>
-                              <label class="calendar">
+                              <div class="form__input calendar is-error">
                                 <input type="text" placeholder="Выберите дату" readonly class="datepicker"><i class="icon-calendar"></i><i data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
-                              </label>
+                              </div>
                             </div>
                             <div class="form__bl">
                               <label class="radiobox">
@@ -55,13 +55,15 @@
                           </form>
                         </div>
                       </section>
-                      <figure>
+                      <figure class="s-margin">
                         <figcaption class="m-pad">
                           <div class="form">
                             <form>
                               <div class="textarea-wrap">
                                 <h2 class="h2"><i class="icon-hamburger"></i><span>Обязанности и функции:</span></h2>
-                                <textarea placeholder="Укажите, какие обязанности Вы выполняли на месте работы или практики. Например, к основным обязанностям ахитектора относятся подготовка технических заданий на проектирование разделов архитектурных решений, планирование и отчетность по проектированию, проверка входящей проектной документации, взаимодействие и согласование проектных решений с разработчиками смежных разделов, производством, заказчиками." class="textarea"></textarea>
+                                <div class="form__input is-details no-margin is-error">
+                                  <textarea placeholder="Укажите, какие обязанности Вы выполняли на месте работы или практики. Например, к основным обязанностям ахитектора относятся подготовка технических заданий на проектирование разделов архитектурных решений, планирование и отчетность по проектированию, проверка входящей проектной документации, взаимодействие и согласование проектных решений с разработчиками смежных разделов, производством, заказчиками." class="textarea"></textarea><i data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
+                                </div>
                                 <div class="hint-wrap"><a href="#" class="textarea__link js-hint"><i class="icon-note"></i><span>Подсказка<i class="icon-arrow"></i></span></a>
                                   <div class="hint js-tip">
                                     <div class="hint__message arr-bottom"><a href="#" class="icon-cancel js-close"></a>Рекомендуем указать обязанности в виде действий, которые ты выполнял</div>
@@ -71,7 +73,9 @@
                               </div>
                               <div class="textarea-wrap">
                                 <h2 class="h2"><i class="icon-achievement"></i><span>Достижения:</span></h2>
-                                <textarea placeholder="Упоминание достижений поможет выгодно представить Ваше резюме наряду с другими соискателями в отрасли. Например, это может быть успешно завершенная работа по проектированию зданий и сооружений, участие в профессиональных выставках и т. д. Если Вы — молодой специалист без опыта работы, то проанализируйте свою стажировку или практику, которую проходили, дипломную работу, над которой работали, или участвовали в конкурсах." class="textarea"></textarea>
+                                <div class="form__input is-details no-margin is-error">
+                                  <textarea placeholder="Упоминание достижений поможет выгодно представить Ваше резюме наряду с другими соискателями в отрасли. Например, это может быть успешно завершенная работа по проектированию зданий и сооружений, участие в профессиональных выставках и т. д. Если Вы — молодой специалист без опыта работы, то проанализируйте свою стажировку или практику, которую проходили, дипломную работу, над которой работали, или участвовали в конкурсах." class="textarea"></textarea><i data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку" class="icon-error"></i>
+                                </div>
                                 <div class="hint-wrap"><a href="#" class="textarea__link js-hint"><i class="icon-note"></i><span>Подсказка<i class="icon-arrow"></i></span></a>
                                   <div class="hint js-tip">
                                     <div class="hint__message arr-bottom-middle"><a href="#" class="icon-cancel js-close"></a>Достижения – это твои измеримые успехи, которые выражаются в цифрах, сроках или существенных качественных изменениях в компании. Они обязательно должны быть конкретны, измеримы, внушительны и соответствовать должности</div>

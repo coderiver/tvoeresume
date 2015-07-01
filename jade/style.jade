@@ -42,13 +42,13 @@ block content
 										.form__group
 											.form__bl.is-top
 												h4.h4 С:
-												label.is-error.calendar.is-error
+												.form__input.calendar.is-error
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 											.form__bl.is-top
 												h4.h4 По (Н4):
-												label.is-error.calendar.is-error
+												.form__input.calendar.is-error
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
@@ -72,25 +72,27 @@ block content
 												i.icon-uni
 												span Учебное заведение:
 											.select-wrap
-												select.js-select(style="width: 100%; height: 40px;" data-placeholder="Напр. МГУ")
-													option
-													option Напр. МГУ
-													option Зеленый
-													option Синий
-													option Красный
-													option Зеленый
-													option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
-													option Красный
-													option Зеленый
-													option Синий
-													option Красный
-													option Зеленый
-													option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+												.form__input.is-error
+													select.js-select(style="width: 100%; height: 40px;" data-placeholder="Напр. МГУ")
+														option
+														option Напр. МГУ
+														option Зеленый
+														option Синий
+														option Красный
+														option Зеленый
+														option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+														option Красный
+														option Зеленый
+														option Синий
+														option Красный
+														option Зеленый
+														option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__section
 											h4.h4.is-another
 												i.icon-feather
 												span Название курса:
-											label.form__input.is-error.no-margin.is-error
+											.form__input.no-margin.is-error
 												input(type="text" placeholder="Напр. Архитектура").input
 												i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__divider
@@ -98,13 +100,15 @@ block content
 												span Личные данные(Н3)
 										.form__section
 											h4.h4 Учебное заведение:
-											label.form__input.no-margin
+											.form__input.no-margin.is-error
 												input(type="text" placeholder="Напр. Архитектура").input
+												i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__section.m-margin
 											h4.h4 Название курса:
-											label.form__input.no-margin
+											.form__input.no-margin.is-error
 												input(type="text" value="МГУ ПРГР мкий").input.small-txt
 												span.form__note *необязательное поле
+												i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__section.m-margin
 											h4.h4.onleft.is-float Название курса:
 											.form__cut.onleft

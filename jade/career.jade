@@ -104,8 +104,9 @@ block content
 									form
 										.form__section
 											h4.h4.is-another.onleft Название должности:
-											label.form__input
+											.form__input.is-error
 												input.input(type="text" value="Архитектор мостов")
+												i.icon-error(data-toggle="tooltip" data-placement="bottom" title="Поле заполнено неверно. Повторите попытку")
 						a(href="#").slide-nav-prev
 							.slide-nav-in
 								i.triangle-ico

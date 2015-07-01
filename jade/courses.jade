@@ -33,14 +33,16 @@ block content
 											form
 												.form__bl
 													h4.h4 С:
-													label.calendar
+													.form__input.calendar.is-error
 														input(type="text" value="25.05.2012" readonly).datepicker
 														i.icon-calendar
+														i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 												.form__bl
 													h4.h4 По (Н4):
-													label.calendar
+													.form__input.calendar.is-error
 														input(type="text" placeholder="Выберите дату" readonly).datepicker
 														i.icon-calendar
+														i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 												.form__bl
 													label.radiobox
 														input(type="checkbox" name="time" value="1")
@@ -52,14 +54,16 @@ block content
 													h4.h4.is-another
 														i.icon-uni
 														span Учебное заведение:
-													label.form__input.no-margin
+													.form__input.no-margin.is-error
 														input(type="text" placeholder="Напр. МГУ").input
+														i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 												.form__section
 													h4.h4.is-another
 														i.icon-feather
 														span Название курса:
-													label.form__input.no-margin
+													.form__input.no-margin.is-error
 														input(type="text" placeholder="Напр. Архитектура").input
+														i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 							.btn.is-padding.js-add
 								i.cross-ico
 								span Добавить курсы повышения квалификации

@@ -32,13 +32,13 @@ block content
 										form
 											.form__bl
 												h4.h4 С:
-												label.calendar.is-error
+												.form__input.calendar.is-error
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
 											.form__bl
 												h4.h4 По (Н4):
-												label.calendar.is-error
+												.form__input.calendar.is-error
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
@@ -55,28 +55,30 @@ block content
 														i.icon-language
 														span Специализация компании:
 													.select-wrap
-														select.js-select(style="width: 100%; height: 40px;")
-															option Электромонтер по ремонту и обслуживанию электрооборудования
-															option Зеленый
-															option Синий
-															option Красный
-															option Зеленый
-															option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
-															option Красный
-															option Зеленый
-															option Синий
-															option Красный
-															option Зеленый
-															option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+														.form__input.is-error
+															select.js-select(style="width: 100%; height: 40px;")
+																option Электромонтер по ремонту и обслуживанию электрооборудования
+																option Зеленый
+																option Синий
+																option Красный
+																option Зеленый
+																option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+																option Красный
+																option Зеленый
+																option Синий
+																option Красный
+																option Зеленый
+																option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 												.form__section.m-margin
 													h4.h4.is-another
 														i.icon-deputy
 														span Название компании:
 													.form__group
-														label.form__input.no-margin.onleft.is-error
+														.form__input.no-margin.onleft.is-error
 															input(type="text" placeholder="Укажите название компании").input
 															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
-														label.form__input.no-margin.is-small.onright.is-error
+														.form__input.no-margin.is-small.onright.is-error
 															input(type="text" placeholder="Сайт").input
 															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.Поле заполнено неверно. Повторите попытку.")
 												.form__section.m-margin
@@ -84,11 +86,11 @@ block content
 														i.icon-recommend
 														span Рекомендации:
 													.form__group
-														label.form__input.no-margin.onleft.is-error
+														.form__input.no-margin.onleft.is-error
 															input(type="text" placeholder="Укажите имя").input
 															span.form__note *необязательное поле
 															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. ")
-														label.form__input.is-small.no-margin.onright.is-error
+														.form__input.is-small.no-margin.onright.is-error
 															input(type="text" placeholder="+70").input
 															span.form__note *необязательное поле
 															i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно.")

@@ -12,11 +12,13 @@ header.header
 						| или <a href="#" class="js-sign">по паролю</a>
 			.form.js-form
 				form
-					label.form__input
+					.form__input.is-error
 						i.icon-mail
 						input(type="email" placeholder="Электронная почта").input.placeholder
-					label.form__input
+						i.icon-error(data-toggle="tooltip" data-placement="left" title="Поле заполнено неверно. Повторите попытку")
+					.form__input.is-error
 						i.icon-pass
 						input(type="password" placeholder="Пароль").input.placeholder
+						i.icon-error(data-toggle="tooltip" data-placement="left" title="Поле заполнено неверно. Повторите попытку")
 					a(href="#").form__link напомнить пароль
 					button(type="submit").form__btn Вход

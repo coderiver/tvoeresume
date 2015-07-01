@@ -27,7 +27,9 @@ block content
 								h2.h2
 									| <i class="icon-hobby"></i><span>Хобби</span>
 								.textarea-wrap
-									textarea.textarea(placeholder="Каковы твои хобби")
+									.form__input.is-details.is-error
+										textarea.textarea(placeholder="Каковы твои хобби")
+										i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 									.hint-wrap.onright
 										a(href="#").textarea__link.js-hint
 											i.icon-note

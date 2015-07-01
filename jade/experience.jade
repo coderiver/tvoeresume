@@ -32,13 +32,13 @@ block content
 										form
 											.form__bl
 												h4.h4 С:
-												label.calendar
+												.form__input.calendar.is-error
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 											.form__bl
 												h4.h4 По (Н4):
-												label.calendar
+												.form__input.calendar.is-error
 													input(type="text" placeholder="Выберите дату" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
@@ -89,9 +89,9 @@ block content
 												h2.h2
 													i.icon-chair
 													span Название должности:
-												label.form__input
+												.form__input.is-error
 													input.input(type="text" value="Изготовитель таблеток").js-input
-
+													i.icon-error(data-toggle="tooltip" data-placement="bottom" title="Поле заполнено неверно. Повторите попытку")
 						a(href="#").slide-nav-prev
 							.slide-nav-in
 								i.triangle-ico

@@ -31,13 +31,13 @@ block content
 												i.icon-avatar
 												span Меня зовут:
 											.form__group
-												label.form__input.is-error
+												.form__input.is-error
 													input(type="text" placeholder="Фамилия").input
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
-												label.form__input.is-error
+												.form__input.is-error
 													input(type="text" placeholder="Имя").input
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
-												label.form__input.is-error
+												.form__input.is-error
 													input(type="text" placeholder="Отчество").input
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__wrap.onleft
@@ -51,7 +51,7 @@ block content
 												h4.h4.is-another
 													i.icon-year
 													span Дата рождения:
-												label.calendar.is-error
+												.form__input.calendar.is-error
 													input(type="text" value="25.05.2012" readonly).datepicker
 													i.icon-calendar
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
@@ -59,11 +59,11 @@ block content
 												h4.h4.is-another
 													i.icon-contacts
 													span Контакты:
-												label.form__input.is-error
+												.form__input.is-error
 													i.icon-call
 													input(type="tel" placeholder="Введите телефон").input.with-pad
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
-												label.form__input.is-error
+												.form__input.is-error
 													i.icon-mail
 													input(type="email" placeholder="Введите эл. почту").input.with-pad
 													i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
@@ -72,20 +72,22 @@ block content
 													i.icon-planet
 													span Ищу работу:
 												.select-wrap
-													select.js-select(style="width: 100%; height: 40px;" data-placeholder="Выберите город")
-														option
-														option Красный
-														option Зеленый
-														option Синий
-														option Красный
-														option Зеленый
-														option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
-														option Красный
-														option Зеленый
-														option Синий
-														option Красный
-														option Зеленый
-														option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+													.form__input.is-error
+														select.js-select(style="width: 100%; height: 40px;" data-placeholder="Выберите город")
+															option
+															option Красный
+															option Зеленый
+															option Синий
+															option Красный
+															option Зеленый
+															option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+															option Красный
+															option Зеленый
+															option Синий
+															option Красный
+															option Зеленый
+															option Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, voluptatum!
+														i.icon-error(data-toggle="tooltip" data-placement="right" title="Поле заполнено неверно. Повторите попытку")
 										.form__bl.onright
 											.form__load
 												.form__load-txt
