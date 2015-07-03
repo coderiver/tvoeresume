@@ -860,8 +860,9 @@ a:visited { color: #9d35ce; }
 
 .experience { margin-top: 15px; }
 .experience-wrap { margin-bottom: 10px; text-align: center; }
-.experience .item-list-wrap { height: 70px; margin-top: 10px; }
 .experience section .form { text-align: center; }
+.experience figure .h2 { margin-bottom: 5px; }
+.experience .item-list-wrap { height: 70px; margin-top: 10px; }
 .experience .form .h2 { display: inline-block; width: 27%; text-align: left; margin: 0; }
 .experience .form .form__input { width: 73%; max-width: inherit; }
 .experience .form .form__input.calendar { width: 100%; }

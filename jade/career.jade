@@ -8,7 +8,7 @@ block header
 		.l-center
 			.header__wrap
 				.header__in
-					a(href="#").logo.onleft
+					a(href="#" data-val="IT").logo.onleft
 						| Твое<span>Резюме</span>
 
 block content
@@ -27,76 +27,76 @@ block content
 								h2.h2
 									| <i class="icon-tie"></i><span>В других областях:</span>
 								.item-wrap
-									a(href="#").item__bl
+									a(href="#" data-val="IT").item__bl
 										.item__ico.it(style="background-image: url(img/svg/it.svg)")
 										.item__in
 											span IT
-									a(href="#").item__bl
+									a(href="#" data-val="Автосервис").item__bl
 										.item__ico.auto(style="background-image: url(img/svg/auto.svg)")
 										.item__in
 											span Автосервис
-									a(href="#").item__bl
+									a(href="#" data-val="Банки").item__bl
 										.item__ico.bank(style="background-image: url(img/svg/bank.svg)")
 										.item__in
 											span Банки
-									a(href="#").item__bl
+									a(href="#" data-val="Административная работа").item__bl
 										.item__ico.waiter(style="background-image: url(img/svg/waiter.svg)")
 										.item__in
 											span Административная работа
-									a(href="#").item__bl
+									a(href="#" data-val="Охрана").item__bl
 										.item__ico.security(style="background-image: url(img/svg/security.svg)")
 										.item__in
 											span Охрана
-									a(href="#").item__bl
+									a(href="#" data-val="Продажи").item__bl
 										.item__ico.sale(style="background-image: url(img/svg/sale.svg)")
 										.item__in
 											span Продажи
-									a(href="#").item__bl
+									a(href="#" data-val="Бухгалтерия").item__bl
 										.item__ico.account(style="background-image: url(img/svg/account.svg)")
 										.item__in
 											span Бухгалтерия
-									a(href="#").item__bl
+									a(href="#" data-val="Гос. служба").item__bl
 										.item__ico.deputy(style="background-image: url(img/svg/deputy.svg)")
 										.item__in
 											span Гос. служба
-									a(href="#").item__bl
+									a(href="#" data-val="Дизайн").item__bl
 										.item__ico.design(style="background-image: url(img/svg/design.svg)")
 										.item__in
 											span Дизайн
-									a(href="#").item__bl
+									a(href="#" data-val="Промышленность").item__bl
 										.item__ico.production(style="background-image: url(img/svg/production.svg)")
 										.item__in
 											span Промышленность
-									a(href="#").item__bl
+									a(href="#" data-val="Рестораны").item__bl
 										.item__ico.restaurant(style="background-image: url(img/svg/restaurant.svg)")
 										.item__in
 
 											span Рестораны
-									a(href="#").item__bl
+									a(href="#" data-val="Недвижимость").item__bl
 										.item__ico.realty(style="background-image: url(img/svg/realty.svg)")
 										.item__in
 											span Недвижимость
-									a(href="#").item__bl
+									a(href="#" data-val="Логистика").item__bl
 										.item__ico.logistic(style="background-image: url(img/svg/logistic.svg)")
 										.item__in
 											span Логистика
-									a(href="#").item__bl
+									a(href="#" data-val="Медицина").item__bl
 										.item__ico.medicine(style="background-image: url(img/svg/medicine.svg)")
 										.item__in
 											span Медицина
-									a(href="#").item__bl
+									a(href="#" data-val="Нефть").item__bl
 										.item__ico.oil(style="background-image: url(img/svg/oil.svg)")
 										.item__in
 											span Нефть
-									a(href="#").item__bl
+									a(href="#" data-val="Транспорт").item__bl
 										.item__ico.transport(style="background-image: url(img/svg/transport.svg)")
 										.item__in
 											span Транспорт
-									a(href="#").item__bl
+									a(href="#" data-val="Туризм").item__bl
 										.item__ico.tourism(style="background-image: url(img/svg/tourism.svg)")
 										.item__in
 											span Туризм
-									a(href="#").item__bl
+									a(href="#" data-val="Другое").item__bl
 										.item__ico.guitar(style="background-image: url(img/svg/guitar.svg)")
 										.item__in
 											span Другое
@@ -105,15 +105,33 @@ block content
 										.form__section
 											h4.h4.is-another.onleft Название должности:
 											.form__input.is-error
-												input.input(type="text" value="Архитектор мостов")
+												select(style="width: 100%; height: 115px" multiple="multiple").tags.js-tags
+													option(value="IT") IT
+													option(value="Автосервис" selected="selected") Автосервис
+													option(value="Банки") Банки
+													option(value="Административная работа") Административная работа
+													option(value="Охрана") Охрана
+													option(value="Продажи") Продажи
+													option(value="Реклама") Бухгалтерия
+													option(value="Гос. служба") Гос. служба
+													option(value="Дизайн") Дизайн
+													option(value="Промышленность") Промышленность
+													option(value="Рестораны") Рестораны
+													option(value="Недвижимость") Недвижимость
+													option(value="Логистика") Логистика
+													option(value="Медицина") Медицина
+													option(value="Нефть") Нефть
+													option(value="Транспорт") Транспорт
+													option(value="Туризм") Туризм
+													option(value="Другое") Другое
 												i.icon-error(data-toggle="tooltip" data-placement="bottom" title="Поле заполнено неверно. Повторите попытку")
-						a(href="#").slide-nav-prev
+						a(href="#" data-val="IT").slide-nav-prev
 							.slide-nav-in
 								i.triangle-ico
 								i.icon-angle-left
 								span Назад
 							i.line-ico
-						a(href="#").slide-nav-next
+						a(href="#" data-val="IT").slide-nav-next
 							.slide-nav-in
 								i.triangle-ico
 								span Далее

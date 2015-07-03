@@ -131,10 +131,9 @@ head.ready(function() {
 		minimumResultsForSearch: Infinity
 	});
 
-	$(".item__link").on("click", function (e) {
-		e.preventDefault();
+	function tagMove(el){
 
-		var el 	 = $(this),
+		var el 	 	= el,
 			elValue = el.data('val');
 
 		if($(".js-tags").length > 0){
@@ -148,7 +147,20 @@ head.ready(function() {
 			}, 0);
 		}
 
+	}
+
+	$(".item__link").on("click", function (e) {
+		e.preventDefault();
+
+		var elValue = $(this).data('val');
+
+		tagMove($(this));
 		$(this).closest('.js-parent').find('.js-input').val(elValue);
+	});
+
+	$(".item__bl").on("click", function (e) {
+		e.preventDefault();
+		tagMove($(this));
 	});
 
 	//dial
