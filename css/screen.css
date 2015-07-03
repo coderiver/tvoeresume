@@ -170,6 +170,8 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 .icon-facebook:before { content: '\e848'; }
 
+.icon-cancel-circled-outline:before { content: '\e849'; }
+
 @font-face { font-family: roboto-regular; src: url("fonts/roboto-regular.eot"); src: url("fonts/roboto-regular.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-regular.woff2") format("woff2"), url("fonts/roboto-regular.woff") format("woff"), url("fonts/roboto-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: roboto-light; src: url("fonts/roboto-light.eot"); src: url("fonts/roboto-light.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-light.woff2") format("woff2"), url("fonts/roboto-light.woff") format("woff"), url("fonts/roboto-light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: roboto-light-italic; src: url("fonts/roboto-light-italic.eot"); src: url("fonts/roboto-light-italic.eot?#iefix") format("embedded-opentype"), url("fonts/roboto-light-italic.woff2") format("woff2"), url("fonts/roboto-light-italic.woff") format("woff"), url("fonts/roboto-light-italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -312,7 +314,7 @@ a:visited { color: #9d35ce; }
 .btn .checkbox span:before { width: 20px; height: 20px; top: 50%; left: 12px; border-radius: 20px; margin-top: -10px; box-shadow: 0 0 0 12px #66d4ff; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .btn .checkbox span:after { top: 50%; left: 12px; margin-top: -10px; }
 
-.form-wrap { margin-bottom: 73px; }
+.form-wrap { padding-bottom: 30px; margin-bottom: 43px; }
 .form__group { display: inline-block; }
 .form__group:not(only-of-type):first-child { vertical-align: middle; }
 .form__group:first-child .form__bl:first-child { margin-right: 20px; }
@@ -366,6 +368,11 @@ a:visited { color: #9d35ce; }
 .input-load { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 2; }
 
 .icon-error { position: absolute; top: 50%; left: 100%; margin: -7.5px 0 0 4px; font-size: 14px; color: #ff7d64; line-height: 1; cursor: pointer; opacity: 0; visibility: hidden; -moz-transition: opacity 0.2s ease; -o-transition: opacity 0.2s ease; -webkit-transition: opacity 0.2s ease; transition: opacity 0.2s ease; }
+
+.icon-angle-down { display: inline-block; margin-top: 10px; font-size: 45px; color: #5dc1e8; cursor: pointer; line-height: 0; opacity: 0; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.icon-angle-down.is-up { margin: 0 0 10px; opacity: 0; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.icon-angle-down.is-visible { opacity: 1; }
+.icon-angle-down:before { line-height: 0.5; }
 
 .tooltip.error.in { opacity: 1; }
 .tooltip.error.right { margin-left: 2px; }
@@ -651,7 +658,7 @@ a:visited { color: #9d35ce; }
 .slide.study-bg { background: white url(../img/study-bg.png) center bottom no-repeat; }
 .slide.start-bg { background: white url(../img/svg/start-bg.svg) center bottom no-repeat; background-size: 100% auto; }
 .slide.courses-bg { background: white url(../img/courses-bg.png) center bottom no-repeat; }
-.slide.courses-bg .btn { margin: 0 0 150px 15px; }
+.slide.courses-bg .btn { margin: 10px 0 150px 15px; }
 .slide.hobby-bg { background: white url(../img/hobby-bg.png) center bottom no-repeat; }
 .slide.language-bg { background: white url(../img/svg/language-bg.svg) center bottom no-repeat; }
 .slide.experience-bg { background: white url(../img/experience-bg.png) center bottom no-repeat; }
@@ -774,12 +781,18 @@ a:visited { color: #9d35ce; }
 .career .form .btn-wrap { margin: 70px 0 20px; }
 .career .icon-glasses { margin-right: 15px; font-size: 24px; vertical-align: middle; }
 .career .icon-tie { font-size: 30px; }
-.career .icon-angle-down { display: inline-block; margin-top: 10px; font-size: 45px; color: #5dc1e8; cursor: pointer; line-height: 0; opacity: 0; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.career .icon-angle-down.is-up { margin: 0 0 10px; opacity: 0; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.career .icon-angle-down.is-visible { opacity: 1; }
-.career .icon-angle-down:before { line-height: 0.5; }
 
+.courses { text-align: center; }
+.courses__wrap { position: relative; height: 850px; text-align: left; overflow: hidden; }
+.courses__in { position: absolute; top: 0; left: -17px; right: -17px; bottom: 0; padding: 0 20px; overflow-y: auto; -ms-overflow-x: hidden; overflow-x: hidden; }
 .courses .h4.is-another { vertical-align: top; }
+.courses .slide__subttl { margin-top: 0; }
+.courses .form-wrap { position: relative; }
+.courses .form-wrap:before { content: ""; position: absolute; bottom: 0; left: -30px; right: -30px; border-top: 1px dashed #cccccc; }
+.courses .form-wrap:after { content: ""; position: absolute; height: 7px; bottom: -14px; left: -30px; right: -30px; background: url(../img/svg/dots-bg.svg) 0 0 repeat-x; }
+.courses .icon-angle-down.is-up { margin-top: 10px; }
+.courses .icon-lamp { vertical-align: bottom; }
+.courses .icon-cancel-circled-outline { position: absolute; right: 100px; bottom: 37px; text-decoration: none; font-size: 20px; color: #ef8772; }
 
 .certificate { margin-top: 32px; }
 .certificate__wrap { margin-top: 37px; }
@@ -869,10 +882,6 @@ a:visited { color: #9d35ce; }
 .experience .icon-tie { margin-right: 5px; font-size: 26px; }
 .experience .icon-chair { margin-right: 10px; font-size: 27px; }
 .experience .icon-recommend { font-size: 26px; margin-right: 15px; }
-.experience .icon-angle-down { display: inline-block; margin-top: 10px; font-size: 45px; color: #5dc1e8; cursor: pointer; line-height: 0; opacity: 0; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.experience .icon-angle-down.is-up { margin: 0 0 10px; opacity: 0; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.experience .icon-angle-down.is-visible { opacity: 1; }
-.experience .icon-angle-down:before { line-height: 0.5; }
 
 .practice { margin-top: 30px; }
 .practice section .form { text-align: center; }

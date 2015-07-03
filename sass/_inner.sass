@@ -74,7 +74,7 @@
 	&.courses-bg
 		background: #fff url(../img/courses-bg.png) center bottom no-repeat
 		.btn
-			margin: 0 0 150px 15px
+			margin: 10px 0 150px 15px
 	&.hobby-bg
 		background: #fff url(../img/hobby-bg.png) center bottom no-repeat
 	&.language-bg
@@ -539,29 +539,57 @@
 		vertical-align: middle
 	.icon-tie
 		font-size: 30px
-	.icon-angle-down
-		display: inline-block
-		margin-top: 10px
-		font-size: 45px
-		color: #5DC1E8
-		cursor: pointer
-		line-height: 0
-		opacity: 0
-		+nosel
-		&.is-up
-			margin: 0 0 10px
-			opacity: 0
-			+transform(rotate(180deg))
-		&.is-visible
-			opacity: 1
-		&:before
-			line-height: 0.5
-
 
 //courses
 .courses
+	text-align: center
+	&__wrap
+		position: relative
+		height: 850px
+		text-align: left
+		overflow: hidden
+	&__in
+		position: absolute
+		top: 0
+		left: -17px
+		right: -17px
+		bottom: 0
+		padding: 0 20px
+		overflow-y: auto
+		-ms-overflow-x: hidden
+		overflow-x: hidden
 	.h4.is-another
 		vertical-align: top
+	.slide__subttl
+		margin-top: 0
+	.form-wrap
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: -30px
+			right: -30px
+			border-top: 1px dashed #ccc
+		&:after
+			content: ""
+			position: absolute
+			height: 7px
+			bottom: -14px
+			left: -30px
+			right: -30px
+			background: url(../img/svg/dots-bg.svg) 0 0 repeat-x
+	.icon-angle-down.is-up
+		margin-top: 10px
+	.icon-lamp
+		vertical-align: bottom
+	.icon-cancel-circled-outline
+		position: absolute
+		right: 100px
+		bottom: 37px
+		text-decoration: none
+		font-size: 20px
+		color: #EF8772
 
 
 //certificate
@@ -933,23 +961,6 @@
 	.icon-recommend
 		font-size: 26px
 		margin-right: 15px
-	.icon-angle-down
-		display: inline-block
-		margin-top: 10px
-		font-size: 45px
-		color: #5DC1E8
-		cursor: pointer
-		line-height: 0
-		opacity: 0
-		+nosel
-		&.is-up
-			margin: 0 0 10px
-			opacity: 0
-			+transform(rotate(180deg))
-		&.is-visible
-			opacity: 1
-		&:before
-			line-height: 0.5
 
 //practice
 .practice
