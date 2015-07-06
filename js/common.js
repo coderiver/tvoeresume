@@ -86,6 +86,7 @@ head.ready(function() {
 
 	//scroll
 	$('.js-scroll').jScrollPane();
+
 	$('.tutor__in.js-scroll').jScrollPane({
 		verticalDragMaxHeight: 35
 	});
@@ -121,15 +122,52 @@ head.ready(function() {
 		 }, 300);
 	});
 
+	function course(){
+
+		var wrap  	  = $('.courses__wrap'),
+			block     = wrap.find('.js-clone'),
+			title     = wrap.find('.slide__subttl').outerHeight(true),
+			list 	  = wrap.find('.js-list'),
+			arrowUp   = wrap.closest('.js-parent').find('.js-up'),
+			arrowDown = wrap.closest('.js-parent').find('.js-down'),
+			height    = block.outerHeight() + title;
+
+		if(block.length <= 3){
+			wrap.css({'height': block.length * height});
+			list.css({'overflow-y': 'hidden'});
+			arrowUp.removeClass('is-visible');
+			arrowDown.removeClass('is-visible');
+		} else{
+			wrap.css({'height': '850px'});
+			list.css({'overflow-y': 'auto'});
+		}
+	}
+	course();
+
 	//tags
 	$(".js-tags").select2({
 		tags: true,
-		tokenSeparators: [',', ' ']
+		tokenSeparators: [',', ' '],
+		//templateResult: format,
+		//minimumInputLength: 2
 	});
 
 	$(".js-select").select2({
 		minimumResultsForSearch: Infinity
 	});
+
+	// function format(o) {
+
+	// 	var icon = $(this).element.data('icon');
+	// 	console.log(icon)
+
+	// 	if (!o.id){
+	// 		return o.text;
+	// 	}
+	// 	else{
+	//     	return "<i class='icon-" + icon + "'></i>" + o.text;
+	// 	}
+	// }
 
 	function tagMove(el){
 
