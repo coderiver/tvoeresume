@@ -160,15 +160,11 @@ head.ready(function() {
 
 	function format(opt) {
 		var data  = $(opt.element).data('icon');
-
-		if (!opt.id) {
-			return opt.text;
+		if (opt.id && data) {
+		   return'<img src="img/svg/' + data + '-h.svg" class="option_ico" /> ' + '<span class="option__text">' + opt.text + '</span>';
+		} else {
+		   return opt.text;
 		}
-		if (data){
-			var opt = '<img src="img/svg/' + data + '-h.svg" class="option_ico" /> ' + '<span class="option__text">' + opt.text + '</span>';
-			return opt;
-		}
-		return opt.text;
 	}
 
 	function tagMove(el){
