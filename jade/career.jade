@@ -105,25 +105,25 @@ block content
 										.form__section
 											h4.h4.is-another.onleft Название должности:
 											.form__input.is-error
-												select(style="width: 100%; height: 115px" multiple="multiple").tags.js-tags
-													option(value="IT") IT
-													option(value="Автосервис" selected="selected") Автосервис
-													option(value="Банки") Банки
-													option(value="Административная работа") Административная работа
-													option(value="Охрана") Охрана
-													option(value="Продажи") Продажи
-													option(value="Реклама") Бухгалтерия
-													option(value="Гос. служба") Гос. служба
-													option(value="Дизайн") Дизайн
-													option(value="Промышленность") Промышленность
-													option(value="Рестораны") Рестораны
-													option(value="Недвижимость") Недвижимость
-													option(value="Логистика") Логистика
-													option(value="Медицина") Медицина
-													option(value="Нефть") Нефть
-													option(value="Транспорт") Транспорт
-													option(value="Туризм") Туризм
-													option(value="Другое") Другое
+												select(style="width: 100%; height: 115px" multiple="multiple" id="state").tags.js-tags
+													option(data-icon="it" value="IT") IT
+													option(data-icon="auto" value="Автосервис" selected="selected") Автосервис
+													option(data-icon="bank" value="Банки") Банки
+													option(data-icon="waiter" value="Административная работа") Административная работа
+													option(data-icon="security" value="Охрана") Охрана
+													option(data-icon="sale" value="Продажи") Продажи
+													option(data-icon="account" value="Бухгалтерия") Бухгалтерия
+													option(data-icon="deputy" value="Гос. служба") Гос. служба
+													option(data-icon="design" value="Дизайн") Дизайн
+													option(data-icon="production" value="Промышленность") Промышленность
+													option(data-icon="restaurant" value="Рестораны") Рестораны
+													option(data-icon="realty" value="Недвижимость") Недвижимость
+													option(data-icon="logistic" value="Логистика") Логистика
+													option(data-icon="medicine" value="Медицина") Медицина
+													option(data-icon="oil" value="Нефть") Нефть
+													option(data-icon="transport" value="Транспорт") Транспорт
+													option(data-icon="tourism" value="Туризм") Туризм
+													option(data-icon="guitar" value="Другое") Другое
 												i.icon-error(data-toggle="tooltip" data-placement="bottom" title="Поле заполнено неверно. Повторите попытку")
 						a(href="#" data-val="IT").slide-nav-prev
 							.slide-nav-in

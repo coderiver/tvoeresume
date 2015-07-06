@@ -6,5 +6,6 @@ head.load("js/lib/jquery.js",
 					"js/lib/mousewheel.min.js",
 					"js/lib/dial.min.js",
 					"js/lib/select2.min.js",
+					"js/lib/ru.js",
 					"js/lib/tooltip.js",
 					"js/common.js");

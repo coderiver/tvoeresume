@@ -148,26 +148,28 @@ head.ready(function() {
 	$(".js-tags").select2({
 		tags: true,
 		tokenSeparators: [',', ' '],
-		//templateResult: format,
-		//minimumInputLength: 2
+		templateSelection: format,
+		escapeMarkup: function(m) { return m; },
+		minimumInputLength: 2,
+		language: 'ru'
 	});
 
 	$(".js-select").select2({
 		minimumResultsForSearch: Infinity
 	});
 
-	// function format(o) {
+	function format(opt) {
+		var data  = $(opt.element).data('icon');
 
-	// 	var icon = $(this).element.data('icon');
-	// 	console.log(icon)
-
-	// 	if (!o.id){
-	// 		return o.text;
-	// 	}
-	// 	else{
-	//     	return "<i class='icon-" + icon + "'></i>" + o.text;
-	// 	}
-	// }
+		if (!opt.id) {
+			return opt.text;
+		}
+		if (data){
+			var opt = '<img src="img/svg/' + data + '-h.svg" class="option_ico" /> ' + '<span class="option__text">' + opt.text + '</span>';
+			return opt;
+		}
+		return opt.text;
+	}
 
 	function tagMove(el){
 
